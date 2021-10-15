@@ -1,0 +1,9 @@
+v0.1.0 Oct 12, 2021
+    + Added PDB parser. Currently able to organize atoms into RNA chains, DNA chains, protein chains, and heteroatoms.
+    + Add centroid finder for amino acids.
+    + Added automatic fetch from PDB
+    + Added method to atom class that extracts the probable element from its ID
+    + Added getters and setters for RNA, DNA, AminoAcid, Atom, and Container classes
+----------------------------------------------------------------------------------
+v0.0.0 Oct 8, 2021
+    Initial creation
