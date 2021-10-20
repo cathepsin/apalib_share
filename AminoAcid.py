@@ -29,6 +29,7 @@ class AminoAcid:
         self.atoms.append(atom)
 
     def SetName(self, name, set_name):
+        #TODO check the functionality of this
         if set_name:
             self.name = name
         elif len(name) == 3 and name in self.THREE_LETTER:

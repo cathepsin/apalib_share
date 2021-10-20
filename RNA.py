@@ -25,6 +25,7 @@ class RNA:
 
     def SetName(self, name):
         self.name = name
+        #TODO set_name functionality
 
     def SetN(self):
         self.ONE_LETTER = {

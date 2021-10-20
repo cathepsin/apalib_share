@@ -92,6 +92,8 @@ def Parse():
 
 #TODO get this to work with DNA and RNA domains https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences-and-the-pdb-format
 #Parsing DNA/RNA should be essentially the same as an amino acid atom-group, with some intricacies. 1pyi is a good example
+#TODO Check other PDB standards
+#TODO Ensure functionality with symmetry pairs
 def ParsePDB(pdbFile):
     proteinChains = dict()
     DNAChains = dict()
@@ -149,3 +151,19 @@ def ParsePDB(pdbFile):
     for chain in GetProteinChains():
         for index in GetProteinChains()[chain]:
             GetProteinChains()[chain][index].GetCentroid(GetProteinChains()[chain][index].atoms)
+
+#TODO Complete the below functions before pushing version 1.0.0
+def SurfaceArea(**kwargs):
+    if 'domain' not in kwargs:
+        sys.stderr.write("No domain provided. Specify using SurfaceArea(domain=val)\n")
+    if 'num_dots' not in kwargs:
+        sys.stderr.write("Number of dots not provided. Specify using SurfaceArea(num_dots=val)\n")
+    if 'solvent_radius' not in kwargs:
+        sys.stderr.write("Solvent radius not provided. Specify using SurfaceArea(solvent_radius=val)\n")
+    print("stub")
+
+def GetDistance(object1, object2):
+    print("stub")
+
+def CheckBridge(object1, object2):
+    print("stub")

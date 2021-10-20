@@ -5,11 +5,13 @@ class DNA:
         self.atoms = list()
         self.name = None
 
+        set_name = True
         self.SetN()
 #TODO Made set_name a thing everywhere
-        print("DO THIS NOW")
+        if 'set_name' in kwargs:
+            set_name = kwargs['set_name']
         if 'name' in kwargs:
-            self.SetName(kwargs['name'])
+            self.SetName(kwargs['name'], set_name)
         if 'number' in kwargs:
             self.SetNumber(kwargs['number'])
         if 'atoms' in kwargs:
@@ -25,8 +27,19 @@ class DNA:
     def InsertAtom(self, atom):
         self.atoms.append(atom)
 
-    def SetName(self, name):
-        self.name = name
+    def SetName(self, name, set_name):
+        if not set_name:
+            self.name = name
+            #TODO raise a flag
+            return
+        if name in self.TWO_LETTER:
+            self.name = name
+            return
+        if name in self.FULL_NAME:
+            self.name = self.FULL_NAME[name]
+        if name in self.ONE_LETTER:
+            self.name = 'D' + name
+            return
 
 
 

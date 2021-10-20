@@ -24,3 +24,4 @@ class HETATM:
 
     def SetName(self, name):
         self.name = name
+        #TODO set_name functionality
