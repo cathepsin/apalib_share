@@ -23,10 +23,10 @@ class Atom:
         self.number = num
 
     def SetCoordinates(self, coor):
-        self.coordinates = dict()
-        self.coordinates['x'] = coor[0]
-        self.coordinates['y'] = coor[1]
-        self.coordinates['z'] = coor[2]
+        self.coordinates = [coor[0], coor[1], coor[2]]
+
+    def GetCoordinates(self):
+        return self.coordinates
 
     def SetID(self, id, extract):
         self.id = id
@@ -45,7 +45,10 @@ class Atom:
     def SetResidue(self, res):
         if len(res) == 4:
             self.rotation = res[0]
-        self.residue = res[1:]
+            self.residue = res[1:]
+            return
+        self.residue = res
+
 
     #In case the element informatin is missing
     def __ExtractElement(self, id):

@@ -28,6 +28,8 @@ class RNA:
         #TODO set_name functionality
 
     def SetN(self):
+
+        # TODO Make these global constants
         self.ONE_LETTER = {
             'A': 'ADENINE',
             'C': 'CYTOSINE',

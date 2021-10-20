@@ -23,10 +23,13 @@ class AminoAcid:
 
     def SetAtoms(self, atoms):
         self.atoms = atoms
-        self.GetCentroid(atoms)
+        self.CalculateCentroid(atoms)
 
     def InsertAtom(self, atom):
         self.atoms.append(atom)
+
+    def GetAtoms(self):
+        return self.atoms
 
     def SetName(self, name, set_name):
         #TODO check the functionality of this
@@ -51,7 +54,8 @@ class AminoAcid:
             self.flags['BAD_NAME'] = "Name cannot be two letters"
             self.name = None
         if self.name is not None:
-            self.flags.pop('BAD_NAME')
+            if 'BAD_NAME' in self.flags:
+                self.flags.pop('BAD_NAME')
 
     def SetHeptad(self, heptad):
         self.heptad = heptad
@@ -59,9 +63,11 @@ class AminoAcid:
     def InsertAtom(self, atom):
         self.atoms.append(atom)
 
-    def GetCentroid(self, atoms):
+    def CalculateCentroid(self, atoms):
         # *For Glycine, only the alpha carbon is considered
         # *For Alanine, only the beta carbon is considered
+
+        #TODO Make these global constants
         AAs = {
             "SER": ['OG'],
             "CYS": ['SG'],
@@ -95,30 +101,35 @@ class AminoAcid:
             for atom in [atom for atom in atoms if atom.id in AAs[self.name]]:
                 if atom.element == 'H':
                     continue
-                x_coord += atom.coordinates['x']
-                y_coord += atom.coordinates['y']
-                z_coord += atom.coordinates['z']
+                x_coord += atom.GetCoordinates()[0]
+                y_coord += atom.GetCoordinates()[1]
+                z_coord += atom.GetCoordinates()[2]
                 num_atoms += 1
-            self.centroid = dict()
+            self.centroid = list()
             try:
-                self.centroid['x'] = x_coord / num_atoms
-                self.centroid['y'] = y_coord / num_atoms
-                self.centroid['z'] = z_coord / num_atoms
+                self.centroid.append(x_coord / num_atoms)
+                self.centroid.append(y_coord / num_atoms)
+                self.centroid.append(z_coord / num_atoms)
             except ZeroDivisionError:
+                self.centroid.clear()
                 beta = [atom for atom in atoms if atom.id == 'CB']
+                alpha = [atom for atom in atoms if atom.id == 'CA']
                 if len(beta) != 0:
-                    self.centroid['x'] = beta[0].coordinates['x']
-                    self.centroid['y'] = beta[0].coordinates['y']
-                    self.centroid['z'] = beta[0].coordinates['z']
+                    self.centroid.append(beta[0].coordinates[0])
+                    self.centroid.append(beta[0].coordinates[1])
+                    self.centroid.append(beta[0].coordinates[2])
                     self.flags['B_CENTROID'] = "This residue is missing information to get an accurate centroid" \
                                                "calculation. The coordinates of the beta carbon will be used"
-                else:
-                    alpha = [atom for atom in atoms if atom.id == 'CA']
-                    self.centroid['x'] = alpha[0].coordinates['x']
-                    self.centroid['y'] = alpha[0].coordinates['y']
-                    self.centroid['z'] = alpha[0].coordinates['z']
+                elif len(alpha) != 0:
+                    self.centroid.append(alpha[0].coordinates[0])
+                    self.centroid.append(alpha[0].coordinates[1])
+                    self.centroid.append(alpha[0].coordinates[2])
                     self.flags['A_CENTROID'] = "This residue is missing information to get an accurate centroid" \
                                                "calculation. The coordinates of the alpha carbon will be used"
+                else:
+                    self.centroid = None
+                    self.flags['BAD_CENTROID'] = "Too few atoms were included with this residue to calculate a centroid."
+
 
         elif len(self.name) == 4 and self.name[1:] in AAs:
             import sys
@@ -127,6 +138,8 @@ class AminoAcid:
             import sys
             sys.exit("UNKNOWN AMINO ACID YO")
 
+    def GetCentroid(self):
+        return self.centroid
 
     def OneToThree(self, oln):
         if oln in self.ONE_LETTER:

@@ -150,7 +150,7 @@ def ParsePDB(pdbFile):
 
     for chain in GetProteinChains():
         for index in GetProteinChains()[chain]:
-            GetProteinChains()[chain][index].GetCentroid(GetProteinChains()[chain][index].atoms)
+            GetProteinChains()[chain][index].CalculateCentroid(GetProteinChains()[chain][index].atoms)
 
 #TODO Complete the below functions before pushing version 1.0.0
 def SurfaceArea(**kwargs):
@@ -162,8 +162,16 @@ def SurfaceArea(**kwargs):
         sys.stderr.write("Solvent radius not provided. Specify using SurfaceArea(solvent_radius=val)\n")
     print("stub")
 
-def GetDistance(object1, object2):
-    print("stub")
+def GetDistance(coor1, coor2):
+    return ((coor1[0] - coor2[0])**2 + (coor1[1] - coor2[1])**2 + (coor1[2] - coor2[2])**2)**.5
 
 def CheckBridge(object1, object2):
     print("stub")
+
+#TODO Make sure ALL flags are properly cleared automatically
+
+
+Fetch('5u59')
+Parse()
+print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
+print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
