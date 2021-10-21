@@ -1,3 +1,7 @@
+global ONE_LETTER
+global THREE_LETTER
+global FULL_NAME
+
 class AminoAcid:
     def __init__(self, **kwargs):
         self.flags = dict()
@@ -5,7 +9,7 @@ class AminoAcid:
         self.atoms = list()
         self.name = None
         self.rotamer = None
-        self.SetAAs()
+
 
         set_name = True
         if 'set_name' in kwargs:
@@ -33,17 +37,17 @@ class AminoAcid:
 
     def SetName(self, name, set_name):
         #TODO check the functionality of this
-        if set_name:
+        if not set_name:
             self.name = name
-        elif len(name) == 3 and name in self.THREE_LETTER:
+        elif len(name) == 3 and name in THREE_LETTER:
             self.name = name
-        elif len(name) == 3 and name not in self.THREE_LETTER:
+        elif len(name) == 3 and name not in THREE_LETTER:
             self.flags['BAD_NAME'] = "Three-letter code not recognized"
             self.name = None
         elif len(name) == 1:
             self.name = self.OneToThree(name)
         elif len(name) <= 4:
-            if name[-3:] in self.THREE_LETTER:
+            if name[-3:] in THREE_LETTER:
                 self.name = name[-3:]
                 self.rotamer = name[:-3]
                 self.flags['ROT_RES'] = "This residue has a rotamer conformation"
@@ -157,90 +161,92 @@ class AminoAcid:
                 self.flags['BAD_NAME'] = 'This residue was assigned a bad name. Check that the residue name was spelled correctly'
                 self.name = None
 
-
-    def SetAAs(self):
-        #Shoved down here for cleanliness
-        self.ONE_LETTER = {
-            "R": 'ARG',
-            "H": 'HIS',
-            "K": 'LYS',
-            "D": 'ASP',
-            "E": 'GLU',
-            "S": 'SER',
-            "T": 'THR',
-            "N": 'ASN',
-            "Q": 'GLN',
-            "C": 'CYS',
-            "U": 'SEC',
-            "G": 'GLY',
-            "P": 'PRO',
-            "A": 'ALA',
-            "V": 'VAL',
-            "I": 'ILE',
-            "L": 'LEU',
-            "M": 'MET',
-            "F": 'PHE',
-            "Y": 'TYR',
-            "W": 'TRP',
-            "O": 'PYL'
-        }
-
-        self.THREE_LETTER = {
-            "ARG": 'R',
-            "HIS": 'H',
-            "LYS": 'K',
-            "ASP": 'D',
-            "GLU": 'E',
-            "SER": 'S',
-            "THR": 'T',
-            "ASN": 'N',
-            "GLN": 'G',
-            "CYS": 'C',
-            "SEC": 'U',
-            "GLY": 'G',
-            "PRO": 'P',
-            "ALA": 'A',
-            "VAL": 'V',
-            "ILE": 'I',
-            "LEU": 'L',
-            "MET": 'M',
-            "PHE": 'F',
-            "TYR": 'Y',
-            "TRP": 'W',
-            "PYL": 'O'
-        }
-
-        self.FULL_NAME = {
-            "ALANINE": 'ALA',
-            "CYSTEINE": 'CYS',
-            "ASPARTIC ACID": 'ASP',
-            "ASPARTATE" : 'ASP',
-            "GLUTAMIC ACID" : 'GLU',
-            "GLUTAMATE" : 'GLU',
-            "PHENYLALANINE" : 'PHE',
-            "GLYCINE" : 'GLY',
-            "HISTIDINE" : 'HIS',
-            "ISOLEUCINE" : 'ILE',
-            "LYSINE" : 'LYS',
-            "LEUCINE" : 'LEU',
-            "METHIONINE": 'MET',
-            "ASPARAGINE": 'ASN',
-            "PYRROLYSINE": 'PYL',
-            "PROLINE": 'PRO',
-            "GLUTAMINE": 'GLN',
-            "ARGININE": 'ARG',
-            "SERINE": 'SER',
-            "THREONINE": 'THR',
-            "SELENOCYSTEINE": 'SEC',
-            "VALINE": 'VAL',
-            "TRYPTOPHAN": 'TRP',
-            "TYROSINE": 'TYR',
-        }
-
-
     def __lt__(self, other):
         return self.number < other.number
     def __repr__(self):
         return f"RESIDUE: {self.name}, NUMBER: {self.number}"
     def __str__(self):
         return f"{self.name} {self.number}"
+
+
+
+
+#Shoved down here for cleanliness
+global ONE_LETTER
+ONE_LETTER = {
+    "R": 'ARG',
+    "H": 'HIS',
+    "K": 'LYS',
+    "D": 'ASP',
+    "E": 'GLU',
+    "S": 'SER',
+    "T": 'THR',
+    "N": 'ASN',
+    "Q": 'GLN',
+    "C": 'CYS',
+    "U": 'SEC',
+    "G": 'GLY',
+    "P": 'PRO',
+    "A": 'ALA',
+    "V": 'VAL',
+    "I": 'ILE',
+    "L": 'LEU',
+    "M": 'MET',
+    "F": 'PHE',
+    "Y": 'TYR',
+    "W": 'TRP',
+    "O": 'PYL'
+}
+global THREE_LETTER
+THREE_LETTER = {
+    "ARG": 'R',
+    "HIS": 'H',
+    "LYS": 'K',
+    "ASP": 'D',
+    "GLU": 'E',
+    "SER": 'S',
+    "THR": 'T',
+    "ASN": 'N',
+    "GLN": 'G',
+    "CYS": 'C',
+    "SEC": 'U',
+    "GLY": 'G',
+    "PRO": 'P',
+    "ALA": 'A',
+    "VAL": 'V',
+    "ILE": 'I',
+    "LEU": 'L',
+    "MET": 'M',
+    "PHE": 'F',
+    "TYR": 'Y',
+    "TRP": 'W',
+    "PYL": 'O'
+}
+
+global FULL_NAME
+FULL_NAME = {
+    "ALANINE": 'ALA',
+    "CYSTEINE": 'CYS',
+    "ASPARTIC ACID": 'ASP',
+    "ASPARTATE" : 'ASP',
+    "GLUTAMIC ACID" : 'GLU',
+    "GLUTAMATE" : 'GLU',
+    "PHENYLALANINE" : 'PHE',
+    "GLYCINE" : 'GLY',
+    "HISTIDINE" : 'HIS',
+    "ISOLEUCINE" : 'ILE',
+    "LYSINE" : 'LYS',
+    "LEUCINE" : 'LEU',
+    "METHIONINE": 'MET',
+    "ASPARAGINE": 'ASN',
+    "PYRROLYSINE": 'PYL',
+    "PROLINE": 'PRO',
+    "GLUTAMINE": 'GLN',
+    "ARGININE": 'ARG',
+    "SERINE": 'SER',
+    "THREONINE": 'THR',
+    "SELENOCYSTEINE": 'SEC',
+    "VALINE": 'VAL',
+    "TRYPTOPHAN": 'TRP',
+    "TYROSINE": 'TYR',
+}

@@ -1,3 +1,8 @@
+global ONE_LETTER
+global TWO_LETTER
+global FULL_NAME
+
+
 class DNA:
     def __init__(self, **kwargs):
         self.flags = dict()
@@ -7,7 +12,7 @@ class DNA:
 
         set_name = True
         self.SetN()
-#TODO Made set_name a thing everywhere
+        # TODO Made set_name a thing everywhere
         if 'set_name' in kwargs:
             set_name = kwargs['set_name']
         if 'name' in kwargs:
@@ -30,7 +35,7 @@ class DNA:
     def SetName(self, name, set_name):
         if not set_name:
             self.name = name
-            #TODO raise a flag
+            # TODO raise a flag
             return
         if name in self.TWO_LETTER:
             self.name = name
@@ -41,32 +46,31 @@ class DNA:
             self.name = 'D' + name
             return
 
-
-
     def SetN(self):
-
-        # TODO Make these global constants
-        self.ONE_LETTER = {
-            'A' : 'ADENINE',
-            'C' : 'CYTOSINE',
-            'G' : 'GUANINE',
-            'T' : 'THYMINE',
-            'U' : 'URACIL',
-            'I' : 'INOSINE'
+        global ONE_LETTER
+        ONE_LETTER = {
+            'A': 'ADENINE',
+            'C': 'CYTOSINE',
+            'G': 'GUANINE',
+            'T': 'THYMINE',
+            'U': 'URACIL',
+            'I': 'INOSINE'
         }
-        self.TWO_LETTER = {
-            'DA' : 'ADENINE',
-            'DC' : 'CYTOSINE',
-            'DG' : 'GUANINE',
-            'DT' : 'THYMINE',
-            'DU' : 'URACIL',
-            'DI' : 'INOSINE'
+        global TWO_LETTER
+        TWO_LETTER = {
+            'DA': 'ADENINE',
+            'DC': 'CYTOSINE',
+            'DG': 'GUANINE',
+            'DT': 'THYMINE',
+            'DU': 'URACIL',
+            'DI': 'INOSINE'
         }
-        self.FULL_NAME = {
-            'ADENINE' : 'DA',
-            'CYTOSINE' : 'DC',
-            'GUANINE' : 'DG',
-            'THYMINE' : 'DT',
-            'URACIL' : 'DU',
-            'INOSINE' : 'DI'
+        global FULL_NAME
+        FULL_NAME = {
+            'ADENINE': 'DA',
+            'CYTOSINE': 'DC',
+            'GUANINE': 'DG',
+            'THYMINE': 'DT',
+            'URACIL': 'DU',
+            'INOSINE': 'DI'
         }

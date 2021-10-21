@@ -1,3 +1,6 @@
+global FULL_NAME
+global ONE_LETTER
+
 class RNA:
     def __init__(self, **kwargs):
         self.flags = dict()
@@ -28,9 +31,8 @@ class RNA:
         #TODO set_name functionality
 
     def SetN(self):
-
-        # TODO Make these global constants
-        self.ONE_LETTER = {
+        global ONE_LETTER
+        ONE_LETTER = {
             'A': 'ADENINE',
             'C': 'CYTOSINE',
             'G': 'GUANINE',
@@ -38,7 +40,8 @@ class RNA:
             'U': 'URACIL',
             'I': 'INOSINE'
         }
-        self.FULL_NAME = {
+        global FULL_NAME
+        FULL_NAME = {
             'ADENINE': 'A',
             'CYTOSINE': 'C',
             'GUANINE': 'G',
