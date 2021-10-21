@@ -10,7 +10,6 @@ class AminoAcid:
         self.name = None
         self.rotamer = None
 
-
         set_name = True
         if 'set_name' in kwargs:
             set_name = kwargs['set_name']
@@ -70,8 +69,6 @@ class AminoAcid:
     def CalculateCentroid(self, atoms):
         # *For Glycine, only the alpha carbon is considered
         # *For Alanine, only the beta carbon is considered
-
-        #TODO Make these global constants
         AAs = {
             "SER": ['OG'],
             "CYS": ['SG'],
