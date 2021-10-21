@@ -35,13 +35,18 @@ class AminoAcid:
         return self.atoms
 
     def SetName(self, name, set_name):
-        #TODO check the functionality of this
         if not set_name:
             self.name = name
-        elif len(name) == 3 and name in THREE_LETTER:
+            self.flags['NO_NAME_CHECK'] = 'The name of this residue was not checked and may not be standard'
+            return
+        else:
+            try:
+                self.flags.pop('NO_NAME_CHECK')
+            except:
+                pass
+        if len(name) == 3 and name in THREE_LETTER:
             self.name = name
         elif len(name) == 3 and name not in THREE_LETTER:
-            self.flags['BAD_NAME'] = "Three-letter code not recognized"
             self.name = None
         elif len(name) == 1:
             self.name = self.OneToThree(name)
@@ -49,16 +54,24 @@ class AminoAcid:
             if name[-3:] in THREE_LETTER:
                 self.name = name[-3:]
                 self.rotamer = name[:-3]
-                self.flags['ROT_RES'] = "This residue has a rotamer conformation"
             else:
-                self.flags['BAD_NAME'] = "Three-letter code not recognized"
                 self.name = None
         elif len(name) == 2:
-            self.flags['BAD_NAME'] = "Name cannot be two letters"
             self.name = None
         if self.name is not None:
-            if 'BAD_NAME' in self.flags:
+            try:
                 self.flags.pop('BAD_NAME')
+            except:
+                pass
+        else:
+            self.flags['BAD_NAME'] = 'The provided name is invalid and does not map to a residue'
+        if self.name is not None and self.rotamer is not None:
+            self.flags['MARKED'] = 'This residue has some special designation and may be a rotamer'
+        elif self.name is not None and self.rotamer is None:
+            try:
+                self.flags.pop('MARKED')
+            except:
+                pass
 
     def SetHeptad(self, heptad):
         self.heptad = heptad
@@ -145,18 +158,16 @@ class AminoAcid:
     def OneToThree(self, oln):
         if oln in self.ONE_LETTER:
             try:
-                self.name = self.ONE_LETTER[oln]
+                return self.ONE_LETTER[oln]
             except KeyError:
-                self.flags['BAD_NAME'] = 'This residue was assigned a bad name. Check that the correct one-letter code was used'
-                self.name = None
+                return None
 
     def NameToThree(self, name):
         if name in self.FULL_NAME:
             try:
-                self.name = self.FULL_NAME[name]
+                return self.FULL_NAME[name]
             except KeyError:
-                self.flags['BAD_NAME'] = 'This residue was assigned a bad name. Check that the residue name was spelled correctly'
-                self.name = None
+                return None
 
     def __lt__(self, other):
         return self.number < other.number
@@ -164,9 +175,6 @@ class AminoAcid:
         return f"RESIDUE: {self.name}, NUMBER: {self.number}"
     def __str__(self):
         return f"{self.name} {self.number}"
-
-
-
 
 #Shoved down here for cleanliness
 global ONE_LETTER

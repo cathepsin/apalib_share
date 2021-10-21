@@ -11,7 +11,6 @@ class DNA:
         self.name = None
 
         set_name = True
-        self.SetN()
         # TODO Made set_name a thing everywhere
         if 'set_name' in kwargs:
             set_name = kwargs['set_name']
@@ -35,8 +34,13 @@ class DNA:
     def SetName(self, name, set_name):
         if not set_name:
             self.name = name
-            # TODO raise a flag
+            self.flags['NO_NAME_CHECK'] = 'The name of this residue was not checked and may not be standard'
             return
+        else:
+            try:
+                self.flags.pop('NO_NAME_CHECK')
+            except:
+                pass
         if name in self.TWO_LETTER:
             self.name = name
             return
@@ -46,31 +50,30 @@ class DNA:
             self.name = 'D' + name
             return
 
-    def SetN(self):
-        global ONE_LETTER
-        ONE_LETTER = {
-            'A': 'ADENINE',
-            'C': 'CYTOSINE',
-            'G': 'GUANINE',
-            'T': 'THYMINE',
-            'U': 'URACIL',
-            'I': 'INOSINE'
-        }
-        global TWO_LETTER
-        TWO_LETTER = {
-            'DA': 'ADENINE',
-            'DC': 'CYTOSINE',
-            'DG': 'GUANINE',
-            'DT': 'THYMINE',
-            'DU': 'URACIL',
-            'DI': 'INOSINE'
-        }
-        global FULL_NAME
-        FULL_NAME = {
-            'ADENINE': 'DA',
-            'CYTOSINE': 'DC',
-            'GUANINE': 'DG',
-            'THYMINE': 'DT',
-            'URACIL': 'DU',
-            'INOSINE': 'DI'
-        }
+global ONE_LETTER
+ONE_LETTER = {
+    'A': 'ADENINE',
+    'C': 'CYTOSINE',
+    'G': 'GUANINE',
+    'T': 'THYMINE',
+    'U': 'URACIL',
+    'I': 'INOSINE'
+}
+global TWO_LETTER
+TWO_LETTER = {
+    'DA': 'ADENINE',
+    'DC': 'CYTOSINE',
+    'DG': 'GUANINE',
+    'DT': 'THYMINE',
+    'DU': 'URACIL',
+    'DI': 'INOSINE'
+}
+global FULL_NAME
+FULL_NAME = {
+    'ADENINE': 'DA',
+    'CYTOSINE': 'DC',
+    'GUANINE': 'DG',
+    'THYMINE': 'DT',
+    'URACIL': 'DU',
+    'INOSINE': 'DI'
+}

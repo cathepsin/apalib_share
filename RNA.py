@@ -8,7 +8,6 @@ class RNA:
         self.atoms = list()
         self.name = None
 
-        self.SetN()
         if 'name' in kwargs:
             self.SetName(kwargs['name'])
         if 'number' in kwargs:
@@ -30,22 +29,21 @@ class RNA:
         self.name = name
         #TODO set_name functionality
 
-    def SetN(self):
-        global ONE_LETTER
-        ONE_LETTER = {
-            'A': 'ADENINE',
-            'C': 'CYTOSINE',
-            'G': 'GUANINE',
-            'T': 'THYMINE',
-            'U': 'URACIL',
-            'I': 'INOSINE'
-        }
-        global FULL_NAME
-        FULL_NAME = {
-            'ADENINE': 'A',
-            'CYTOSINE': 'C',
-            'GUANINE': 'G',
-            'THYMINE': 'T',
-            'URACIL': 'U',
-            'INOSINE': 'I'
-        }
+global ONE_LETTER
+ONE_LETTER = {
+    'A': 'ADENINE',
+    'C': 'CYTOSINE',
+    'G': 'GUANINE',
+    'T': 'THYMINE',
+    'U': 'URACIL',
+    'I': 'INOSINE'
+}
+global FULL_NAME
+FULL_NAME = {
+    'ADENINE': 'A',
+    'CYTOSINE': 'C',
+    'GUANINE': 'G',
+    'THYMINE': 'T',
+    'URACIL': 'U',
+    'INOSINE': 'I'
+}
