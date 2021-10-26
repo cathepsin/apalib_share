@@ -22,6 +22,9 @@ class Atom:
     def SetNumber(self, num):
         self.number = num
 
+    def GetNumber(self):
+        return self.number
+
     def SetCoordinates(self, coor):
         self.coordinates = [coor[0], coor[1], coor[2]]
 
@@ -33,21 +36,37 @@ class Atom:
         if extract:
             self.__ExtractElement(id)
 
+    def GeID(self):
+        return self.id
+
     def SetOccupancy(self, occ):
         self.occupancy = occ
+
+    def GetOccupancy(self):
+        return self.occupancy
 
     def SetBFactor(self, bfact):
         self.b_factor = bfact
 
+    def GetBFactor(self):
+        return self.b_factor
+
     def SetElement(self, ele):
         self.element = ele
 
+    def GetElement(self):
+        return self.element
+
     def SetResidue(self, res):
+        #TODO Set rotation based off of parameter. Add a bool parameter
         if len(res) == 4:
             self.rotation = res[0]
             self.residue = res[1:]
             return
         self.residue = res
+
+    def GetResidue(self):
+        return self.residue
 
 
     #In case the element informatin is missing

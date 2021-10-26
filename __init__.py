@@ -153,20 +153,48 @@ def ParsePDB(pdbFile):
             GetProteinChains()[chain][index].CalculateCentroid(GetProteinChains()[chain][index].atoms)
 
 #TODO Complete the below functions before pushing version 1.0.0
-def SurfaceArea(**kwargs):
-    if 'domain' not in kwargs:
-        sys.stderr.write("No domain provided. Specify using SurfaceArea(domain=val)\n")
-    if 'num_dots' not in kwargs:
-        sys.stderr.write("Number of dots not provided. Specify using SurfaceArea(num_dots=val)\n")
-    if 'solvent_radius' not in kwargs:
-        sys.stderr.write("Solvent radius not provided. Specify using SurfaceArea(solvent_radius=val)\n")
-    print("stub")
 
-def GetDistance(coor1, coor2):
-    return ((coor1[0] - coor2[0])**2 + (coor1[1] - coor2[1])**2 + (coor1[2] - coor2[2])**2)**.5
-
-def CheckBridge(object1, object2):
-    print("stub")
+# def SurfaceArea(**kwargs):
+#     if 'domain' not in kwargs:
+#         sys.stderr.write("No domain provided. Specify using SurfaceArea(domain=val)\n")
+#     if 'num_dots' not in kwargs:
+#         sys.stderr.write("Number of dots not provided. Specify using SurfaceArea(num_dots=val)\n")
+#     if 'solvent_radius' not in kwargs:
+#         sys.stderr.write("Solvent radius not provided. Specify using SurfaceArea(solvent_radius=val)\n")
+#     print("stub")
+#
+# def GetDistance(coor1, coor2):
+#     return ((coor1[0] - coor2[0])**2 + (coor1[1] - coor2[1])**2 + (coor1[2] - coor2[2])**2)**.5
+#
+# def VectorPair(self, AA1, AA2):
+#     # Slope of line made from CA --> CENTROID
+#     CA1 = AA1.GetCA()
+#     CA2 = AA2.GetCA()
+#     # XY orthogonal projection
+#     m1 = (AA1.GetCentroid()[1] - CA1.GetCoordinates()[1]) / (AA1.GetCentroid()[0] - CA1.GetCoordinates()[0])
+#     m2 = (AA2.GetCentroid()[1] - CA2.GetCoordinates()[1]) / (AA2.GetCentroid()[0] - CA2.GetCoordinates()[0])
+#     # Intersection point
+#     #
+#     #               y_2 - y_1 + m_1x_1 - m_2x_2
+#     #   x_int =    ------------------------------
+#     #                       m_1 - m_2
+#
+#     x_int = (AA2.GetCentroid()[1] - AA1.GetCentroid()[1] + m1 * AA1.GetCentroid()[0] - m2 * AA2.GetCentroid()[0]) / (m1 - m2)
+#     # Cast back into 3D
+#     #
+#     #        x - x_1
+#     #   z = --------- * c + z_1
+#     #           a
+#
+#     y1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[1] + AA1.GetCentroid()[1]
+#     y2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[1] + AA2.centroid[1]
+#
+#     z1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[2] + AA1.GetCentroid()[2]
+#     z2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[2] + AA2.GetCentroid()[2]
+#     return abs(z1 - z2), [x_int, y1, z1], [x_int, y2, z2]
+#
+# def CheckBridge(object1, object2):
+#     print("stub")
 
 #TODO Make sure ALL flags are properly cleared automatically
 

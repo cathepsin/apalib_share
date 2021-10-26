@@ -9,6 +9,7 @@ class AminoAcid:
         self.atoms = list()
         self.name = None
         self.rotamer = None
+        self.vector = None
 
         set_name = True
         if 'set_name' in kwargs:
@@ -33,6 +34,12 @@ class AminoAcid:
 
     def GetAtoms(self):
         return self.atoms
+
+    def GetCA(self):
+        for atom in self.atoms:
+            if atom.GetID() == 'CA':
+                return atom
+        return None
 
     def SetName(self, name, set_name):
         if not set_name:
@@ -143,7 +150,8 @@ class AminoAcid:
                 else:
                     self.centroid = None
                     self.flags['BAD_CENTROID'] = "Too few atoms were included with this residue to calculate a centroid."
-
+            #After all that, set the centroidal vector
+            self.vector = [self.centroid[0] - self.GetCA().GetCoordinates()[0], self.centroid[1] - self.GetCA().GetCoordinates()[1], self.centroid[2] - self.GetCA().GetCoordinates()[2]]
 
         elif len(self.name) == 4 and self.name[1:] in AAs:
             import sys
@@ -156,16 +164,16 @@ class AminoAcid:
         return self.centroid
 
     def OneToThree(self, oln):
-        if oln in self.ONE_LETTER:
+        if oln in ONE_LETTER:
             try:
-                return self.ONE_LETTER[oln]
+                return ONE_LETTER[oln]
             except KeyError:
                 return None
 
     def NameToThree(self, name):
-        if name in self.FULL_NAME:
+        if name in FULL_NAME:
             try:
-                return self.FULL_NAME[name]
+                return FULL_NAME[name]
             except KeyError:
                 return None
 
