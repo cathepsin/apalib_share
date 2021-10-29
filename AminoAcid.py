@@ -1,20 +1,20 @@
-global ONE_LETTER
-global THREE_LETTER
-global FULL_NAME
+# global ONE_LETTER
+# global THREE_LETTER
+# global FULL_NAME
+# global FLAGS
 
 class AminoAcid:
     def __init__(self, **kwargs):
-        self.flags = dict()
         self.number = None
-        self.atoms = list()
+        self.atoms = None
         self.name = None
         self.rotamer = None
         self.vector = None
-
+        self.heptad = None
+        self.centroid = None
         set_name = True
         if 'set_name' in kwargs:
             set_name = kwargs['set_name']
-
         if 'name' in kwargs:
             self.SetName(kwargs['name'], set_name)
         if 'number' in kwargs:
@@ -33,12 +33,10 @@ class AminoAcid:
         self.atoms.append(atom)
 
     def GetAtoms(self):
-        if 'atoms' in self.__dict__:
-            return self.atoms
-        return None
+        return self.atoms
 
     def GetCA(self):
-        if 'atoms' not in self.__dict__:
+        if self.atoms is None:
             return None
         for atom in self.atoms:
             if atom.GetID() == 'CA':
@@ -48,13 +46,10 @@ class AminoAcid:
     def SetName(self, name, set_name):
         if not set_name:
             self.name = name
-            self.flags['NO_NAME_CHECK'] = 'The name of this residue was not checked and may not be standard'
+            self.RaiseFlag('NO_NAME_CHECK')
             return
         else:
-            try:
-                self.flags.pop('NO_NAME_CHECK')
-            except:
-                pass
+            self.ClearFlag('NO_NAME_CHECK')
         if len(name) == 3 and name in THREE_LETTER:
             self.name = name
         elif len(name) == 3 and name not in THREE_LETTER:
@@ -70,19 +65,13 @@ class AminoAcid:
         elif len(name) == 2:
             self.name = None
         if self.name is not None:
-            try:
-                self.flags.pop('BAD_NAME')
-            except:
-                pass
+            self.RaiseFlag('BAD_NAME')
         else:
-            self.flags['BAD_NAME'] = 'The provided name is invalid and does not map to a residue'
+            self.RaiseFlag('BAD_NAME')
         if self.name is not None and self.rotamer is not None:
-            self.flags['MARKED'] = 'This residue has some special designation and may be a rotamer'
+            self.RaiseFlag('MARKED')
         elif self.name is not None and self.rotamer is None:
-            try:
-                self.flags.pop('MARKED')
-            except:
-                pass
+            self.ClearFlag('MARKED')
 
     def SetHeptad(self, heptad):
         self.heptad = heptad
@@ -116,9 +105,9 @@ class AminoAcid:
             "TYR": ['CG', 'CD1', 'CD2', 'CE1', 'CE2', 'CZ', 'OH'],
             "TRP": ['CG', 'CD1', 'CD2', 'NE1', 'CE2', 'CE3', 'CZ2', 'CZ3', 'CH2']
         }
-        #TODO Deal with non-1 occupancy
+        # TODO Deal with non-1 occupancy
         if len(self.name) == 3 and self.name in AAs:
-            #If residue is not specified
+            # If residue is not specified
             x_coord = 0
             y_coord = 0
             z_coord = 0
@@ -143,19 +132,19 @@ class AminoAcid:
                     self.centroid.append(beta[0].coordinates[0])
                     self.centroid.append(beta[0].coordinates[1])
                     self.centroid.append(beta[0].coordinates[2])
-                    self.flags['B_CENTROID'] = "This residue is missing information to get an accurate centroid" \
-                                               "calculation. The coordinates of the beta carbon will be used"
+                    self.RaiseFlag('B_CENTROID')
                 elif len(alpha) != 0:
                     self.centroid.append(alpha[0].coordinates[0])
                     self.centroid.append(alpha[0].coordinates[1])
                     self.centroid.append(alpha[0].coordinates[2])
-                    self.flags['A_CENTROID'] = "This residue is missing information to get an accurate centroid" \
-                                               "calculation. The coordinates of the alpha carbon will be used"
+                    self.RaiseFlag('A_CENTROID')
                 else:
                     self.centroid = None
-                    self.flags['BAD_CENTROID'] = "Too few atoms were included with this residue to calculate a centroid."
-            #After all that, set the centroidal vector
-            self.vector = [self.centroid[0] - self.GetCA().GetCoordinates()[0], self.centroid[1] - self.GetCA().GetCoordinates()[1], self.centroid[2] - self.GetCA().GetCoordinates()[2]]
+                    self.RaiseFlag('BAD_CENTROID')
+            # After all that, set the centroidal vector
+            self.vector = [self.centroid[0] - self.GetCA().GetCoordinates()[0],
+                           self.centroid[1] - self.GetCA().GetCoordinates()[1],
+                           self.centroid[2] - self.GetCA().GetCoordinates()[2]]
 
         elif len(self.name) == 4 and self.name[1:] in AAs:
             import sys
@@ -165,38 +154,65 @@ class AminoAcid:
             sys.exit("UNKNOWN AMINO ACID YO")
 
     def GetCentroid(self):
-        if 'centroid' in self.__dict__:
-            return self.centroid
-        return None
+        return self.centroid
 
-    def OneToThree(self, oln):
+    @staticmethod
+    def OneToThree(oln):
         if oln in ONE_LETTER:
             try:
                 return ONE_LETTER[oln]
             except KeyError:
                 return None
 
-    def NameToThree(self, name):
+    @staticmethod
+    def NameToThree(name):
         if name in FULL_NAME:
             try:
                 return FULL_NAME[name]
             except KeyError:
                 return None
 
-    def ClearFlag(self, flag):
-        try:
-            self.flags.pop(flag)
-        except:
-            pass
+    @staticmethod
+    def CheckFlag(f):
+        global FLAGS
+        if f in FLAGS:
+            return FLAGS[f]
+        return False
+
+    @staticmethod
+    def RaiseFlag(flag):
+        global FLAGS
+        FLAGS[flag] = True
+
+    @staticmethod
+    def ClearFlag(flag):
+        global FLAGS
+        FLAGS[flag] = False
+
+    # TODO These would be pretty cool to implement if possible. May be impossible, though...
+    @staticmethod
+    def Set_lt():
+        print('stub')
+
+    @staticmethod
+    def Set_repr():
+        print('stub')
+
+    @staticmethod
+    def Set_str():
+        print('stub')
 
     def __lt__(self, other):
         return self.number < other.number
+
     def __repr__(self):
         return f"RESIDUE: {self.name}, NUMBER: {self.number}"
+
     def __str__(self):
         return f"{self.name} {self.number}"
 
-#Shoved down here for cleanliness
+
+# Shoved down here for cleanliness
 global ONE_LETTER
 ONE_LETTER = {
     "R": 'ARG',
@@ -253,15 +269,15 @@ FULL_NAME = {
     "ALANINE": 'ALA',
     "CYSTEINE": 'CYS',
     "ASPARTIC ACID": 'ASP',
-    "ASPARTATE" : 'ASP',
-    "GLUTAMIC ACID" : 'GLU',
-    "GLUTAMATE" : 'GLU',
-    "PHENYLALANINE" : 'PHE',
-    "GLYCINE" : 'GLY',
-    "HISTIDINE" : 'HIS',
-    "ISOLEUCINE" : 'ILE',
-    "LYSINE" : 'LYS',
-    "LEUCINE" : 'LEU',
+    "ASPARTATE": 'ASP',
+    "GLUTAMIC ACID": 'GLU',
+    "GLUTAMATE": 'GLU',
+    "PHENYLALANINE": 'PHE',
+    "GLYCINE": 'GLY',
+    "HISTIDINE": 'HIS',
+    "ISOLEUCINE": 'ILE',
+    "LYSINE": 'LYS',
+    "LEUCINE": 'LEU',
     "METHIONINE": 'MET',
     "ASPARAGINE": 'ASN',
     "PYRROLYSINE": 'PYL',
@@ -274,4 +290,14 @@ FULL_NAME = {
     "VALINE": 'VAL',
     "TRYPTOPHAN": 'TRP',
     "TYROSINE": 'TYR',
+}
+
+global FLAGS
+FLAGS = {
+    'NO_NAME_CHECK': False,
+    'BAD_NAME': False,
+    'MARKED': False,
+    'B_CENTROID': False,
+    'A_CENTROID': False,
+    'BAD_CENTROID': False
 }
