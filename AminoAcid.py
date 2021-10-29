@@ -183,6 +183,12 @@ class AminoAcid:
             except KeyError:
                 return None
 
+    def ClearFlag(self, flag):
+        try:
+            self.flags.pop(flag)
+        except:
+            pass
+
     def __lt__(self, other):
         return self.number < other.number
     def __repr__(self):

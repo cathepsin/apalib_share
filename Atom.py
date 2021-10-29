@@ -108,6 +108,13 @@ class Atom:
             import sys
             sys.exit("SOMETHING WENT WRONG! CHECK WHAT HAPPENED")
 
+
+    def ClearFlag(self, flag):
+        try:
+            self.flags.pop(flag)
+        except:
+            pass
+
     def __repr__(self):
         return f"ATOM: NUMBER: {self.number}, " \
                f"TAG: {self.id}, RESIDUE: {self.residue}, " \

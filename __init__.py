@@ -204,6 +204,8 @@ def ParsePDB(pdbFile):
 
 #TODO Make sure ALL flags are properly cleared automatically
 
+#TODO flag handling could be a lot better. const dictionary of bools?
+
 
 # Fetch('5u59')
 # Parse()

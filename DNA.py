@@ -50,6 +50,13 @@ class DNA:
             self.name = 'D' + name
             return
 
+    def ClearFlag(self, flag):
+        try:
+            self.flags.pop(flag)
+        except:
+            pass
+
+
 global ONE_LETTER
 ONE_LETTER = {
     'A': 'ADENINE',

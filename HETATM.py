@@ -45,3 +45,9 @@ class HETATM:
         if 'centroid' in self.__dict:
             return self.centroid
         return None
+
+    def ClearFlag(self, flag):
+        try:
+            self.flags.pop(flag)
+        except:
+            pass
