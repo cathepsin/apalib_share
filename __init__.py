@@ -152,6 +152,12 @@ def ParsePDB(pdbFile):
         for index in GetProteinChains()[chain]:
             GetProteinChains()[chain][index].CalculateCentroid(GetProteinChains()[chain][index].atoms)
 
+#TODO in all GETTERS in each class, add a check to see if variable exists
+#if var in self.__dict__:
+#   return var
+#return None
+
+
 #TODO Complete the below functions before pushing version 1.0.0
 
 # def SurfaceArea(**kwargs):
@@ -203,3 +209,4 @@ def ParsePDB(pdbFile):
 # Parse()
 # print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
 # print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
+

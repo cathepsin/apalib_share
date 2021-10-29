@@ -17,7 +17,7 @@ class HETATM:
 
     def SetAtoms(self, atoms):
         self.atoms = atoms
-        self.GetCentroid(atoms)
+        self.CalculateCentroid(atoms)
 
     def InsertAtom(self, atom):
         self.atoms.append(atom)
@@ -28,3 +28,20 @@ class HETATM:
 
     def ClearFlags(self):
         self.flags.clear()
+
+    def CalculateCentroid(self, atoms):
+        n = 0
+        x = 0
+        y = 0
+        z = 0
+        for atom in atoms:
+            n += 1
+            x += atom.GetCoordinates()[0]
+            y += atom.GetCoordinates()[1]
+            z += atom.GetCoordinates()[2]
+        self.centroid = [x/n, y/n, z/n]
+
+    def GetCentroid(self):
+        if 'centroid' in self.__dict:
+            return self.centroid
+        return None

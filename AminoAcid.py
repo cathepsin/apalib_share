@@ -33,9 +33,13 @@ class AminoAcid:
         self.atoms.append(atom)
 
     def GetAtoms(self):
-        return self.atoms
+        if 'atoms' in self.__dict__:
+            return self.atoms
+        return None
 
     def GetCA(self):
+        if 'atoms' not in self.__dict__:
+            return None
         for atom in self.atoms:
             if atom.GetID() == 'CA':
                 return atom
@@ -161,7 +165,9 @@ class AminoAcid:
             sys.exit("UNKNOWN AMINO ACID YO")
 
     def GetCentroid(self):
-        return self.centroid
+        if 'centroid' in self.__dict__:
+            return self.centroid
+        return None
 
     def OneToThree(self, oln):
         if oln in ONE_LETTER:
