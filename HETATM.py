@@ -1,8 +1,10 @@
+global FLAGS
+FLAGS = {}
+
 class HETATM:
     def __init__(self, **kwargs):
-        self.flags = dict()
         self.number = None
-        self.atoms = list()
+        self.atoms = None
         self.name = None
 
         if 'name' in kwargs:
@@ -20,11 +22,12 @@ class HETATM:
         self.CalculateCentroid(atoms)
 
     def InsertAtom(self, atom):
+        if self.atoms is None:
+            self.atoms = list()
         self.atoms.append(atom)
 
     def SetName(self, name):
         self.name = name
-        #TODO set_name functionality
 
     def ClearFlags(self):
         self.flags.clear()
@@ -46,8 +49,19 @@ class HETATM:
             return self.centroid
         return None
 
-    def ClearFlag(self, flag):
-        try:
-            self.flags.pop(flag)
-        except:
-            pass
+    @staticmethod
+    def CheckFlag(f):
+        global FLAGS
+        if f in FLAGS:
+            return FLAGS[f]
+        return False
+
+    @staticmethod
+    def RaiseFlag(flag):
+        global FLAGS
+        FLAGS[flag] = True
+
+    @staticmethod
+    def ClearFlag(flag):
+        global FLAGS
+        FLAGS[flag] = False

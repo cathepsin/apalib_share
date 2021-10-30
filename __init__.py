@@ -94,6 +94,7 @@ def Parse():
 #Parsing DNA/RNA should be essentially the same as an amino acid atom-group, with some intricacies. 1pyi is a good example
 #TODO Check other PDB standards
 #TODO Ensure functionality with symmetry pairs
+# TODO Made set_name a thing everywhere
 def ParsePDB(pdbFile):
     proteinChains = dict()
     DNAChains = dict()
@@ -207,8 +208,10 @@ def ParsePDB(pdbFile):
 #TODO flag handling could be a lot better. const dictionary of bools?
 
 
-# Fetch('5u59')
-# Parse()
+Fetch('5u59')
+Parse()
+GetProteinChains()['A'][1].Set_str("\"wow\"")
+print(GetProteinChains()['A'][1])
 # print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
 # print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
 

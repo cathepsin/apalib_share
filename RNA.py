@@ -1,11 +1,12 @@
-global FULL_NAME
-global ONE_LETTER
+# global FULL_NAME
+# global ONE_LETTER
+global FLAGS
+FLAGS = {}
 
 class RNA:
     def __init__(self, **kwargs):
-        self.flags = dict()
         self.number = None
-        self.atoms = list()
+        self.atoms = None
         self.name = None
 
         set_name = True
@@ -26,33 +27,45 @@ class RNA:
         self.GetCentroid(atoms)
 
     def InsertAtom(self, atom):
+        if self.atoms is None:
+            self.atoms = list()
         self.atoms.append(atom)
 
     def SetName(self, name, set_name):
         if not set_name:
             self.name = name
-            self.flags['NO_NAME_CHECK'] = 'The name of this residue was not checked and may not be standard'
+            self.RaiseFlag('NO_NAME_CHECK')
+            self.ClearFlag('BAD_NAME')
             return
         else:
-            try:
-                self.flags.pop('NO_NAME_CHECK')
-            except:
-                pass
+            self.ClearFlag('NO_NAME_CHECK')
         global ONE_LETTER
         if name in ONE_LETTER:
-            self.name = name
-            return
+            self.name = ONE_LETTER[name]
+        elif name in FULL_NAME:
+            self.name = FULL_NAME[name]
         else:
-            self.flags['BAD_NAME'] = 'The provided name is invalid and does not map to a residue'
-        #TODO set_name functionality
+            self.RaiseFlag('BAD_NAME')
+            return
+        self.ClearFlag('BAD_NAME')
+        return
 
+    @staticmethod
+    def CheckFlag(f):
+        global FLAGS
+        if f in FLAGS:
+            return FLAGS[f]
+        return False
 
+    @staticmethod
+    def RaiseFlag(flag):
+        global FLAGS
+        FLAGS[flag] = True
 
-    def ClearFlag(self, flag):
-        try:
-            self.flags.pop(flag)
-        except:
-            pass
+    @staticmethod
+    def ClearFlag(flag):
+        global FLAGS
+        FLAGS[flag] = False
 
 global ONE_LETTER
 ONE_LETTER = {

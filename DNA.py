@@ -1,17 +1,17 @@
-global ONE_LETTER
-global TWO_LETTER
-global FULL_NAME
+# global ONE_LETTER
+# global TWO_LETTER
+# global FULL_NAME
+global FLAGS
+FLAGS = {}
 
 
 class DNA:
     def __init__(self, **kwargs):
-        self.flags = dict()
         self.number = None
-        self.atoms = list()
+        self.atoms = None
         self.name = None
 
         set_name = True
-        # TODO Made set_name a thing everywhere
         if 'set_name' in kwargs:
             set_name = kwargs['set_name']
         if 'name' in kwargs:
@@ -29,32 +29,47 @@ class DNA:
         self.GetCentroid(atoms)
 
     def InsertAtom(self, atom):
+        if self.atoms is None:
+            self.atoms = list()
         self.atoms.append(atom)
 
     def SetName(self, name, set_name):
         if not set_name:
             self.name = name
-            self.flags['NO_NAME_CHECK'] = 'The name of this residue was not checked and may not be standard'
+            self.RaiseFlag('NO_NAME_CHECK')
             return
         else:
-            try:
-                self.flags.pop('NO_NAME_CHECK')
-            except:
-                pass
+            self.CheckFlag('NO_NAME_CHECK')
         if name in self.TWO_LETTER:
             self.name = name
-            return
-        if name in self.FULL_NAME:
+        elif name in self.FULL_NAME:
             self.name = self.FULL_NAME[name]
-        if name in self.ONE_LETTER:
+        elif name in self.ONE_LETTER:
             self.name = 'D' + name
+        else:
+            self.name = None
+            self.RaiseFlag('BAD_NAME')
             return
+        self.CheckFlag('BAD_NAME')
+        return
 
-    def ClearFlag(self, flag):
-        try:
-            self.flags.pop(flag)
-        except:
-            pass
+
+    @staticmethod
+    def CheckFlag(f):
+        global FLAGS
+        if f in FLAGS:
+            return FLAGS[f]
+        return False
+
+    @staticmethod
+    def RaiseFlag(flag):
+        global FLAGS
+        FLAGS[flag] = True
+
+    @staticmethod
+    def ClearFlag(flag):
+        global FLAGS
+        FLAGS[flag] = False
 
 
 global ONE_LETTER

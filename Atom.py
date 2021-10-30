@@ -1,6 +1,8 @@
+global FLAGS
+FLAGS = {}
+
 class Atom:
     def __init__(self, **kwargs):
-        self.flags = dict()
         extract = True
         if 'extract' in kwargs:
             extract = kwargs['extract']
@@ -40,7 +42,7 @@ class Atom:
         if extract:
             self.__ExtractElement(id)
 
-    def GeID(self):
+    def GetID(self):
         if 'id' in self.__dict__:
             return self.id
         return None
@@ -108,12 +110,22 @@ class Atom:
             import sys
             sys.exit("SOMETHING WENT WRONG! CHECK WHAT HAPPENED")
 
+    @staticmethod
+    def CheckFlag(f):
+        global FLAGS
+        if f in FLAGS:
+            return FLAGS[f]
+        return False
 
-    def ClearFlag(self, flag):
-        try:
-            self.flags.pop(flag)
-        except:
-            pass
+    @staticmethod
+    def RaiseFlag(flag):
+        global FLAGS
+        FLAGS[flag] = True
+
+    @staticmethod
+    def ClearFlag(flag):
+        global FLAGS
+        FLAGS[flag] = False
 
     def __repr__(self):
         return f"ATOM: NUMBER: {self.number}, " \

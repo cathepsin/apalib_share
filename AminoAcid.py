@@ -1,7 +1,10 @@
 # global ONE_LETTER
 # global THREE_LETTER
 # global FULL_NAME
-# global FLAGS
+from types import FunctionType
+global FLAGS
+FLAGS = {}
+
 
 class AminoAcid:
     def __init__(self, **kwargs):
@@ -30,6 +33,8 @@ class AminoAcid:
         self.CalculateCentroid(atoms)
 
     def InsertAtom(self, atom):
+        if self.atoms is None:
+            self.atoms = list()
         self.atoms.append(atom)
 
     def GetAtoms(self):
@@ -75,9 +80,6 @@ class AminoAcid:
 
     def SetHeptad(self, heptad):
         self.heptad = heptad
-
-    def InsertAtom(self, atom):
-        self.atoms.append(atom)
 
     def CalculateCentroid(self, atoms):
         # *For Glycine, only the alpha carbon is considered
@@ -140,7 +142,9 @@ class AminoAcid:
                     self.RaiseFlag('A_CENTROID')
                 else:
                     self.centroid = None
+                    self.vector = None
                     self.RaiseFlag('BAD_CENTROID')
+                    return
             # After all that, set the centroidal vector
             self.vector = [self.centroid[0] - self.GetCA().GetCoordinates()[0],
                            self.centroid[1] - self.GetCA().GetCoordinates()[1],
@@ -151,7 +155,7 @@ class AminoAcid:
             sys.stderr.write("ROTAMER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         else:
             import sys
-            sys.exit("UNKNOWN AMINO ACID YO")
+            sys.exit("UNKNOWN AMINO ACID YO. DO SOMETHING ABOUT THIS!!!!!")
 
     def GetCentroid(self):
         return self.centroid
@@ -189,27 +193,29 @@ class AminoAcid:
         global FLAGS
         FLAGS[flag] = False
 
-    # TODO These would be pretty cool to implement if possible. May be impossible, though...
+    # TODO These would be pretty cool to implement if possible. Open and write to a new python file that these access?
     @staticmethod
-    def Set_lt():
+    def Set_lt(str):
         print('stub')
 
     @staticmethod
-    def Set_repr():
+    def Set_repr(str):
         print('stub')
 
-    @staticmethod
-    def Set_str():
-        print('stub')
 
-    def __lt__(self, other):
-        return self.number < other.number
+    def Set_str(self, str):
+        code = compile(f"def __str__(self): return {str}", "<str>", "exec")
+        self.__str__= FunctionType(code.co_consts[0], globals(), "__str__")
+        print(self.__str__(self))
 
-    def __repr__(self):
-        return f"RESIDUE: {self.name}, NUMBER: {self.number}"
-
-    def __str__(self):
-        return f"{self.name} {self.number}"
+    # def __lt__(self, other):
+    #     return self.number < other.number
+    #
+    # def __repr__(self):
+    #     return f"RESIDUE: {self.name}, NUMBER: {self.number}"
+    #
+    # def __str__(self):
+    #     return f"{self.name} {self.number}"
 
 
 # Shoved down here for cleanliness
@@ -238,6 +244,7 @@ ONE_LETTER = {
     "W": 'TRP',
     "O": 'PYL'
 }
+
 global THREE_LETTER
 THREE_LETTER = {
     "ARG": 'R',
@@ -290,14 +297,4 @@ FULL_NAME = {
     "VALINE": 'VAL',
     "TRYPTOPHAN": 'TRP',
     "TYROSINE": 'TYR',
-}
-
-global FLAGS
-FLAGS = {
-    'NO_NAME_CHECK': False,
-    'BAD_NAME': False,
-    'MARKED': False,
-    'B_CENTROID': False,
-    'A_CENTROID': False,
-    'BAD_CENTROID': False
 }
