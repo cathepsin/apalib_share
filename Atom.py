@@ -72,7 +72,7 @@ class Atom:
         return None
 
     def SetResidue(self, res):
-        #TODO Set rotation based off of parameter. Add a bool parameter
+        #TODO Set rotation based off of parameter. Add a bool parameter?
         if len(res) == 4:
             self.rotation = res[0]
             self.residue = res[1:]
