@@ -204,9 +204,7 @@ class AminoAcid:
 
 
     def Set_str(self, str):
-        code = compile(f"def __str__(self): return {str}", "<str>", "exec")
-        self.__str__= FunctionType(code.co_consts[0], globals(), "__str__")
-        print(self.__str__(self))
+        return
 
     # def __lt__(self, other):
     #     return self.number < other.number

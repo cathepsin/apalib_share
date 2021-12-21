@@ -9,6 +9,8 @@ import HETATM
 global current_fetch
 current_fetch = None
 
+#TODO Move **ALL HARDCODED DATA** into a json file
+
 class container:
     def __init__(self):
         self.current_fetch = None
@@ -73,7 +75,7 @@ def Fetch(prot):
     try:
         with urllib.request.urlopen(url) as f:
             SetFetch(f.read().decode('utf-8'))
-    except:
+    except urllib.error.URLError:
         sys.stderr.write("The requested pdb code could not be retrieved or does not exist\n")
 
 #Clears the fetched protein
@@ -90,11 +92,11 @@ def Parse():
     except apalibExceptions.NoFetchError as e:
         sys.stderr.write(e.message)
 
-#TODO get this to work with DNA and RNA domains https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences-and-the-pdb-format
-#Parsing DNA/RNA should be essentially the same as an amino acid atom-group, with some intricacies. 1pyi is a good example
-#TODO Check other PDB standards
-#TODO Ensure functionality with symmetry pairs
-# TODO Made set_name a thing everywhere
+# TODO get this to work with DNA and RNA domains https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences-and-the-pdb-format
+# Parsing DNA/RNA should be essentially the same as an amino acid atom-group, with some intricacies. 1pyi is a good example
+# TODO Check other PDB standards
+# TODO Ensure functionality with symmetry pairs
+# TODO Make set_name a thing everywhere
 def ParsePDB(pdbFile):
     proteinChains = dict()
     DNAChains = dict()
@@ -122,6 +124,7 @@ def ParsePDB(pdbFile):
                     HETATMChains[chain] = dict()
                 if groupNumber not in HETATMChains[chain]:
                     HETATMChains[chain][groupNumber] = HETATM.HETATM(name=groupName, number=groupNumber)
+                HETATMChains[chain][groupNumber].InsertAtom(newAtom)
             elif len(groupName) == 1:
                 if chain not in RNAChains:
                     RNAChains[chain] = dict()
@@ -205,12 +208,11 @@ def ParsePDB(pdbFile):
 
 #TODO Make sure ALL flags are properly cleared automatically
 
-#TODO flag handling could be a lot better. const dictionary of bools?
 
+########################################################################################################################
 
 Fetch('5u59')
 Parse()
-GetProteinChains()['A'][1].Set_str("\"wow\"")
 print(GetProteinChains()['A'][1])
 # print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
 # print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
