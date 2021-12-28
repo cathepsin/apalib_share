@@ -9,7 +9,7 @@ import HETATM
 global current_fetch
 current_fetch = None
 
-#TODO Move **ALL HARDCODED DATA** into a json file
+#TODO Move **ALL HARDCODED DATA** into a json
 
 class container:
     def __init__(self):
