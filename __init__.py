@@ -79,6 +79,21 @@ def SetHETATMChains(hchain):
     global CONTAINER
     CONTAINER.HETATMChains = hchain
 
+#Return all residues from all chains as a single list
+def AsList():
+    global CONTAINER
+    fullLst = []
+    retLst = []
+    lst = [CONTAINER.ProteinChains, CONTAINER.DNAChains, CONTAINER.RNAChains, CONTAINER.HETATMChains]
+    for val in lst:
+        if val is not None and len(val.keys()) != 0:
+            fullLst = fullLst + list(val.values())
+    for val in fullLst:
+        retLst = retLst + list(val.values())
+    return retLst
+
+
+
 
 def Fetch(prot):
     print("Fetching ", prot)
@@ -181,9 +196,13 @@ def getIEP(pHofInterest):
 
     # initialize dict of counts
     total_counts = {'NTERM': 0, 'CTERM': 0, 'CYS': 0, 'ASP': 0, 'GLU': 0, 'HIS': 0, 'LYS': 0, 'ARG': 0, 'TYR': 0}
-
+    import copy
+    test = copy.deepcopy(total_counts)
     for key, value in curr_protein_chains.items():
         current_chain = value
+        #TODO Add check for termini (in case section of a protein is checked instead of a full protein)
+        #TODO Are there pKas for nucleic acids?
+
         total_counts['NTERM'] += 1
         total_counts['CTERM'] += 1
 
@@ -202,6 +221,8 @@ def getIEP(pHofInterest):
                 total_counts['ARG'] += 1
             elif value.name == "TYR":
                 total_counts['TYR'] += 1
+
+
 
     print(total_counts)
 
