@@ -1,0 +1,178 @@
+﻿{
+  "Amino Acids": {
+    "Arginine": {
+      "1code": "R",
+      "3code": "ARG",
+      "Charge": "+",
+      "Polarity": "Polar",
+      "Codons": ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"],
+      "List": ["CG", "CD", "NE", "CZ", "NH1", "NH2"]},
+    "Histidine": {
+      "1code": "H",
+      "3code": "HIS",
+      "Charge": "+",
+      "Polarity": "Polar",
+      "Codons": ["CAU", "CAC"],
+      "List": ["CG", "ND1", "CD2", "CE1", "NE2"]
+    },
+    "Lysine": {
+      "1code": "K",
+      "3code": "LYS",
+      "Charge": "+",
+      "Polarity": "Polar",
+      "Codons": ["AAA", "AAG"],
+      "List": ["CG", "CD", "CE", "NZ"]
+    },
+    "Aspartate": {
+      "1code": "D",
+      "3code": "ASP",
+      "Charge": "-",
+      "Polarity": "Polar",
+      "Codons": ["GAU", "GAC"],
+      "List": ["CG", "OD1", "OD2"]
+    },
+    "Glutamate": {
+      "1code": "E",
+      "3code": "GLU",
+      "Charge": "-",
+      "Polarity": "Polar",
+      "Codons": ["GAA", "GAG"],
+      "List": ["CG", "CD", "OE1", "OE2"]
+    },
+    "Serine": {
+      "1code": "S",
+      "3code": "SER",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"],
+      "List": ["OG"]
+    },
+    "Threonine": {
+      "1code": "T",
+      "3code": "THR",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["ACU", "ACC", "ACA", "ACG"],
+      "List": ["OG1", "CG2"]
+    },
+    "Asparagine": {
+      "1code": "N",
+      "3code": "ASN",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["AAU", "AAC"],
+      "List": ["CG", "OD1", "ND2"]
+    },
+    "Glutamine": {
+      "1code": "Q",
+      "3code": "GLN",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["CAA", "CAG"],
+      "List": ["CG", "CD", "OE1", "NE2"]
+    },
+    "Cysteine": {
+      "1code": "C",
+      "3code": "CYS",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["UGU", "UGC"],
+      "List": ["SG"]
+    },
+    "Glycine": {
+      "1code": "G",
+      "3code": "GLY",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["GGU", "GGC", "GGA", "GGA"],
+      "List": ["CA"]
+    },
+    "Proline": {
+      "1code": "P",
+      "3code": "PRO",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["CCU", "CCC", "CCA", "CCG"],
+      "List": ["CG", "CD"]
+    },
+    "Alanine": {
+      "1code": "A",
+      "3code": "ALA",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["GCU", "GCC", "GCA", "GCG"],
+      "List": ["CB"]
+    },
+    "Valine": {
+      "1code": "V",
+      "3code": "VAL",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["GUU", "GUC", "GUA", "GUG"],
+      "List": ["CG1", "CG2"]
+    },
+    "Isoleucine": {
+      "1code": "I",
+      "3code": "ILE",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["AUU", "AUC", "AUA"],
+      "List": ["CG1", "CG2", "CD1"]
+    },
+    "Leucine": {
+      "1code": "L",
+      "3code": "LEU",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"],
+      "List": ["CG", "CD1", "CD2"]
+    },
+    "Methionine": {
+      "1code": "M",
+      "3code": "MET",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["AUG"],
+      "List": ["CG", "SD", "CE"]
+    },
+    "Phenylalanine": {
+      "1code": "F",
+      "3code": "PHE",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["UUU", "UUC"],
+      "List": ["CG", "CD1", "CD2", "CE1", "CE2", "CZ"]
+    },
+    "Tyrosine": {
+      "1code": "Y",
+      "3code": "TYR",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["UAU", "UAC"],
+      "List": ["CG", "CD1", "CD2", "CE1", "CE2", "CZ", "OH"]
+    },
+    "Tryptophan": {
+      "1code": "W",
+      "3code": "TRP",
+      "Charge": "NULL",
+      "Polarity": "Nonpolar",
+      "Codons": ["UGG"],
+      "List": ["CG", "CD1", "CD2", "NE1", "CE2", "CE3", "CZ2", "CZ3", "CH2"]
+    },
+    "Selenocysteine": {
+      "1code": "U",
+      "3code": "SEC",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["UGA"],
+      "List": ["SE"]
+    },
+    "Pyrrolysine": {
+      "1code": "O",
+      "3code": "PYL",
+      "Charge": "NULL",
+      "Polarity": "Polar",
+      "Codons": ["UAG"]
+    }
+  }
+}

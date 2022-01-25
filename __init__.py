@@ -1,4 +1,5 @@
 import sys
+import json
 import AminoAcid
 import DNA
 import RNA
@@ -316,9 +317,10 @@ def getIEP(pHofInterest):
 
 ########################################################################################################################
 
-Fetch('3mzw')
-Parse()
-print(GetProteinChains()['A'][1])
-print(getIEP(7.4))
+# Fetch('3mzw')
+# Parse()
+# print(GetProteinChains()['A'][1])
+# print(getIEP(7.4))
 # print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
 # print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
+
