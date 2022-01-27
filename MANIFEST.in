@@ -1,4 +1,4 @@
-global-include *.txt *.py *.md
+global-include *.txt *.py *.md *.json
 
 Copyright 2021 Nathan McMurray
 

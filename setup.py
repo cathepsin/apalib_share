@@ -10,7 +10,7 @@ classifiers = [
 
 setup(
     name='apalib',
-    version='1.0.0',
+    version='1.0.1',
     description='Advanced Protein Analysis library',
     long_description=open('README.md').read() +'\n\n' + open('CHANGELOG.txt').read(),
     url='',
@@ -20,5 +20,7 @@ setup(
     classifiers=classifiers,
     keywords='Protein',
     packages=find_packages(),
-    install_requires=['numpy']
+    install_requires=['numpy'],
+    include_package_data=True,
+package_data={'': ['data/*.json']}
 )

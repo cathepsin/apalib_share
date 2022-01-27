@@ -1,5 +1,8 @@
 import sys
 import json
+import pkg_resources
+
+
 import AminoAcid
 import DNA
 import RNA
@@ -9,6 +12,24 @@ import HETATM
 
 global current_fetch
 current_fetch = None
+
+# try:
+#     with open(r"data/residues.json", "r", encoding='utf-8-sig') as f:
+#         jData = json.loads(f.read())
+# except:
+#     #Because Windows can be silly sometimes.
+#     with open(r"data\\residues.json", "r", encoding='utf-8-sig') as f:
+#         jData = json.loads(f.read())
+
+try:
+    stream = pkg_resources.resource_stream(__name__, 'data/residues.json')
+    jData = json.load(stream)
+    print(jData)
+except:
+    print("Something went wrong loading the json file :(")
+
+def TestJSON():
+    print(jData)
 
 
 # TODO Move **ALL HARDCODED DATA** into a json
