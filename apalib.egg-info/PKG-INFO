@@ -1,14 +1,11 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: apalib
-Version: 0.0.1
-Summary: Advanced Protein Analysis library
-Home-page: UNKNOWN
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: https://github.com/cathepsin/apalib
 Author: Nate McMurray
 Author-email: natemresearch@gmail.com
 License: MIT
-Description: 
-        
-        
 Keywords: Protein
 Platform: UNKNOWN
 Classifier: Development Status :: 2 - Pre-Alpha
@@ -16,3 +13,7 @@ Classifier: Intended Audience :: Science/Research
 Classifier: Operating System :: Microsoft :: Windows :: Windows 10
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+UNKNOWN
+

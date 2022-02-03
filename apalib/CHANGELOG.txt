@@ -1,4 +1,4 @@
-v0.0.2 January 25, 2022 (Pre-release alpha)
+v0.0.2 January 27, 2022 (Pre-release alpha)
     + Added global CONTAINER object with appropriate getters and setters.
     + Moved (most) hardcoded data into a json file
     + Added funciton to estimate charge of a protein at different pHs

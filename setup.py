@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-
 classifiers = [
     'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Science/Research',
@@ -10,17 +9,18 @@ classifiers = [
 
 setup(
     name='apalib',
-    version='1.0.1',
-    description='Advanced Protein Analysis library',
-    long_description=open('README.md').read() +'\n\n' + open('CHANGELOG.txt').read(),
-    url='',
+    version='0.0.5',
+    # description='Advanced Protein Analysis library',
+    # long_description=open('README.md').read() +'\n\n' + open('CHANGELOG.txt').read(),
     author='Nate McMurray',
     author_email='natemresearch@gmail.com',
-    licence='MIT',
+    license='MIT',
     classifiers=classifiers,
     keywords='Protein',
     packages=find_packages(),
     install_requires=['numpy'],
     include_package_data=True,
-package_data={'': ['data/*.json']}
+    package_data={'': ['data/*.json']},
+    python_requires='>=3',
+    url='https://github.com/cathepsin/apalib'
 )

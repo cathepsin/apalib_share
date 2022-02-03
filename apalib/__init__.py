@@ -2,36 +2,31 @@ import sys
 import json
 import pkg_resources
 
-
-import AminoAcid
-import DNA
-import RNA
-import apalibExceptions
-import Atom
-import HETATM
+from apalib.AminoAcid import AminoAcid
+from apalib.Atom import Atom
+from apalib.DNA import DNA
+from apalib.RNA import RNA
+from apalib.HETATM import HETATM
+import apalib.apalibExceptions
 
 global current_fetch
 current_fetch = None
 
-# try:
-#     with open(r"data/residues.json", "r", encoding='utf-8-sig') as f:
-#         jData = json.loads(f.read())
-# except:
-#     #Because Windows can be silly sometimes.
-#     with open(r"data\\residues.json", "r", encoding='utf-8-sig') as f:
-#         jData = json.loads(f.read())
+_stream = pkg_resources.resource_stream(__name__, 'data/residues.json')
+_jData = json.load(_stream)
 
-try:
-    stream = pkg_resources.resource_stream(__name__, 'data/residues.json')
-    jData = json.load(stream)
-    print(jData)
-except:
-    print("Something went wrong loading the json file :(")
-
-def TestJSON():
-    print(jData)
+def GetJson():
+    return _jData
 
 
+Settings = {
+    "Verbose": False,
+}
+
+def PrintSettings():
+    print(Settings.keys())
+    for key in Settings.keys():
+        print(key, ": ", Settings[key])
 # TODO Move **ALL HARDCODED DATA** into a json
 
 class container:
@@ -41,6 +36,13 @@ class container:
         self.DNAChains = None
         self.RNAChains = None
         self.HETATMChains = None
+
+class storage:
+    def __init__(self):
+        self.pile = []
+
+    def AddContainer(self, cont):
+        self.pile.append(cont)
 
 
 global CONTAINER
@@ -168,7 +170,7 @@ def ParsePDB(pdbFile):
             occupancy = float(line[55:60])
             bfactor = float(line[60:67])
             element = line[77:].strip()
-            newAtom = Atom.Atom(number=atomNumber, coordinates=coordinates, id=id, occupancy=occupancy,
+            newAtom = Atom(number=atomNumber, coordinates=coordinates, id=id, occupancy=occupancy,
                                 b_factor=bfactor, element=element, residue=groupName)
 
             # RNA atom
@@ -176,27 +178,27 @@ def ParsePDB(pdbFile):
                 if chain not in HETATMChains:
                     HETATMChains[chain] = dict()
                 if groupNumber not in HETATMChains[chain]:
-                    HETATMChains[chain][groupNumber] = HETATM.HETATM(name=groupName, number=groupNumber)
+                    HETATMChains[chain][groupNumber] = HETATM(name=groupName, number=groupNumber)
                 HETATMChains[chain][groupNumber].InsertAtom(newAtom)
             elif len(groupName) == 1:
                 if chain not in RNAChains:
                     RNAChains[chain] = dict()
                 if groupNumber not in RNAChains[chain]:
-                    RNAChains[chain][groupNumber] = RNA.RNA(name=groupName, number=groupNumber)
+                    RNAChains[chain][groupNumber] = RNA(name=groupName, number=groupNumber)
                 RNAChains[chain][groupNumber].InsertAtom(newAtom)
 
             elif len(groupName) == 2:
                 if chain not in DNAChains:
                     DNAChains[chain] = dict()
                 if groupNumber not in DNAChains[chain]:
-                    DNAChains[chain][groupNumber] = DNA.DNA(name=groupName, number=groupNumber)
+                    DNAChains[chain][groupNumber] = DNA(name=groupName, number=groupNumber)
                 DNAChains[chain][groupNumber].InsertAtom(newAtom)
 
             elif len(groupName) == 3 or len(groupName) == 4:
                 if chain not in proteinChains:
                     proteinChains[chain] = dict()
                 if groupNumber not in proteinChains[chain]:
-                    proteinChains[chain][groupNumber] = AminoAcid.AminoAcid(name=groupName, number=groupNumber)
+                    proteinChains[chain][groupNumber] = AminoAcid(name=groupName, number=groupNumber)
                 proteinChains[chain][groupNumber].InsertAtom(newAtom)
 
     # Postparsing functions
@@ -316,7 +318,8 @@ def getIEP(pHofInterest):
 #     #   x_int =    ------------------------------
 #     #                       m_1 - m_2
 #
-#     x_int = (AA2.GetCentroid()[1] - AA1.GetCentroid()[1] + m1 * AA1.GetCentroid()[0] - m2 * AA2.GetCentroid()[0]) / (m1 - m2)
+#     x_int = (AA2.GetCentroid()[1] - AA1.GetCentroid()[1] + m1 * AA1.GetCentroid()[0] - m2 * AA2.GetCentroid()[0])
+#     #/ (m1 - m2)
 #     # Cast back into 3D
 #     #
 #     #        x - x_1
@@ -334,14 +337,4 @@ def getIEP(pHofInterest):
 #     print("stub")
 
 # TODO Make sure ALL flags are properly cleared automatically
-
-
-########################################################################################################################
-
-# Fetch('3mzw')
-# Parse()
-# print(GetProteinChains()['A'][1])
-# print(getIEP(7.4))
-# print(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates())
-# print(GetDistance(GetProteinChains()['A'][1].GetAtoms()[0].GetCoordinates(), GetProteinChains()['A'][1].GetAtoms()[2].GetCoordinates()))
 

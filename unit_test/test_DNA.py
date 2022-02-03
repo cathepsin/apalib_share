@@ -1,5 +1,5 @@
 from unittest import TestCase
-import DNA
+
 
 class TestDNA(TestCase):
     def test_set_number(self):

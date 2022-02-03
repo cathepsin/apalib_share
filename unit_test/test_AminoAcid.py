@@ -1,5 +1,5 @@
 from unittest import TestCase
-import AminoAcid
+
 
 class TestAminoAcid(TestCase):
     def test_set_number(self):
