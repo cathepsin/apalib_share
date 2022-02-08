@@ -65,3 +65,6 @@ class HETATM:
     def ClearFlag(flag):
         global FLAGS
         FLAGS[flag] = False
+
+    def __lt__(self, other):
+        return self.number < other.number

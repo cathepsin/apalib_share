@@ -71,6 +71,9 @@ class DNA:
         global FLAGS
         FLAGS[flag] = False
 
+    def __lt__(self, other):
+        return self.number < other.number
+
 
 global ONE_LETTER
 ONE_LETTER = {

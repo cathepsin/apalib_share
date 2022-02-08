@@ -8,3 +8,4 @@ class Data:
 
     def GetJson(self):
         return self._jData
+

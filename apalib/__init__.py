@@ -128,6 +128,7 @@ def Fetch(prot):
     try:
         with urllib.request.urlopen(url) as f:
             SetFetch(f.read().decode('utf-8'))
+            Parse()
     except urllib.error.URLError:
         sys.stderr.write("The requested pdb code could not be retrieved or does not exist\n")
 
@@ -213,6 +214,20 @@ def ParsePDB(pdbFile):
         for index in GetProteinChains()[chain]:
             GetProteinChains()[chain][index].CalculateCentroid(GetProteinChains()[chain][index].atoms)
 
+#Write the current container into a .pdb file
+def WritePDB():
+    try:
+        if GetFetch() is None:
+            raise apalibExceptions.NoFetchError
+#TODO CHAINS!!!!!!
+        lst = AsList()
+
+
+
+    except apalibExceptions.NoFetchError as e:
+            sys.stderr.write(e.message)
+
+    print("Stub")
 
 #  Naive approach to calculating isoelectric point at a specific pH
 

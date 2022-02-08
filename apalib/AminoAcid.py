@@ -206,8 +206,8 @@ class AminoAcid:
     def Set_str(self, str):
         return
 
-    # def __lt__(self, other):
-    #     return self.number < other.number
+    def __lt__(self, other):
+        return self.number < other.number
     #
     # def __repr__(self):
     #     return f"RESIDUE: {self.name}, NUMBER: {self.number}"
