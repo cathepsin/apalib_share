@@ -7,17 +7,19 @@ from apalib.Atom import Atom
 from apalib.DNA import DNA
 from apalib.RNA import RNA
 from apalib.HETATM import HETATM
+from apalib.Data import Data
 import apalib.apalibExceptions
 
 global current_fetch
 current_fetch = None
 
-_stream = pkg_resources.resource_stream(__name__, 'data/residues.json')
-_jData = json.load(_stream)
+# _stream = pkg_resources.resource_stream(__name__, 'data/residues.json')
+# _jData = json.load(_stream)
+#
+# def GetJson():
+#     return _jData
 
-def GetJson():
-    return _jData
-
+data = Data()
 
 Settings = {
     "Verbose": False,

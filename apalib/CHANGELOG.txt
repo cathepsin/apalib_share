@@ -1,7 +1,13 @@
+v0.0.x
+    + Moved more hardcoded data into a json file
+    + Added a "Data" class to access json file
+
+
 v0.0.2 January 27, 2022 (Pre-release alpha)
     + Added global CONTAINER object with appropriate getters and setters.
     + Moved (most) hardcoded data into a json file
-    + Added funciton to estimate charge of a protein at different pHs
+    + Added function to estimate charge of a protein at different pHs
+    --> Will modify to estimate nucleoproteins, riobnucleoproteins, and protein segments
     + Added SOME test files. More to come
     * This version is released only for testing and developmental purposes.
     --> There is NO guarantee of accuracy, efficiency, or functionality for this version.
