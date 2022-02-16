@@ -2,6 +2,7 @@
 # global THREE_LETTER
 # global FULL_NAME
 from types import FunctionType
+from apalib.config import *
 global FLAGS
 FLAGS = {}
 
@@ -39,6 +40,39 @@ class AminoAcid:
 
     def GetAtoms(self):
         return self.atoms
+
+    def GetRotamers(self, **kwargs):
+        accepted = ['unique']
+        for key in kwargs.keys():
+            if key not in accepted:
+                raise apalib.apalibExceptions.BadKwarg(accepted)
+
+        if self.rotamer is not None:
+            return self.rotamer
+
+        if 'unique' in kwargs.keys() and isinstance(kwargs['unique'], (bool)):
+            unique = kwargs['unique']
+        else:
+            unique = False
+
+        retDict = {'Common':[]}
+        if self.atoms is not None:
+            for atom in self.atoms:
+                if atom.rotation is None or atom.rotation == '':
+                    retDict['Common'].append(atom)
+                    continue
+                if atom.rotation not in retDict.keys():
+                    retDict[atom.rotation] = []
+                retDict[atom.rotation].append(atom)
+        if unique is False:
+            for lst in [key for key in retDict.keys() if key != 'Common']:
+                lst += retDict['Common']
+        return retDict
+
+
+
+
+
 
     def GetCA(self):
         if self.atoms is None:
@@ -208,12 +242,12 @@ class AminoAcid:
 
     def __lt__(self, other):
         return self.number < other.number
-    #
-    # def __repr__(self):
-    #     return f"RESIDUE: {self.name}, NUMBER: {self.number}"
-    #
-    # def __str__(self):
-    #     return f"{self.name} {self.number}"
+
+    def __repr__(self):
+        return f"RESIDUE: {self.name}, NUMBER: {self.number}"
+
+    def __str__(self):
+        return f"{self.name} {self.number}"
 
 
 # Shoved down here for cleanliness

@@ -70,6 +70,12 @@ class RNA:
     def __lt__(self, other):
         return self.number < other.number
 
+    def __repr__(self):
+        return f"RESIDUE: {self.name}, NUMBER: {self.number}"
+
+    def __str__(self):
+        return f"{self.name} {self.number}"
+
 global ONE_LETTER
 ONE_LETTER = {
     'A': 'ADENINE',

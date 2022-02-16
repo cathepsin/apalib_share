@@ -77,6 +77,8 @@ class Atom:
             self.rotation = res[0]
             self.residue = res[1:]
             return
+        else:
+            self.rotation = ""
         self.residue = res
 
     def GetResidue(self):
@@ -108,7 +110,7 @@ class Atom:
             self.SetElement('H')
         else:
             import sys
-            sys.exit("SOMETHING WENT WRONG! CHECK WHAT HAPPENED")
+            sys.exit("SOMETHING WENT WRONG! CHECK WHAT HAPPENED! THIS ERROR SHOULD NOT OCCUR")
 
     @staticmethod
     def CheckFlag(f):
@@ -127,6 +129,8 @@ class Atom:
         global FLAGS
         FLAGS[flag] = False
 
+
+    #TODO Make this not crash if an element is missing. Probably iterate through self.__dict__()
     def __repr__(self):
         return f"ATOM: NUMBER: {self.number}, " \
                f"TAG: {self.id}, RESIDUE: {self.residue}, " \
@@ -134,4 +138,4 @@ class Atom:
                f" B_FACTOR: {self.bfactor}, ELEMENT: {self.element}"
 
     def __str__(self):
-        return f"{self.id} {self.residue} {self.coordinates}"
+        return f"{self.id} {self.rotation}{self.residue} {self.coordinates}"

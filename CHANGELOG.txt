@@ -14,7 +14,7 @@ v0.0.2 January 27, 2022 (Pre-release alpha)
     --> The purpose of this version is to ensure the proper upload of the json data file to PyPI
 
 v0.0.1 Oct 12, 2021 (Pre-release alpha)
-    + Added PDB parser. Currently able to organize atoms into RNA chains, DNA chains, protein chains, and heteroatoms.
+    + Added PDB parser. Currently, able to organize atoms into RNA chains, DNA chains, protein chains, and heteroatoms.
     + Add centroid finder for amino acids.
     + Added automatic fetch from PDB
     + Added method to atom class that extracts the probable element from its ID
