@@ -87,17 +87,25 @@ class PDB:
             for index in config.Container.GetPeptideChains()[chain]:
                 config.Container.GetPeptideChains()[chain][index].CalculateCentroid(config.Container.GetPeptideChains()[chain][index].atoms)
 
-    def CountResidues(self, **kwargs):
+    # def CountResidues(self, **kwargs):
+    #     for key in kwargs:
+    #         if key != 'find' or (key == 'find' and not isinstance(kwargs['find'], list)):
+    #             raise apalib.apalibExceptions.BadKwarg('find=[residue_name1, residue_name2, ...]')
+    #
+    #     # If a specific residue is wanted
+    #     if 'find' in kwargs:
+    #
+    #     else:
+    #
+    # #TODO GetMass() of a current fetch
+    #
+    #
+    # def __StandardizeResidue(self, res, **kwargs):
+    #     accepted_kwargs = ['']
+    #
+
+
+    def Validate(self, **kwargs):
         for key in kwargs:
-            if key != 'find' or (key == 'find' and not isinstance(kwargs['find'], list)):
-                raise apalib.apalibExceptions.BadKwarg('find=[residue_name1, residue_name2, ...]')
-
-        # If a specific residue is wanted
-        if 'find' in kwargs:
-            for res in kwargs['find']:
-
-        else:
-
-
-
-    def __StandardizeResidue(self, res):
+            if key != 'pdb' or (key == 'pdb' and not isinstance(kwargs['pdb'], str)):
+                raise apalib.apalibExceptions.BadKwarg('pdb=<pdb_to_validate>')

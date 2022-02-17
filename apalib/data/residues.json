@@ -355,5 +355,367 @@
   },
   "DNA Nucleotides": {},
   "RNA Nucleotides": {},
-  "Atoms": {}
+  "Atoms": {
+    "Hydrogen":{
+      "Symbol": "H",
+      "Number": 1
+    },
+    "Helium":{
+      "Symbol": "He"},
+      "Number": 2,
+    "Lithium":{
+      "Symbol": "Li"},
+      "Number": 3,
+    "Beryllium":{
+      "Symbol": "Be"},
+      "Number": 4,
+    "Boron":{
+      "Symbol": "B"},
+      "Number": 5,
+    "Carbon":{
+      "Symbol": "C"},
+      "Number": 6,
+    "Nitrogen":{
+      "Symbol": "N"},
+      "Number": 7,
+    "Oxygen":{
+      "Symbol": "O"},
+      "Number": 8,
+    "Fluorine":{
+      "Symbol": "F"},
+      "Number": 9,
+    "Neon":{
+      "Symbol": "Ne"},
+      "Number": 10,
+    "Sodium":{
+      "Symbol": "Na"},
+      "Number": 11,
+    "Magnesium":{
+      "Symbol": "Mg"},
+      "Number": 12,
+    "Aluminum":{
+      "Symbol": "Al"},
+      "Number": 13,
+    "Silicon":{
+      "Symbol": "Si"},
+      "Number": 14,
+    "Phosphorus":{
+      "Symbol": "P"},
+      "Number": 15,
+    "Sulfur":{
+      "Symbol": "S"},
+      "Number": 16,
+    "Chlorine":{
+      "Symbol": "Cl"},
+      "Number": 17,
+    "Argon":{
+      "Symbol": "Ar"},
+      "Number": 18,
+    "Potassium":{
+      "Symbol": "K"},
+      "Number": 19,
+    "Calcium":{
+      "Symbol": "Ca"},
+      "Number": 20,
+    "Scandium":{
+      "Symbol": "Sc"},
+      "Number": 21,
+    "Titanium":{
+      "Symbol": "Ti"},
+      "Number": 22,
+    "Vanadium":{
+      "Symbol": "V"},
+      "Number": 23,
+    "Chromium":{
+      "Symbol": "Cr"},
+      "Number": 24,
+    "Manganese":{
+      "Symbol": "Mn"},
+      "Number": 25,
+    "Iron":{
+      "Symbol": "Fe"},
+      "Number": 26,
+    "Cobalt":{
+      "Symbol": "Co"},
+      "Number": 27,
+    "Nickel":{
+      "Symbol": "Ni"},
+      "Number": 28,
+    "Copper":{
+      "Symbol": "Cu"},
+      "Number": 29,
+    "Zinc":{
+      "Symbol": "Zn"},
+      "Number": 30,
+    "Gallium":{
+      "Symbol": "Ga"},
+      "Number": 31,
+    "Germanium":{
+      "Symbol": "Ge"},
+      "Number": 32,
+    "Arsenic":{
+      "Symbol": "As"},
+      "Number": 33,
+    "Selenium":{
+      "Symbol": "Se"},
+      "Number": 34,
+    "Bromine":{
+      "Symbol": "Br"},
+      "Number": 35,
+    "Krypton":{
+      "Symbol": "Kr"},
+      "Number": 36,
+    "Rubidium":{
+      "Symbol": "Rb"},
+      "Number": 37,
+    "Strontium":{
+      "Symbol": "Sr"},
+      "Number": 38,
+    "Yttrium":{
+      "Symbol": "Y"},
+      "Number": 39,
+    "Zirconium":{
+      "Symbol": "Zr"},
+      "Number": 40,
+    "Niobium":{
+      "Symbol": "Nb"},
+      "Number": 41,
+    "Molybdenum":{
+      "Symbol": "Mb"},
+      "Number": 42,
+    "Technetium":{
+      "Symbol": "Tc"},
+      "Number": 43,
+    "Ruthenium":{
+      "Symbol": "Ru"},
+      "Number": 44,
+    "Rhodium":{
+      "Symbol": "Rh"},
+      "Number": 45,
+    "Palladium":{
+      "Symbol": "Pd"},
+      "Number": 46,
+    "Silver":{
+      "Symbol": "Ag"},
+      "Number": 47,
+    "Cadmium":{
+      "Symbol": "Cd"},
+      "Number": 48,
+    "Indium":{
+      "Symbol": "In"},
+      "Number": 49,
+    "Tin":{
+      "Symbol": "Sn"},
+      "Number": 50,
+    "Antimony":{
+      "Symbol": "Sb"},
+      "Number": 51,
+    "Tellurium":{
+      "Symbol": "Te"},
+      "Number": 52,
+    "Iodine":{
+      "Symbol": "I"},
+      "Number": 53,
+    "Xenon":{
+      "Symbol": "Xe"},
+      "Number": 54,
+    "Cesium":{
+      "Symbol": "Cs"},
+      "Number": 55,
+    "Caesium":{
+      "Symbol": "Cs"},
+      "Number": 55,
+    "Barium":{
+      "Symbol": "Ba"},
+      "Number": 56,
+    "Lanthanum":{
+      "Symbol": "La"},
+      "Number": 57,
+    "Cerium":{
+      "Symbol": "Ce"},
+      "Number": 58,
+    "Praseodymium":{
+      "Symbol": "Pr"},
+      "Number": 59,
+    "Neodymium":{
+      "Symbol": "Nd"},
+      "Number": 60,
+    "Promethium":{
+      "Symbol": "Pm"},
+      "Number": 61,
+    "Samarium":{
+      "Symbol": "Sm"},
+      "Number": 62,
+    "Europium":{
+      "Symbol": "Eu"},
+      "Number": 63,
+    "Gadolinium":{
+      "Symbol": "Gd"},
+      "Number": 64,
+    "Terbium":{
+      "Symbol": "Tb"},
+      "Number": 65,
+    "Dysprosium":{
+      "Symbol": "Dy"},
+      "Number": 66,
+    "Holmium":{
+      "Symbol": "Ho"},
+      "Number": 67,
+    "Erbium":{
+      "Symbol": "Er"},
+      "Number": 68,
+    "Thullium":{
+      "Symbol": "Tm"},
+      "Number": 69,
+    "Ytterbium":{
+      "Symbol": "Tb"},
+      "Number": 70,
+    "Lutetium":{
+      "Symbol": "Lu"},
+      "Number": 71,
+    "Hafnium":{
+      "Symbol": "Hf"},
+      "Number": 72,
+    "Tantalum":{
+      "Symbol": "Ta"},
+      "Number": 73,
+    "Tungsten":{
+      "Symbol": "W"},
+      "Number": 74,
+    "Rhenium":{
+      "Symbol": "Re"},
+      "Number": 75,
+    "Osmium":{
+      "Symbol": "Os"},
+      "Number": 76,
+    "Iridium":{
+      "Symbol": "Ir"},
+      "Number": 77,
+    "Platinum":{
+      "Symbol": "Pt"},
+      "Number": 78,
+    "Gold":{
+      "Symbol": "Au"},
+      "Number": 79,
+    "Mercury":{
+      "Symbol": "Hg"},
+      "Number": 80,
+    "Thallium":{
+      "Symbol": "Tl"},
+      "Number": 81,
+    "Lead":{
+      "Symbol": "Pb"},
+      "Number": 82,
+    "Bismuth":{
+      "Symbol": "Bi"},
+      "Number": 83,
+    "Polonium":{
+      "Symbol": "Po"},
+      "Number": 84,
+    "Astatine":{
+      "Symbol": "At"},
+      "Number": 85,
+    "Radon":{
+      "Symbol": "Rn"},
+      "Number": 86,
+    "Francium":{
+      "Symbol": "Fr"},
+      "Number": 87,
+    "Radium":{
+      "Symbol": "Ra"},
+      "Number": 88,
+    "Actinium":{
+      "Symbol": "Ac"},
+      "Number": 89,
+    "Thorium":{
+      "Symbol": "Th"},
+      "Number": 90,
+    "Protactinium":{
+      "Symbol": "Pa"},
+      "Number": 91,
+    "Uranium":{
+      "Symbol": "U"},
+      "Number": 92,
+    "Neptunium":{
+      "Symbol": "Np"},
+      "Number": 93,
+    "Plutonium":{
+      "Symbol": "Pu"},
+      "Number": 94,
+    "Americium":{
+      "Symbol": "Am"},
+      "Number": 95,
+    "Curium":{
+      "Symbol": "Cm"},
+      "Number": 96,
+    "Berkelium":{
+      "Symbol": "Bk"},
+      "Number": 97,
+    "Californium":{
+      "Symbol": "Cf"},
+      "Number": 98,
+    "Einsteinium":{
+      "Symbol": "Es"},
+      "Number": 99,
+    "Fermium":{
+      "Symbol": "Fm"},
+      "Number": 100,
+    "Mendelevium":{
+      "Symbol": "Md"},
+      "Number": 101,
+    "Nobelium":{
+      "Symbol": "No"},
+      "Number": 102,
+    "Lawrencium":{
+      "Symbol": "Lr"},
+      "Number": 103,
+    "Rutherfordium":{
+      "Symbol": "Rf"},
+      "Number": 104,
+    "Dubnium":{
+      "Symbol": "Db"},
+      "Number": 105,
+    "Seaborgium":{
+      "Symbol": "Sg"},
+      "Number": 106,
+    "Bohrium":{
+      "Symbol": "Bh"},
+      "Number": 107,
+    "Hassium":{
+      "Symbol": "Hs"},
+      "Number": 108,
+    "Meitnerium":{
+      "Symbol": "Mt"},
+      "Number": 109,
+    "Darmstadtium":{
+      "Symbol": "Ds"},
+      "Number": 110,
+    "Roentgenium":{
+      "Symbol": "Rg"},
+      "Number": 111,
+    "Copernicium":{
+      "Symbol": "Cn"},
+      "Number": 112,
+    "Nihonium":{
+      "Symbol": "Nh"},
+      "Number": 113,
+    "Flerovium":{
+      "Symbol": "Fl"},
+      "Number": 114,
+    "Moscovium":{
+      "Symbol": "Mc"},
+      "Number": 115,
+    "Livermorium":{
+      "Symbol": "Lv"},
+      "Number": 116,
+    "Tennessine":{
+      "Symbol": "Ts"},
+      "Number": 117,
+    "Oganesson":{
+      "Symbol": "Og"},
+      "Number": 118
+  },
+  "Sources": {
+    "Atom molar masses": "ACS"
+  }
 }
