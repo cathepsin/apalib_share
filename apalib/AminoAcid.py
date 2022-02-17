@@ -65,7 +65,7 @@ class AminoAcid:
                     retDict[atom.rotation] = []
                 retDict[atom.rotation].append(atom)
         if unique is False:
-            for lst in [key for key in retDict.keys() if key != 'Common']:
+            for lst in [retDict[key] for key in retDict.keys() if key != 'Common']:
                 lst += retDict['Common']
         return retDict
 

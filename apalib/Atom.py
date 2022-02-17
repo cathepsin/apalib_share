@@ -132,10 +132,22 @@ class Atom:
 
     #TODO Make this not crash if an element is missing. Probably iterate through self.__dict__()
     def __repr__(self):
+        retStr = "Atom: "
+        for key in self.__dict__:
+            retStr += f"{key}: {self.__dict__[key]}, "
+        return retStr
+
+        # TODO Create some setting where this will print instead
         return f"ATOM: NUMBER: {self.number}, " \
                f"TAG: {self.id}, RESIDUE: {self.residue}, " \
                f"COORDINATES: {self.coordinates}, OCCUPANCY: {self.occupancy}," \
                f" B_FACTOR: {self.bfactor}, ELEMENT: {self.element}"
 
     def __str__(self):
+        retStr = ""
+        for key in self.__dict__:
+            retStr += f"{key}: {self.__dict__[key]}, "
+        return retStr
+
+        # TODO Create some setting where this will print instead
         return f"{self.id} {self.rotation}{self.residue} {self.coordinates}"

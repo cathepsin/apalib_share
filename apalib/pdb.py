@@ -1,3 +1,4 @@
+import apalib.apalibExceptions
 import apalib.config as config
 import apalib.apalibExceptions as apaExcept
 import sys
@@ -85,3 +86,18 @@ class PDB:
         for chain in config.Container.GetPeptideChains():
             for index in config.Container.GetPeptideChains()[chain]:
                 config.Container.GetPeptideChains()[chain][index].CalculateCentroid(config.Container.GetPeptideChains()[chain][index].atoms)
+
+    def CountResidues(self, **kwargs):
+        for key in kwargs:
+            if key != 'find' or (key == 'find' and not isinstance(kwargs['find'], list)):
+                raise apalib.apalibExceptions.BadKwarg('find=[residue_name1, residue_name2, ...]')
+
+        # If a specific residue is wanted
+        if 'find' in kwargs:
+            for res in kwargs['find']:
+
+        else:
+
+
+
+    def __StandardizeResidue(self, res):
