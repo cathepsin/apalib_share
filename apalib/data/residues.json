@@ -21,10 +21,12 @@
         "NH1",
         "NH2"
       ],
-      "Gly-X-Gly ASA w": 249.26,
-      "Gly-X-Gly ASA sc": 190.24,
-      "Ala-X-Ala ASA w": 235.45,
-      "Ala-X-Ala ASA sc": 190.04
+      "ASA": {
+        "Gly-X-Gly ASA w": 249.26,
+        "Gly-X-Gly ASA sc": 190.24,
+        "Ala-X-Ala ASA w": 235.45,
+        "Ala-X-Ala ASA sc": 190.04
+      }
 
     },
     "Histidine": {
@@ -43,10 +45,12 @@
         "CE1",
         "NE2"
       ],
-      "Gly-X-Gly ASA w": 198.51,
-      "Gly-X-Gly ASA sc": 141.27,
-      "Ala-X-Ala ASA w": 184.79,
-      "Ala-X-Ala ASA sc": 141.17
+      "ASA": {
+        "Gly-X-Gly ASA w": 198.51,
+        "Gly-X-Gly ASA sc": 141.27,
+        "Ala-X-Ala ASA w": 184.79,
+        "Ala-X-Ala ASA sc": 141.17
+      }
     },
     "Lysine": {
       "1code": "K",
@@ -63,10 +67,12 @@
         "CE",
         "NZ"
       ],
-      "Gly-X-Gly ASA w": 207.49,
-      "Gly-X-Gly ASA sc": 147.99,
-      "Ala-X-Ala ASA w": 193.73,
-      "Ala-X-Ala ASA sc": 147.83
+      "ASA": {
+        "Gly-X-Gly ASA w": 207.49,
+        "Gly-X-Gly ASA sc": 147.99,
+        "Ala-X-Ala ASA w": 193.73,
+        "Ala-X-Ala ASA sc": 147.83
+      }
     },
     "Aspartate": {
       "1code": "D",
@@ -82,10 +88,12 @@
         "OD1",
         "OD2"
       ],
-      "Gly-X-Gly ASA w": 155.37,
-      "Gly-X-Gly ASA sc": 97.80,
-      "Ala-X-Ala ASA w": 141.61,
-      "Ala-X-Ala ASA sc": 97.66
+      "ASA": {
+        "Gly-X-Gly ASA w": 155.37,
+        "Gly-X-Gly ASA sc": 97.80,
+        "Ala-X-Ala ASA w": 141.61,
+        "Ala-X-Ala ASA sc": 97.66
+      }
     },
     "Glutamate": {
       "1code": "E",
@@ -102,10 +110,12 @@
         "OE1",
         "OE2"
       ],
-      "Gly-X-Gly ASA w": 187.16,
-      "Gly-X-Gly ASA sc": 132.53,
-      "Ala-X-Ala ASA w": 173.46,
-      "Ala-X-Ala ASA sc": 132.42
+      "ALA": {
+        "Gly-X-Gly ASA w": 187.16,
+        "Gly-X-Gly ASA sc": 132.53,
+        "Ala-X-Ala ASA w": 173.46,
+        "Ala-X-Ala ASA sc": 132.42
+      }
     },
     "Serine": {
       "1code": "S",
@@ -123,10 +133,12 @@
       "List": [
         "OG"
       ],
-      "Gly-X-Gly ASA w": 125.68,
-      "Gly-X-Gly ASA sc": 69.08,
-      "Ala-X-Ala ASA w": 111.97,
-      "Ala-X-Ala ASA sc": 68.97
+      "ALA": {
+        "Gly-X-Gly ASA w": 125.68,
+        "Gly-X-Gly ASA sc": 69.08,
+        "Ala-X-Ala ASA w": 111.97,
+        "Ala-X-Ala ASA sc": 68.97
+      }
     },
     "Threonine": {
       "1code": "T",
@@ -143,10 +155,12 @@
         "OG1",
         "CG2"
       ],
-      "Gly-X-Gly ASA w": 148.06,
-      "Gly-X-Gly ASA sc": 88.62,
-      "Ala-X-Ala ASA w": 134.28,
-      "Ala-X-Ala ASA sc": 88.45
+      "ALA": {
+        "Gly-X-Gly ASA w": 148.06,
+        "Gly-X-Gly ASA sc": 88.62,
+        "Ala-X-Ala ASA w": 134.28,
+        "Ala-X-Ala ASA sc": 88.45
+      }
     },
     "Asparagine": {
       "1code": "N",
@@ -162,10 +176,12 @@
         "OD1",
         "ND2"
       ],
-      "Gly-X-Gly ASA w": 168.87,
-      "Gly-X-Gly ASA sc": 109.92,
-      "Ala-X-Ala ASA w": 155.22,
-      "Ala-X-Ala ASA sc": 109.87
+      "ASA": {
+        "Gly-X-Gly ASA w": 168.87,
+        "Gly-X-Gly ASA sc": 109.92,
+        "Ala-X-Ala ASA w": 155.22,
+        "Ala-X-Ala ASA sc": 109.87
+      }
     },
     "Glutamine": {
       "1code": "Q",
@@ -182,10 +198,12 @@
         "OE1",
         "NE2"
       ],
-      "Gly-X-Gly ASA w": 189.17,
-      "Gly-X-Gly ASA sc": 129.68,
-      "Ala-X-Ala ASA w": 175.42,
-      "Ala-X-Ala ASA sc": 129.52
+      "ASA": {
+        "Gly-X-Gly ASA w": 189.17,
+        "Gly-X-Gly ASA sc": 129.68,
+        "Ala-X-Ala ASA w": 175.42,
+        "Ala-X-Ala ASA sc": 129.52
+      }
     },
     "Cysteine": {
       "1code": "C",
@@ -199,10 +217,12 @@
       "List": [
         "SG"
       ],
-      "Gly-X-Gly ASA w": 141.48,
-      "Gly-X-Gly ASA sc": 82.07,
-      "Ala-X-Ala ASA w": 127.72,
-      "Ala-X-Ala ASA sc": 81.91
+      "ASA": {
+        "Gly-X-Gly ASA w": 141.48,
+        "Gly-X-Gly ASA sc": 82.07,
+        "Ala-X-Ala ASA w": 127.72,
+        "Ala-X-Ala ASA sc": 81.91
+      }
     },
     "Glycine": {
       "1code": "G",
@@ -218,10 +238,12 @@
       "List": [
         "CA"
       ],
-      "Gly-X-Gly ASA w": 83.91,
-      "Gly-X-Gly ASA sc": 0,
-      "Ala-X-Ala ASA w": 70.27,
-      "Ala-X-Ala ASA sc": 0
+      "ASA": {
+        "Gly-X-Gly ASA w": 83.91,
+        "Gly-X-Gly ASA sc": 0,
+        "Ala-X-Ala ASA w": 70.27,
+        "Ala-X-Ala ASA sc": 0
+      }
     },
     "Proline": {
       "1code": "P",
@@ -238,10 +260,12 @@
         "CG",
         "CD"
       ],
-      "Gly-X-Gly ASA w": 144.80,
-      "Gly-X-Gly ASA sc": 106.44,
-      "Ala-X-Ala ASA w": 126.78,
-      "Ala-X-Ala ASA sc": 98.23
+      "ASA": {
+        "Gly-X-Gly ASA w": 144.80,
+        "Gly-X-Gly ASA sc": 106.44,
+        "Ala-X-Ala ASA w": 126.78,
+        "Ala-X-Ala ASA sc": 98.23
+      }
     },
     "Alanine": {
       "1code": "A",
@@ -257,10 +281,12 @@
       "List": [
         "CB"
       ],
-      "Gly-X-Gly ASA w": 116.40,
-      "Gly-X-Gly ASA sc": 55.40,
-      "Ala-X-Ala ASA w": 102.68,
-      "Ala-X-Ala ASA sc": 55.28
+      "ASA": {
+        "Gly-X-Gly ASA w": 116.40,
+        "Gly-X-Gly ASA sc": 55.40,
+        "Ala-X-Ala ASA w": 102.68,
+        "Ala-X-Ala ASA sc": 55.28
+      }
     },
     "Valine": {
       "1code": "V",
@@ -277,10 +303,12 @@
         "CG1",
         "CG2"
       ],
-      "Gly-X-Gly ASA w": 162.24,
-      "Gly-X-Gly ASA sc": 103.12,
-      "Ala-X-Ala ASA w": 148.51,
-      "Ala-X-Ala ASA sc": 103.00
+      "ASA": {
+        "Gly-X-Gly ASA w": 162.24,
+        "Gly-X-Gly ASA sc": 103.12,
+        "Ala-X-Ala ASA w": 148.51,
+        "Ala-X-Ala ASA sc": 103.00
+      }
     },
     "Isoleucine": {
       "1code": "I",
@@ -297,10 +325,12 @@
         "CG2",
         "CD1"
       ],
-      "Gly-X-Gly ASA w": 189.85,
-      "Gly-X-Gly ASA sc": 130.71,
-      "Ala-X-Ala ASA w": 176.22,
-      "Ala-X-Ala ASA sc": 130.58
+      "ASA": {
+        "Gly-X-Gly ASA w": 189.95,
+        "Gly-X-Gly ASA sc": 130.71,
+        "Ala-X-Ala ASA w": 176.22,
+        "Ala-X-Ala ASA sc": 130.58
+      }
     },
     "Leucine": {
       "1code": "L",
@@ -320,10 +350,12 @@
         "CD1",
         "CD2"
       ],
-      "Gly-X-Gly ASA w": 197.99,
-      "Gly-X-Gly ASA sc": 141.52,
-      "Ala-X-Ala ASA w": 184.33,
-      "Ala-X-Ala ASA sc": 141.47
+      "ASA": {
+        "Gly-X-Gly ASA w": 197.99,
+        "Gly-X-Gly ASA sc": 141.52,
+        "Ala-X-Ala ASA w": 184.33,
+        "Ala-X-Ala ASA sc": 141.47
+      }
     },
     "Methionine": {
       "1code": "M",
@@ -338,10 +370,12 @@
         "SD",
         "CE"
       ],
-      "Gly-X-Gly ASA w": 210.55,
-      "Gly-X-Gly ASA sc": 150.39,
-      "Ala-X-Ala ASA w": 196.87,
-      "Ala-X-Ala ASA sc": 150.32
+      "ASA": {
+        "Gly-X-Gly ASA w": 210.55,
+        "Gly-X-Gly ASA sc": 150.39,
+        "Ala-X-Ala ASA w": 196.87,
+        "Ala-X-Ala ASA sc": 150.32
+      }
     },
     "Phenylalanine": {
       "1code": "F",
@@ -360,10 +394,12 @@
         "CE2",
         "CZ"
       ],
-      "Gly-X-Gly ASA w": 223.29,
-      "Gly-X-Gly ASA sc": 164.18,
-      "Ala-X-Ala ASA w": 209.64,
-      "Ala-X-Ala ASA sc": 164.14
+      "ASA": {
+        "Gly-X-Gly ASA w": 223.29,
+        "Gly-X-Gly ASA sc": 164.18,
+        "Ala-X-Ala ASA w": 209.64,
+        "Ala-X-Ala ASA sc": 164.14
+      }
     },
     "Tyrosine": {
       "1code": "Y",
@@ -383,10 +419,12 @@
         "CZ",
         "OH"
       ],
-      "Gly-X-Gly ASA w": 238.30,
-      "Gly-X-Gly ASA sc": 180.03,
-      "Ala-X-Ala ASA w": 224.68,
-      "Ala-X-Ala ASA sc": 180.01
+      "ASA": {
+        "Gly-X-Gly ASA w": 238.30,
+        "Gly-X-Gly ASA sc": 180.03,
+        "Ala-X-Ala ASA w": 224.68,
+        "Ala-X-Ala ASA sc": 180.01
+      }
     },
     "Tryptophan": {
       "1code": "W",
@@ -407,10 +445,12 @@
         "CZ3",
         "CH2"
       ],
-      "Gly-X-Gly ASA w": 265.42,
-      "Gly-X-Gly ASA sc": 209.62,
-      "Ala-X-Ala ASA w": 251.78,
-      "Ala-X-Ala ASA sc": 209.57
+      "ASA": {
+        "Gly-X-Gly ASA w": 265.42,
+        "Gly-X-Gly ASA sc": 209.62,
+        "Ala-X-Ala ASA w": 251.78,
+        "Ala-X-Ala ASA sc": 209.57
+      }
     },
     "Selenocysteine": {
       "1code": "U",
@@ -422,7 +462,8 @@
       ],
       "List": [
         "SE"
-      ]
+      ],
+      "ASA": {}
     },
     "Pyrrolysine": {
       "1code": "O",
@@ -431,7 +472,8 @@
       "Polarity": "Polar",
       "Codons": [
         "UAG"
-      ]
+      ],
+      "ASA": {}
     }
   },
   "DNA Nucleotides": {},
