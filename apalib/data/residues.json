@@ -852,7 +852,7 @@
     "Hydrogen":{
       "Symbol": "H",
       "Number": 1,
-      "Isotopes": {
+      "Stable": {
         "1" : {
           "Mass": 1.0078250319,
           "Abundance" : 0.999885
@@ -867,7 +867,7 @@
     "Helium": {
       "Symbol": "He",
       "Number": 2,
-      "Isotopes": {
+      "Stable": {
         "3": {
           "Mass": 3.0160293094,
           "Abundance": 0.00000134
@@ -881,7 +881,7 @@
     "Lithium": {
       "Symbol": "Li",
       "Number": 3,
-      "Isotopes": {
+      "Stable": {
         "6": {
           "Mass": 6.0151223,
           "Abundance": 0.0759
@@ -895,7 +895,7 @@
     "Beryllium": {
       "Symbol": "Be",
       "Number": 4,
-      "Isotopes": {
+      "Stable": {
         "9": {
           "Mass": 9.0121822,
           "Abundance": 1
@@ -905,7 +905,7 @@
     "Boron":{
       "Symbol": "B",
       "Number": 5,
-      "Isotopes": {
+      "Stable": {
         "10": {
           "Mass": 10.0129371,
           "Abundance": 0.199
@@ -919,7 +919,7 @@
     "Carbon":{
       "Symbol": "C",
       "Number": 6,
-      "Isotopes": {
+      "Stable": {
         "12": {
           "Mass": 12.000,
           "Abundance": 0.9893
@@ -933,7 +933,7 @@
     "Nitrogen":{
       "Symbol": "N",
       "Number": 7,
-      "Isotopes": {
+      "Stable": {
         "14": {
           "Mass": 14.0030740074,
           "Abundance": 0.99636
@@ -947,7 +947,7 @@
     "Oxygen": {
       "Symbol": "O",
       "Number": 8,
-      "Isotopes": {
+      "Stable": {
         "16": {
           "Mass":  15.9949146223,
           "Abundance": 0.99757
@@ -965,7 +965,7 @@
     "Fluorine": {
       "Symbol": "F",
       "Number": 9,
-      "Isotopes": {
+      "Stable": {
         "19": {
           "Mass": 18.99840320,
           "Abundance": 1.00
@@ -975,7 +975,7 @@
     "Neon": {
       "Symbol": "Ne",
       "Number": 10,
-      "Isotopes": {
+      "Stable": {
         "20": {
           "Mass":  19.992440176,
           "Abundance": 0.9048
@@ -993,7 +993,7 @@
     "Sodium": {
       "Symbol": "Na",
       "Number": 11,
-      "Isotopes": {
+      "Stable": {
         "23": {
           "Mass": 22.98976966,
           "Abundance": 1.00
@@ -1003,7 +1003,7 @@
     "Magnesium": {
       "Symbol": "Mg",
       "Number": 12,
-      "Isotopes": {
+      "Stable": {
         "24": {
           "Mass": 23.98504187,
           "Abundance":  0.7899
@@ -1021,7 +1021,7 @@
     "Aluminum": {
       "Symbol": "Al",
       "Number": 13,
-      "Isotopes": {
+      "Stable": {
         "27": {
           "Mass":  26.98153841,
           "Abundance": 1.00
@@ -1031,7 +1031,7 @@
     "Silicon": {
       "Symbol": "Si",
       "Number": 14,
-      "Isotopes": {
+      "Stable": {
         "28": {
           "Mass": 27.97692649,
           "Abundance": 0.92223
@@ -1049,7 +1049,7 @@
     "Phosphorus": {
       "Symbol": "P",
       "Number": 15,
-      "Isotopes": {
+      "Stable": {
         "31": {
           "Mass": 30.97376149,
           "Abundance": 1.00
@@ -1059,522 +1059,1126 @@
     "Sulfur": {
       "Symbol": "S",
       "Number": 16,
-      "Isotopes": {}
+      "Stable": {
+        "32": {
+          "Mass":  31.97207073,
+          "Abundance": 0.9499
+        },
+        "33": {
+          "Mass": 32.97145854,
+          "Abundance":  0.0075
+        },
+        "34": {
+          "Mass":  33.96786687,
+          "Abundance": 0.0425
+        },
+        "36": {
+          "Mass":  35.96708088,
+          "Abundance":  0.0001
+        }
+      }
     },
     "Chlorine": {
       "Symbol": "Cl",
       "Number": 17,
-      "Isotopes": {}
+      "Stable": {
+        "35": {
+          "Mass": 34.96885271,
+          "Abundance": 0.7576
+        },
+        "37": {
+          "Mass":  36.96590260,
+          "Abundance": 0.2424
+        }
+      }
     },
     "Argon": {
       "Symbol": "Ar",
       "Number": 18,
-      "Isotopes": {}
+      "Stable": {
+        "36": {
+          "Mass": 35.96754626,
+          "Abundance":  0.003365
+        },
+        "38": {
+          "Mass":  37.9627322,
+          "Abundance": 0.000632
+        },
+        "40": {
+          "Mass": 39.962383124,
+          "Abundance":  0.996003
+        }
+      }
     },
     "Potassium": {
       "Symbol": "K",
       "Number": 19,
-      "Isotopes": {}
+      "Stable": {
+        "39": {
+          "Mass": 38.9637069,
+          "Abundance" : 0.932581
+        },
+        "40" : {
+          "Mass": 39.96399867,
+          "Abundance": 0.000117
+        },
+        "41": {
+          "Mass":  40.96182597,
+          "Abundance": 0.067302
+        }
+      }
     },
     "Calcium": {
       "Symbol": "Ca",
       "Number": 20,
-      "Isotopes": {}
+      "Stable": {
+        "40": {
+          "Mass":  39.9625912,
+          "Abundance":  0.96941
+        },
+        "42": {
+          "Mass": 41.9586183,
+          "Abundance": 0.00647
+        },
+        "43": {
+          "Mass": 42.9587668,
+          "Abundance": 0.00135
+        },
+        "44": {
+          "Mass":  43.9554811,
+          "Abundance":  0.02086
+        },
+        "46": {
+          "Mass":  45.9536927,
+          "Abundance": 0.00004
+        },
+        "48": {
+          "Mass": 47.952533,
+          "Abundance":  0.00187
+        }
+      }
     },
     "Scandium": {
       "Symbol": "Sc",
       "Number": 21,
-      "Isotopes": {}
+      "Stable": {
+        "45": {
+          "Mass": 44.9559102,
+          "Abundance": 1.00
+        }
+      }
     },
     "Titanium": {
       "Symbol": "Ti",
       "Number": 22,
-      "Isotopes": {}
+      "Stable": {
+        "46": {
+          "Mass": 45.9526295,
+          "Abundance":  0.0825
+        },
+        "47": {
+          "Mass": 46.9517637,
+          "Abundance": 0.0744
+        },
+        "48": {
+          "Mass": 47.9479470,
+          "Abundance": 0.7372
+        },
+        "49": {
+          "Mass": 48.9478707,
+          "Abundance": 0.0541
+        },
+        "50": {
+          "Mass": 49.9447920,
+          "Abundance": 0.0518
+        }
+      }
     },
     "Vanadium": {
       "Symbol": "V",
       "Number": 23,
-      "Isotopes": {}
+      "Stable": {
+        "50": {
+          "Mass": 49.9471627,
+          "Abundance":  0.00250
+        },
+        "51": {
+          "Mass":  50.9439635,
+          "Abundance": 0.99750
+        }
+      }
     },
     "Chromium": {
       "Symbol": "Cr",
       "Number": 24,
-      "Isotopes": {}
+      "Stable": {
+        "50": {
+          "Mass":  49.9460495,
+          "Abundance": 0.04345
+        },
+        "52": {
+          "Mass":  51.9405115,
+          "Abundance": 0.83789
+        },
+        "53": {
+          "Mass":  52.9406534,
+          "Abundance": 0.09501
+        },
+        "54": {
+          "Mass": 53.9388846,
+          "Abundance":  0.02365
+        }
+      }
     },
     "Manganese": {
       "Symbol": "Mn",
       "Number": 25,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Iron": {
       "Symbol": "Fe",
       "Number": 26,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Cobalt": {
       "Symbol": "Co",
       "Number": 27,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Nickel": {
       "Symbol": "Ni",
       "Number": 28,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Copper": {
       "Symbol": "Cu",
       "Number": 29,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Zinc":{
       "Symbol": "Zn",
       "Number": 30,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Gallium": {
       "Symbol": "Ga",
       "Number": 31,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Germanium": {
       "Symbol": "Ge",
       "Number": 32,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Arsenic": {
       "Symbol": "As",
       "Number": 33,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Selenium": {
       "Symbol": "Se",
       "Number": 34,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Bromine": {
       "Symbol": "Br",
       "Number": 35,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Krypton": {
       "Symbol": "Kr",
       "Number": 36,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Rubidium": {
       "Symbol": "Rb",
       "Number": 37,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Strontium": {
       "Symbol": "Sr",
       "Number": 38,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Yttrium": {
       "Symbol": "Y",
       "Number": 39,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Zirconium": {
       "Symbol": "Zr",
       "Number": 40,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Niobium": {
       "Symbol": "Nb",
       "Number": 41,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Molybdenum": {
       "Symbol": "Mo",
       "Number": 42,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Technetium": {
       "Symbol": "Tc",
       "Number": 43,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Ruthenium": {
       "Symbol": "Ru",
       "Number": 44,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Rhodium": {
       "Symbol": "Rh",
       "Number": 45,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Palladium": {
       "Symbol": "Pd",
       "Number": 46,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Silver": {
       "Symbol": "Ag",
       "Number": 47,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Cadmium": {
       "Symbol": "Cd",
       "Number": 48,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Indium": {
       "Symbol": "In",
       "Number": 49,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Tin": {
       "Symbol": "Sn",
       "Number": 50,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Antimony": {
       "Symbol": "Sb",
       "Number": 51,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Tellurium": {
       "Symbol": "Te",
       "Number": 52,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Iodine": {
       "Symbol": "I",
       "Number": 53,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Xenon": {
       "Symbol": "Xe",
       "Number": 54,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Cesium": {
       "Symbol": "Cs",
       "Number": 55,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Caesium": {
       "Symbol": "Cs",
       "Number": 55,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Barium": {
       "Symbol": "Ba",
       "Number": 56,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Lanthanum": {
       "Symbol": "La",
       "Number": 57,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Cerium": {
       "Symbol": "Ce",
       "Number": 58,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Praseodymium": {
       "Symbol": "Pr",
       "Number": 59,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Neodymium": {
       "Symbol": "Nd",
       "Number": 60,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Promethium": {
       "Symbol": "Pm",
       "Number": 61,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Samarium": {
       "Symbol": "Sm",
       "Number": 62,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Europium": {
       "Symbol": "Eu",
       "Number": 63,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Gadolinium": {
       "Symbol": "Gd",
       "Number": 64,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Terbium": {
       "Symbol": "Tb",
       "Number": 65,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Dysprosium": {
       "Symbol": "Dy",
       "Number": 66,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Holmium": {
       "Symbol": "Ho",
       "Number": 67,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Erbium": {
       "Symbol": "Er",
       "Number": 68,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Thulium": {
       "Symbol": "Tm",
       "Number": 69,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Ytterbium": {
       "Symbol": "Yb",
       "Number": 70,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Lutetium": {
       "Symbol": "Lu",
       "Number": 71,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Hafnium": {
       "Symbol": "Hf",
       "Number": 72,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Tantalum": {
       "Symbol": "Ta",
       "Number": 73,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Tungsten": {
       "Symbol": "W",
       "Number": 74,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Rhenium": {
       "Symbol": "Re",
       "Number": 75,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Osmium": {
       "Symbol": "Os",
       "Number": 76,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Iridium": {
       "Symbol": "Ir",
       "Number": 77,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Platinum": {
       "Symbol": "Pt",
       "Number": 78,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Gold": {
       "Symbol": "Au",
       "Number": 79,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Mercury": {
       "Symbol": "Hg",
       "Number": 80,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Thallium": {
       "Symbol": "Tl",
       "Number": 81,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Lead": {
       "Symbol": "Pb",
       "Number": 82,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Bismuth": {
       "Symbol": "Bi",
       "Number": 83,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Polonium": {
       "Symbol": "Po",
       "Number": 84,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Astatine": {
       "Symbol": "At",
       "Number": 85,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Radon": {
       "Symbol": "Rn",
       "Number": 86,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Francium": {
       "Symbol": "Fr",
       "Number": 87,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Radium": {
       "Symbol": "Ra",
       "Number": 88,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Actinium": {
       "Symbol": "Ac",
       "Number": 89,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Thorium": {
       "Symbol": "Th",
       "Number": 90,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Protactinium": {
       "Symbol": "Pa",
       "Number": 91,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Uranium": {
       "Symbol": "U",
       "Number": 92,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Neptunium": {
       "Symbol": "Np",
       "Number": 93,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Plutonium": {
       "Symbol": "Pu",
       "Number": 94,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Americium": {
       "Symbol": "Am",
       "Number": 95,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Curium": {
       "Symbol": "Cm",
       "Number": 96,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Berkelium": {
       "Symbol": "Bk",
       "Number": 97,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Californium": {
       "Symbol": "Cf",
       "Number": 98,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Einsteinium": {
       "Symbol": "Es",
       "Number": 99,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Fermium": {
       "Symbol": "Fm",
       "Number": 100,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Mendelevium": {
       "Symbol": "Md",
       "Number": 101,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Nobelium": {
       "Symbol": "No",
       "Number": 102,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Lawrencium": {
       "Symbol": "Lr",
       "Number": 103,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Rutherfordium": {
       "Symbol": "Rf",
       "Number": 104,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Dubnium": {
       "Symbol": "Db",
       "Number": 105,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Seaborgium": {
       "Symbol": "Sg",
       "Number": 106,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Bohrium": {
       "Symbol": "Bh",
       "Number": 107,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Hassium": {
       "Symbol": "Hs",
       "Number": 108,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Meitnerium": {
       "Symbol": "Mt",
       "Number": 109,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Darmstadtium": {
       "Symbol": "Ds",
       "Number": 110,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Roentgenium": {
       "Symbol": "Rg",
       "Number": 111,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Copernicium": {
       "Symbol": "Cn",
       "Number": 112,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Nihonium": {
       "Symbol": "Nh",
       "Number": 113,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Flerovium": {
       "Symbol": "Fl",
       "Number": 114,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Moscovium": {
       "Symbol": "Mc",
       "Number": 115,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Livermorium": {
       "Symbol": "Lv",
       "Number": 116,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Tennessine": {
       "Symbol": "Ts",
       "Number": 117,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     },
     "Oganesson": {
       "Symbol": "Og",
       "Number": 118,
-      "Isotopes": {}
+      "Stable": {
+        "": {
+          "Mass":,
+          "Abundance"
+        }
+      }
     }
   },
   "Sources": {
