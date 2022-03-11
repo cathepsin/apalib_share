@@ -128,242 +128,243 @@
       ".": []
     },
     "Atoms": {
-      "Hydrogen" : "H",
+      "Hydrogen" : "Hydrogen",
       "H" : "Hydrogen",
-      "Helium" : "He",
+      "Helium" : "Helium",
       "He" : "Helium",
-      "Lithium" : "Li",
+      "Lithium" : "Lithium",
       "Li" : "Lithium",
-      "Beryllium" : "Be",
+      "Beryllium" : "Beryllium",
       "Be" : "Beryllium",
-      "Boron" : "B",
+      "Boron" : "Boron",
       "B" : "Boron",
-      "Carbon" : "C",
+      "Carbon" : "Carbon",
       "C" : "Carbon",
-      "Nitrogen" : "N",
+      "Nitrogen" : "Nitrogen",
       "N" : "Nitrogen",
-      "Oxygen" : "O",
+      "Oxygen" : "Oxygen",
       "O" : "Oxygen",
-      "Fluorine" : "F",
+      "Fluorine" : "Fluorine",
       "F" : "Fluorine",
-      "Neon" : "Ne",
+      "Neon" : "Neon",
       "Ne" : "Neon",
-      "Sodium" : "Na",
+      "Sodium" : "Sodium",
       "Na" : "Sodium",
-      "Magnesium" : "Mg",
+      "Magnesium" : "Magnesium",
       "Mg" : "Magnesium",
-      "Aluminum" : "Al",
+      "Aluminum" : "Aluminum",
       "Al" : "Aluminum",
-      "Silicon" : "Si",
+      "Silicon" : "Silicon",
       "Si" : "Silicon",
-      "Phosphorus" : "P",
+      "Phosphorus" : "Phosphorus",
       "P" : "Phosphorus",
-      "Sulfur" : "S",
+      "Sulfur" : "Sulfur",
       "S" : "Sulfur",
-      "Chlorine" : "Cl",
+      "Chlorine" : "Chlorine",
       "Cl" : "Chlorine",
-      "Argon" : "Ar",
+      "Argon" : "Argon",
       "Ar" : "Argon",
-      "Potassium" : "K",
+      "Potassium" : "Potassium",
       "K" : "Potassium",
-      "Calcium" : "Ca",
+      "Calcium" : "Calcium",
       "Ca" : "Calcium",
-      "Scandium" : "Sc",
+      "Scandium" : "Scandium",
       "Sc" : "Scandium",
-      "Titanium" : "Ti",
+      "Titanium" : "Titanium",
       "Ti" : "Titanium",
-      "Vanadium" : "V",
+      "Vanadium" : "Vanadium",
       "V" : "Vanadium",
-      "Chromium" : "Cr",
+      "Chromium" : "Chromium",
       "Cr" : "Chromium",
-      "Manganese" : "Mn",
+      "Manganese" : "Manganese",
       "Mn" : "Manganese",
-      "Iron" : "Fe",
+      "Iron" : "Iron",
       "Fe" : "Iron",
-      "Cobalt" : "Co",
+      "Cobalt" : "Cobalt",
       "Co" : "Cobalt",
-      "Nickel" : "Ni",
+      "Nickel" : "Nickel",
       "Ni" : "Nickel",
-      "Copper" : "Cu",
+      "Copper" : "Copper",
       "Cu" : "Copper",
-      "Zinc" : "Zn",
+      "Zinc" : "Zinc",
       "Zn" : "Zinc",
-      "Gallium" : "Ga",
+      "Gallium" : "Gallium",
       "Ga" : "Gallium",
-      "Germanium" : "Ge",
+      "Germanium" : "Germanium",
       "Ge" : "Germanium",
-      "Arsenic" : "As",
+      "Arsenic" : "Arsenic",
       "As" : "Arsenic",
-      "Selenium" : "Se",
+      "Selenium" : "Selenium",
       "Se" : "Selenium",
-      "Bromine" : "Br",
+      "Bromine" : "Bromine",
       "Br" : "Bromine",
-      "Krypton" : "Kr",
+      "Krypton" : "Krypton",
       "Kr" : "Krypton",
-      "Rubidium" : "Rb",
+      "Rubidium" : "Rubidium",
       "Rb" : "Rubidium",
-      "Strontium" : "Sr",
+      "Strontium" : "Strontium",
       "Sr" : "Strontium",
-      "Yttrium" : "Y",
+      "Yttrium" : "Yttrium",
       "Y" : "Yttrium",
-      "Zirconium" : "Zr",
+      "Zirconium" : "Zirconium",
       "Zr" : "Zirconium",
-      "Niobium" : "Nb",
+      "Niobium" : "Niobium",
       "Nb" : "Niobium",
-      "Molybdenum" : "Mb",
-      "Mb" : "Molybdenum",
-      "Technetium" : "Tc",
+      "Molybdenum" : "Molybdenum",
+      "Mo" : "Molybdenum",
+      "Technetium" : "Technetium",
       "Tc" : "Technetium",
-      "Ruthenium" : "Ru",
+      "Ruthenium" : "Ruthenium",
       "Ru" : "Ruthenium",
-      "Rhodium" : "Rh",
+      "Rhodium" : "Rhodium",
       "Rh" : "Rhodium",
-      "Palladium" : "Pd",
+      "Palladium" : "Palladium",
       "Pd" : "Palladium",
-      "Silver" : "Ag",
+      "Silver" : "Silver",
       "Ag" : "Silver",
-      "Cadmium" : "Cd",
+      "Cadmium" : "Cadmium",
       "Cd" : "Cadmium",
-      "Indium" : "In",
+      "Indium" : "Indium",
       "In" : "Indium",
-      "Tin" : "Sn",
+      "Tin" : "Tin",
       "Sn" : "Tin",
-      "Antimony" : "Sb",
+      "Antimony" : "Antimony",
       "Sb" : "Antimony",
-      "Tellurium" : "Te",
+      "Tellurium" : "Tellurium",
       "Te" : "Tellurium",
-      "Iodine" : "I",
+      "Iodine" : "Iodine",
       "I" : "Iodine",
-      "Xenon" : "Xe",
+      "Xenon" : "Xenon",
       "Xe" : "Xenon",
-      "Cesium" : "Cs",
-      "Caesium" : "Cs",
+      "Cesium" : "Cesium",
+      "Cs" : "Cesium",
+      "Caesium" : "Caesium",
       "Cs" : "Caesium",
-      "Barium" : "Ba",
+      "Barium" : "Barium",
       "Ba" : "Barium",
-      "Lanthanum" : "La",
+      "Lanthanum" : "Lanthanum",
       "La" : "Lanthanum",
-      "Cerium" : "Ce",
+      "Cerium" : "Cerium",
       "Ce" : "Cerium",
-      "Praseodymium" : "Pr",
+      "Praseodymium" : "Praseodymium",
       "Pr" : "Praseodymium",
-      "Neodymium" : "Nd",
+      "Neodymium" : "Neodymium",
       "Nd" : "Neodymium",
-      "Promethium" : "Pm",
+      "Promethium" : "Promethium",
       "Pm" : "Promethium",
-      "Samarium" : "Sm",
+      "Samarium" : "Samarium",
       "Sm" : "Samarium",
-      "Europium" : "Eu",
+      "Europium" : "Europium",
       "Eu" : "Europium",
-      "Gadolinium" : "Gd",
+      "Gadolinium" : "Gadolinium",
       "Gd" : "Gadolinium",
-      "Terbium" : "Tb",
+      "Terbium" : "Terbium",
       "Tb" : "Terbium",
-      "Dysprosium" : "Dy",
+      "Dysprosium" : "Dysprosium",
       "Dy" : "Dysprosium",
-      "Holmium" : "Ho",
+      "Holmium" : "Holmium",
       "Ho" : "Holmium",
-      "Erbium" : "Er",
+      "Erbium" : "Erbium",
       "Er" : "Erbium",
-      "Thullium" : "Tm",
-      "Tm" : "Thullium",
-      "Ytterbium" : "Yb",
+      "Thulium" : "Thulium",
+      "Tm" : "Thulium",
+      "Ytterbium" : "Ytterbium",
       "Yb" : "Ytterbium",
-      "Lutetium" : "Lu",
+      "Lutetium" : "Lutetium",
       "Lu" : "Lutetium",
-      "Hafnium" : "Hf",
+      "Hafnium" : "Hafnium",
       "Hf" : "Hafnium",
-      "Tantalum" : "Ta",
+      "Tantalum" : "Tantalum",
       "Ta" : "Tantalum",
-      "Tungsten" : "W",
+      "Tungsten" : "Tungsten",
       "W" : "Tungsten",
-      "Rhenium" : "Re",
+      "Rhenium" : "Rhenium",
       "Re" : "Rhenium",
-      "Osmium" : "Os",
+      "Osmium" : "Osmium",
       "Os" : "Osmium",
-      "Iridium" : "Ir",
+      "Iridium" : "Iridium",
       "Ir" : "Iridium",
-      "Platinum" : "Pt",
+      "Platinum" : "Platinum",
       "Pt" : "Platinum",
-      "Gold" : "Au",
+      "Gold" : "Gold",
       "Au" : "Gold",
-      "Mercury" : "Hg",
+      "Mercury" : "Mercury",
       "Hg" : "Mercury",
-      "Thallium" : "Tl",
+      "Thallium" : "Thallium",
       "Tl" : "Thallium",
-      "Lead" : "Pb",
+      "Lead" : "Lead",
       "Pb" : "Lead",
-      "Bismuth" : "Bi",
+      "Bismuth" : "Bismuth",
       "Bi" : "Bismuth",
-      "Polonium" : "Po",
+      "Polonium" : "Polonium",
       "Po" : "Polonium",
-      "Astatine" : "At",
+      "Astatine" : "Astatine",
       "At" : "Astatine",
-      "Radon" : "Rn",
+      "Radon" : "Radon",
       "Rn" : "Radon",
-      "Francium" : "Fr",
+      "Francium" : "Francium",
       "Fr" : "Francium",
-      "Radium" : "Ra",
+      "Radium" : "Radium",
       "Ra" : "Radium",
-      "Actinium" : "Ac",
+      "Actinium" : "Actinium",
       "Ac" : "Actinium",
-      "Thorium" : "Th",
+      "Thorium" : "Thorium",
       "Th" : "Thorium",
-      "Protactinium" : "Pa",
+      "Protactinium" : "Protactinium",
       "Pa" : "Protactinium",
-      "Uranium" : "U",
+      "Uranium" : "Uranium",
       "U" : "Uranium",
-      "Neptunium" : "Np",
+      "Neptunium" : "Neptunium",
       "Np" : "Neptunium",
-      "Plutonium" : "Pu",
+      "Plutonium" : "Plutonium",
       "Pu" : "Plutonium",
-      "Americium" : "Am",
+      "Americium" : "Americium",
       "Am" : "Americium",
-      "Curium" : "Cm",
+      "Curium" : "Curium",
       "Cm" : "Curium",
-      "Berkelium" : "Bk",
+      "Berkelium" : "Berkelium",
       "Bk" : "Berkelium",
-      "Californium" : "Cf",
+      "Californium" : "Californium",
       "Cf" : "Californium",
-      "Einsteinium" : "Es",
+      "Einsteinium" : "Einsteinium",
       "Es" : "Einsteinium",
-      "Fermium" : "Fm",
+      "Fermium" : "Fermium",
       "Fm" : "Fermium",
-      "Mendelevium" : "Md",
+      "Mendelevium" : "Mendelevium",
       "Md" : "Mendelevium",
-      "Nobelium" : "No",
+      "Nobelium" : "Nobelium",
       "No" : "Nobelium",
-      "Lawrencium" : "Lr",
+      "Lawrencium" : "Lawrencium",
       "Lr" : "Lawrencium",
-      "Rutherfordium" : "Rf",
+      "Rutherfordium" : "Rutherfordium",
       "Rf" : "Rutherfordium",
-      "Dubnium" : "Db",
+      "Dubnium" : "Dubnium",
       "Db" : "Dubnium",
-      "Seaborgium" : "Sg",
+      "Seaborgium" : "Seaborgium",
       "Sg" : "Seaborgium",
-      "Bohrium" : "Bh",
+      "Bohrium" : "Bohrium",
       "Bh" : "Bohrium",
-      "Hassium" : "Hs",
+      "Hassium" : "Hassium",
       "Hs" : "Hassium",
-      "Meitnerium" : "Mt",
+      "Meitnerium" : "Meitnerium",
       "Mt" : "Meitnerium",
-      "Darmstadtium" : "Ds",
+      "Darmstadtium" : "Darmstadtium",
       "Ds" : "Darmstadtium",
-      "Roentgenium" : "Rg",
+      "Roentgenium" : "Roentgenium",
       "Rg" : "Roentgenium",
-      "Copernicium" : "Cn",
+      "Copernicium" : "Copernicium",
       "Cn" : "Copernicium",
-      "Nihonium" : "Nh",
+      "Nihonium" : "Nihonium",
       "Nh" : "Nihonium",
-      "Flerovium" : "Fl",
+      "Flerovium" : "Flerovium",
       "Fl" : "Flerovium",
-      "Moscovium" : "Mc",
+      "Moscovium" : "Moscovium",
       "Mc" : "Moscovium",
-      "Livermorium" : "Lv",
+      "Livermorium" : "Livermorium",
       "Lv" : "Livermorium",
-      "Tennessine" : "Ts",
+      "Tennessine" : "Tennessine",
       "Ts" : "Tennessine",
-      "Oganesson" : "Og",
+      "Oganesson" : "Oganesson",
       "Og" : "Oganesson"
     }
 
@@ -851,77 +852,209 @@
     "Hydrogen":{
       "Symbol": "H",
       "Number": 1,
-      "Isotopes": {}
+      "Isotopes": {
+        "1" : {
+          "Mass": 1.0078250319,
+          "Abundance" : 0.999885
+        },
+        "2" : {
+
+          "Mass": 2.0141017779,
+          "Abundance" : 0.000115
+        }
+      }
     },
     "Helium": {
       "Symbol": "He",
       "Number": 2,
-      "Isotopes": {}
+      "Isotopes": {
+        "3": {
+          "Mass": 3.0160293094,
+          "Abundance": 0.00000134
+        },
+        "4": {
+          "Mass": 4.0026032497,
+          "Abundance": 0.99999866
+        }
+      }
     },
     "Lithium": {
       "Symbol": "Li",
       "Number": 3,
-      "Isotopes": {}
+      "Isotopes": {
+        "6": {
+          "Mass": 6.0151223,
+          "Abundance": 0.0759
+        },
+        "7": {
+          "Mass": 7.0160041,
+          "Abundance": 0.9241
+        }
+      }
     },
     "Beryllium": {
       "Symbol": "Be",
       "Number": 4,
-      "Isotopes": {}
+      "Isotopes": {
+        "9": {
+          "Mass": 9.0121822,
+          "Abundance": 1
+        }
+      }
     },
     "Boron":{
       "Symbol": "B",
       "Number": 5,
-      "Isotopes": {}
+      "Isotopes": {
+        "10": {
+          "Mass": 10.0129371,
+          "Abundance": 0.199
+        },
+        "11": {
+          "Mass":  11.0093055,
+          "Abundance": 0.801
+        }
+      }
     },
     "Carbon":{
       "Symbol": "C",
       "Number": 6,
-      "Isotopes": {}
+      "Isotopes": {
+        "12": {
+          "Mass": 12.000,
+          "Abundance": 0.9893
+        },
+        "13": {
+          "Mass":  13.003354838,
+          "Abundance":  0.0107
+        }
+      }
     },
     "Nitrogen":{
       "Symbol": "N",
       "Number": 7,
-      "Isotopes": {}
+      "Isotopes": {
+        "14": {
+          "Mass": 14.0030740074,
+          "Abundance": 0.99636
+        },
+        "15": {
+          "Mass":  15.000108973,
+          "Abundance": 0.00364
+        }
+      }
     },
     "Oxygen": {
       "Symbol": "O",
       "Number": 8,
-      "Isotopes": {}
+      "Isotopes": {
+        "16": {
+          "Mass":  15.9949146223,
+          "Abundance": 0.99757
+        },
+        "17": {
+          "Mass":  16.99913150,
+          "Abundance": 0.00038
+        },
+        "18": {
+          "Mass": 17.9991604,
+          "Abundance": 0.00205
+        }
+      }
     },
     "Fluorine": {
       "Symbol": "F",
       "Number": 9,
-      "Isotopes": {}
+      "Isotopes": {
+        "19": {
+          "Mass": 18.99840320,
+          "Abundance": 1.00
+        }
+      }
     },
     "Neon": {
       "Symbol": "Ne",
       "Number": 10,
-      "Isotopes": {}
+      "Isotopes": {
+        "20": {
+          "Mass":  19.992440176,
+          "Abundance": 0.9048
+        },
+        "21": {
+          "Mass": 20.99384674,
+          "Abundance": 0.0027
+        },
+        "22": {
+          "Mass": 21.99138550,
+          "Abundance":  0.0925
+        }
+      }
     },
     "Sodium": {
       "Symbol": "Na",
       "Number": 11,
-      "Isotopes": {}
+      "Isotopes": {
+        "23": {
+          "Mass": 22.98976966,
+          "Abundance": 1.00
+        }
+      }
     },
     "Magnesium": {
       "Symbol": "Mg",
       "Number": 12,
-      "Isotopes": {}
+      "Isotopes": {
+        "24": {
+          "Mass": 23.98504187,
+          "Abundance":  0.7899
+        },
+        "25": {
+          "Mass": 24.98583700,
+          "Abundance": 0.1000
+        },
+        "26": {
+          "Mass":  25.98259300,
+          "Abundance": 0.1101
+        }
+      }
     },
     "Aluminum": {
       "Symbol": "Al",
       "Number": 13,
-      "Isotopes": {}
+      "Isotopes": {
+        "27": {
+          "Mass":  26.98153841,
+          "Abundance": 1.00
+        }
+      }
     },
     "Silicon": {
       "Symbol": "Si",
       "Number": 14,
-      "Isotopes": {}
+      "Isotopes": {
+        "28": {
+          "Mass": 27.97692649,
+          "Abundance": 0.92223
+        },
+        "29": {
+          "Mass":28.97649468,
+          "Abundance": 0.04685
+        },
+        "30": {
+          "Mass":  29.97377018,
+          "Abundance": 0.03092
+        }
+      }
     },
     "Phosphorus": {
       "Symbol": "P",
       "Number": 15,
-      "Isotopes": {}
+      "Isotopes": {
+        "31": {
+          "Mass": 30.97376149,
+          "Abundance": 1.00
+        }
+      }
     },
     "Sulfur": {
       "Symbol": "S",
@@ -1054,7 +1187,7 @@
       "Isotopes": {}
     },
     "Molybdenum": {
-      "Symbol": "Mb",
+      "Symbol": "Mo",
       "Number": 42,
       "Isotopes": {}
     },
@@ -1193,7 +1326,7 @@
       "Number": 68,
       "Isotopes": {}
     },
-    "Thullium": {
+    "Thulium": {
       "Symbol": "Tm",
       "Number": 69,
       "Isotopes": {}
@@ -1445,7 +1578,8 @@
     }
   },
   "Sources": {
-    "Atom molar masses": "STANDARD ATOMIC WEIGHTS, ciaaw 2020.",
+    "Atom molar masses": "STANDARD ATOMIC WEIGHTS, ciaaw 2020. Available online at www.ciaaw.org/atomic-masses.htm",
+    "Isotopic Abundances": "CIAAW. Isotopic compositions of the elements 2019. Available online at www.ciaaw.org.",
     "Model peptide SASAs": "Uttamkumar Samanta, Ranjit P. Bahadur, Pinak Chakrabarti, Quantifying the accessible surface area of protein residues in their local environment, Protein Engineering, Design and Selection, Volume 15, Issue 8, August 2002, Pages 659–667, https://doi.org/10.1093/protein/15.8.659"
   }
 }

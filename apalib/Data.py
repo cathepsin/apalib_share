@@ -9,3 +9,5 @@ class Data:
     def GetJson(self):
         return self._jData
 
+    def Map(self, dtype, val):
+        return self._jData["Map"][dtype][val]
