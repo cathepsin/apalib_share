@@ -1234,9 +1234,9 @@
       "Symbol": "Mn",
       "Number": 25,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "55": {
+          "Mass":  54.9380493,
+          "Abundance": 1.00
         }
       }
     },
@@ -1244,9 +1244,21 @@
       "Symbol": "Fe",
       "Number": 26,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "54": {
+          "Mass": 53.9396147,
+          "Abundance":  0.05845
+        },
+        "56": {
+          "Mass":  55.9349418,
+          "Abundance":  0.91754
+        },
+        "57": {
+          "Mass": 56.9353983,
+          "Abundance": 0.02119
+        },
+        "58": {
+          "Mass": 57.9332801,
+          "Abundance":  0.00282
         }
       }
     },
@@ -1254,9 +1266,9 @@
       "Symbol": "Co",
       "Number": 27,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "59": {
+          "Mass":  58.9331999,
+          "Abundance": 1.00
         }
       }
     },
@@ -1264,9 +1276,25 @@
       "Symbol": "Ni",
       "Number": 28,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "58": {
+          "Mass": 57.9353477,
+          "Abundance":  0.680769
+        },
+        "60": {
+          "Mass":  59.9307903,
+          "Abundance":  0.262231
+        },
+        "61": {
+          "Mass": 60.9310601,
+          "Abundance": 0.011399
+        },
+        "62": {
+          "Mass": 61.9283484,
+          "Abundance": 0.036345
+        },
+        "64": {
+          "Mass": 63.9279692,
+          "Abundance": 0.009256
         }
       }
     },
@@ -1274,9 +1302,13 @@
       "Symbol": "Cu",
       "Number": 29,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "63": {
+          "Mass": 62.9296007,
+          "Abundance": 0.6915
+        },
+        "65": {
+          "Mass": 64.9277938,
+          "Abundance":  0.3085
         }
       }
     },
@@ -1284,9 +1316,25 @@
       "Symbol": "Zn",
       "Number": 30,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "64": {
+          "Mass": 63.9291461,
+          "Abundance": 0.48268
+        },
+        "66": {
+          "Mass": 65.9260364,
+          "Abundance": 0.27975
+        },
+        "67": {
+          "Mass": 66.9271305,
+          "Abundance": 0.04102
+        },
+        "68": {
+          "Mass": 67.9248473,
+          "Abundance": 0.19024
+        },
+        "70": {
+          "Mass":  69.925325,
+          "Abundance": 0.00631
         }
       }
     },
@@ -1294,9 +1342,13 @@
       "Symbol": "Ga",
       "Number": 31,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "69": {
+          "Mass": 68.925581,
+          "Abundance": 0.60108
+        },
+        "71": {
+          "Mass": 70.9247073,
+          "Abundance": 0.39892
         }
       }
     },
@@ -1304,9 +1356,25 @@
       "Symbol": "Ge",
       "Number": 32,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "70": {
+          "Mass":  69.9242500,
+          "Abundance":  0.2038
+        },
+        "72": {
+          "Mass": 71.9220763,
+          "Abundance":  0.2731
+        },
+        "73": {
+          "Mass":  72.9234595,
+          "Abundance":  0.0776
+        },
+        "74": {
+          "Mass": 73.9211784,
+          "Abundance": 0.3672
+        },
+        "76": {
+          "Mass": 75.9214029,
+          "Abundance":  0.0783
         }
       }
     },
@@ -1314,9 +1382,9 @@
       "Symbol": "As",
       "Number": 33,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "75": {
+          "Mass": 74.9215966,
+          "Abundance": 1.00
         }
       }
     },
@@ -1324,9 +1392,29 @@
       "Symbol": "Se",
       "Number": 34,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "74": {
+          "Mass": 73.9224767,
+          "Abundance": 0.0089
+        },
+        "76": {
+          "Mass": 75.9192143,
+          "Abundance": 0.0937
+        },
+        "77": {
+          "Mass":  76.9199148,
+          "Abundance": 0.0763
+        },
+        "78": {
+          "Mass": 77.9173097,
+          "Abundance": 0.2377
+        },
+        "80": {
+          "Mass": 79.9165221,
+          "Abundance":  0.4961
+        },
+        "82": {
+          "Mass":  81.9167003,
+          "Abundance":  0.0873
         }
       }
     },
@@ -1334,9 +1422,13 @@
       "Symbol": "Br",
       "Number": 35,
       "Stable": {
-        "": {
-          "Mass":,
-          "Abundance"
+        "79": {
+          "Mass": 78.9183379,
+          "Abundance": 0.5069
+        },
+        "81": {
+          "Mass": 80.916291,
+          "Abundance": 0.4931
         }
       }
     },
@@ -2185,5 +2277,6 @@
     "Atom molar masses": "STANDARD ATOMIC WEIGHTS, ciaaw 2020. Available online at www.ciaaw.org/atomic-masses.htm",
     "Isotopic Abundances": "CIAAW. Isotopic compositions of the elements 2019. Available online at www.ciaaw.org.",
     "Model peptide SASAs": "Uttamkumar Samanta, Ranjit P. Bahadur, Pinak Chakrabarti, Quantifying the accessible surface area of protein residues in their local environment, Protein Engineering, Design and Selection, Volume 15, Issue 8, August 2002, Pages 659–667, https://doi.org/10.1093/protein/15.8.659"
-  }
+  },
+  "Special Thanks": ["Bechthold, H. C.", "Farwell, Taylor Cameron", "Holliday, Noah", "Howald, Curtis M.", "Jenkins, Chloe E.", "Loosli, Sarah", "Rivers, Ava D."]
 }
