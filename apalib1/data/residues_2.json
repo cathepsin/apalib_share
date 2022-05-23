@@ -1,0 +1,2718 @@
+{
+ "Map": {
+   "Peptide": {
+     "Arginine": "Arginine",
+     "Arg": "Arginine",
+     "R": "Arginine",
+     "Histidine": "Histidine",
+     "His": "Histidine",
+     "H": "Histidine",
+     "Lysine": "Lysine",
+     "Lys": "Lysine",
+     "K": "Lysine",
+     "Aspartic Acid": "Aspartate",
+     "Aspartate": "Aspartate",
+     "Asp": "Aspartate",
+     "D": "Aspartate",
+     "Glutamic Acid": "Glutamate",
+     "Glutamate": "Glutamate",
+     "Glu": "Glutamate",
+     "E": "Glutamate",
+     "Serine": "Serine",
+     "Ser": "Serine",
+     "S": "Serine",
+     "Threonine": "Threonine",
+     "Thr": "Threonine",
+     "T": "Threonine",
+     "Asparagine": "Asparagine",
+     "Asn": "Asparagine",
+     "N": "Asparagine",
+     "Glutamine": "Glutamine",
+     "Gln": "Glutamine",
+     "Q": "Glutamine",
+     "Cysteine": "Cysteine",
+     "Cys": "Cysteine",
+     "C": "Cysteine",
+     "Glycine": "Glycine",
+     "Gly": "Glycine",
+     "G": "Glycine",
+     "Proline": "Proline",
+     "Pro": "Proline",
+     "P": "Proline",
+     "Alanine": "Alanine",
+     "Ala": "Alanine",
+     "A": "Alanine",
+     "Valine": "Valine",
+     "Val": "Valine",
+     "V": "Valine",
+     "Isoleucine": "Isoleucine",
+     "Ile": "Isoleucine",
+     "I": "Isoleucine",
+     "Leucine": "Leucine",
+     "Leu": "Leucine",
+     "L": "Leucine",
+     "Methionine": "Methionine",
+     "Met": "Methionine",
+     "M": "Methionine",
+     "Phenylalanine": "Phenylalanine",
+     "Phe": "Phenylalanine",
+     "F": "Phenylalanine",
+     "Tyrosine": "Tyrosine",
+     "Tyr": "Tyrosine",
+     "Y": "Tyrosine",
+     "Tryptophan": "Tryptophan",
+     "Trp": "Tryptophan",
+     "W": "Tryptophan"
+   },
+   "DNA": {
+     "Adenine": "Adenine",
+     "DA": "Adenine",
+     "A":  "Adenine",
+     "Cytosine": "Cytosine",
+     "DC": "Cytosine",
+     "C": "Cytosine",
+     "Guanine": "Guanine",
+     "DG": "Guanine",
+     "G": "Guanine",
+     "Thymine": "Thymine",
+     "DT": "Thymine",
+     "T": "Thymine",
+     "Uracil": "Uracil",
+     "DU": "Uracil",
+     "U": "Uracil",
+     "DR": ["Adenine", "Guanine"],
+     "R": ["Adenine", "Guanine"],
+     "DY": ["Cytosine", "Thymine"],
+     "Y": ["Cytosine", "Thymine", "Uracil"],
+     "DS": ["Guanine", "Cytosine"],
+     "S": ["Guanine", "Cytosine"],
+     "DW": ["Adenine", "Thymine"],
+     "W": ["Adenine", "Thymine", "Uracil"],
+     "DM": ["Adenine", "Cytosine"],
+     "M": ["Adenine", "Cytosine"],
+     "DB": ["Cytosine", "Guanine", "Thymine"],
+     "B": ["Cytosine", "Guanine", "Thymine", "Uracil"],
+     "DD": ["Adenine", "Guanine", "Thymine"],
+     "D": ["Adenine", "Guanine", "Thymine", "Uracil"],
+     "DH": ["Adenine", "Cytosine", "Thymine"],
+     "H": ["Adenine", "Cytosine", "Thymine", "Uracil"],
+     "DV": ["Adenine", "Cytosine", "Guanine"],
+     "V": ["Adenine", "Cytosine", "Guanine"],
+     "DN": ["Adenine", "Cytosine", "Guanine", "Thymine"],
+     "N": ["Adenine", "Cytosine", "Guanine", "Thymine", "Uracil"],
+     "-": [],
+     ".": []
+   },
+   "RNA": {
+     "Adenine": "Adenine",
+     "A":  "Adenine",
+     "Cytosine": "Cytosine",
+     "C": "Cytosine",
+     "Guanine": "Guanine",
+     "G": "Guanine",
+     "Thymine": "Thymine",
+     "T": "Thymine",
+     "Uracil": "Uracil",
+     "U": "Uracil",
+     "R": ["Adenine", "Guanine"],
+     "Y": ["Cytosine", "Thymine", "Uracil"],
+     "S": ["Guanine", "Cytosine"],
+     "W": ["Adenine", "Thymine", "Uracil"],
+     "M": ["Adenine", "Cytosine"],
+     "B": ["Cytosine", "Guanine", "Thymine", "Uracil"],
+     "D": ["Adenine", "Guanine", "Thymine", "Uracil"],
+     "H": ["Adenine", "Cytosine", "Thymine", "Uracil"],
+     "V": ["Adenine", "Cytosine", "Guanine"],
+     "N": ["Adenine", "Cytosine", "Guanine", "Thymine", "Uracil"],
+     "-": [],
+     ".": []
+   },
+   "Atoms": {
+     "Hydrogen" : "Hydrogen",
+     "H" : "Hydrogen",
+     "Helium" : "Helium",
+     "He" : "Helium",
+     "Lithium" : "Lithium",
+     "Li" : "Lithium",
+     "Beryllium" : "Beryllium",
+     "Be" : "Beryllium",
+     "Boron" : "Boron",
+     "B" : "Boron",
+     "Carbon" : "Carbon",
+     "C" : "Carbon",
+     "Nitrogen" : "Nitrogen",
+     "N" : "Nitrogen",
+     "Oxygen" : "Oxygen",
+     "O" : "Oxygen",
+     "Fluorine" : "Fluorine",
+     "F" : "Fluorine",
+     "Neon" : "Neon",
+     "Ne" : "Neon",
+     "Sodium" : "Sodium",
+     "Na" : "Sodium",
+     "Magnesium" : "Magnesium",
+     "Mg" : "Magnesium",
+     "Aluminum" : "Aluminum",
+     "Al" : "Aluminum",
+     "Silicon" : "Silicon",
+     "Si" : "Silicon",
+     "Phosphorus" : "Phosphorus",
+     "P" : "Phosphorus",
+     "Sulfur" : "Sulfur",
+     "S" : "Sulfur",
+     "Chlorine" : "Chlorine",
+     "Cl" : "Chlorine",
+     "Argon" : "Argon",
+     "Ar" : "Argon",
+     "Potassium" : "Potassium",
+     "K" : "Potassium",
+     "Calcium" : "Calcium",
+     "Ca" : "Calcium",
+     "Scandium" : "Scandium",
+     "Sc" : "Scandium",
+     "Titanium" : "Titanium",
+     "Ti" : "Titanium",
+     "Vanadium" : "Vanadium",
+     "V" : "Vanadium",
+     "Chromium" : "Chromium",
+     "Cr" : "Chromium",
+     "Manganese" : "Manganese",
+     "Mn" : "Manganese",
+     "Iron" : "Iron",
+     "Fe" : "Iron",
+     "Cobalt" : "Cobalt",
+     "Co" : "Cobalt",
+     "Nickel" : "Nickel",
+     "Ni" : "Nickel",
+     "Copper" : "Copper",
+     "Cu" : "Copper",
+     "Zinc" : "Zinc",
+     "Zn" : "Zinc",
+     "Gallium" : "Gallium",
+     "Ga" : "Gallium",
+     "Germanium" : "Germanium",
+     "Ge" : "Germanium",
+     "Arsenic" : "Arsenic",
+     "As" : "Arsenic",
+     "Selenium" : "Selenium",
+     "Se" : "Selenium",
+     "Bromine" : "Bromine",
+     "Br" : "Bromine",
+     "Krypton" : "Krypton",
+     "Kr" : "Krypton",
+     "Rubidium" : "Rubidium",
+     "Rb" : "Rubidium",
+     "Strontium" : "Strontium",
+     "Sr" : "Strontium",
+     "Yttrium" : "Yttrium",
+     "Y" : "Yttrium",
+     "Zirconium" : "Zirconium",
+     "Zr" : "Zirconium",
+     "Niobium" : "Niobium",
+     "Nb" : "Niobium",
+     "Molybdenum" : "Molybdenum",
+     "Mo" : "Molybdenum",
+     "Technetium" : "Technetium",
+     "Tc" : "Technetium",
+     "Ruthenium" : "Ruthenium",
+     "Ru" : "Ruthenium",
+     "Rhodium" : "Rhodium",
+     "Rh" : "Rhodium",
+     "Palladium" : "Palladium",
+     "Pd" : "Palladium",
+     "Silver" : "Silver",
+     "Ag" : "Silver",
+     "Cadmium" : "Cadmium",
+     "Cd" : "Cadmium",
+     "Indium" : "Indium",
+     "In" : "Indium",
+     "Tin" : "Tin",
+     "Sn" : "Tin",
+     "Antimony" : "Antimony",
+     "Sb" : "Antimony",
+     "Tellurium" : "Tellurium",
+     "Te" : "Tellurium",
+     "Iodine" : "Iodine",
+     "I" : "Iodine",
+     "Xenon" : "Xenon",
+     "Xe" : "Xenon",
+     "Cesium" : "Cesium",
+     "Caesium" : "Caesium",
+     "Cs" : "Caesium",
+     "Barium" : "Barium",
+     "Ba" : "Barium",
+     "Lanthanum" : "Lanthanum",
+     "La" : "Lanthanum",
+     "Cerium" : "Cerium",
+     "Ce" : "Cerium",
+     "Praseodymium" : "Praseodymium",
+     "Pr" : "Praseodymium",
+     "Neodymium" : "Neodymium",
+     "Nd" : "Neodymium",
+     "Promethium" : "Promethium",
+     "Pm" : "Promethium",
+     "Samarium" : "Samarium",
+     "Sm" : "Samarium",
+     "Europium" : "Europium",
+     "Eu" : "Europium",
+     "Gadolinium" : "Gadolinium",
+     "Gd" : "Gadolinium",
+     "Terbium" : "Terbium",
+     "Tb" : "Terbium",
+     "Dysprosium" : "Dysprosium",
+     "Dy" : "Dysprosium",
+     "Holmium" : "Holmium",
+     "Ho" : "Holmium",
+     "Erbium" : "Erbium",
+     "Er" : "Erbium",
+     "Thulium" : "Thulium",
+     "Tm" : "Thulium",
+     "Ytterbium" : "Ytterbium",
+     "Yb" : "Ytterbium",
+     "Lutetium" : "Lutetium",
+     "Lu" : "Lutetium",
+     "Hafnium" : "Hafnium",
+     "Hf" : "Hafnium",
+     "Tantalum" : "Tantalum",
+     "Ta" : "Tantalum",
+     "Tungsten" : "Tungsten",
+     "W" : "Tungsten",
+     "Rhenium" : "Rhenium",
+     "Re" : "Rhenium",
+     "Osmium" : "Osmium",
+     "Os" : "Osmium",
+     "Iridium" : "Iridium",
+     "Ir" : "Iridium",
+     "Platinum" : "Platinum",
+     "Pt" : "Platinum",
+     "Gold" : "Gold",
+     "Au" : "Gold",
+     "Mercury" : "Mercury",
+     "Hg" : "Mercury",
+     "Thallium" : "Thallium",
+     "Tl" : "Thallium",
+     "Lead" : "Lead",
+     "Pb" : "Lead",
+     "Bismuth" : "Bismuth",
+     "Bi" : "Bismuth",
+     "Polonium" : "Polonium",
+     "Po" : "Polonium",
+     "Astatine" : "Astatine",
+     "At" : "Astatine",
+     "Radon" : "Radon",
+     "Rn" : "Radon",
+     "Francium" : "Francium",
+     "Fr" : "Francium",
+     "Radium" : "Radium",
+     "Ra" : "Radium",
+     "Actinium" : "Actinium",
+     "Ac" : "Actinium",
+     "Thorium" : "Thorium",
+     "Th" : "Thorium",
+     "Protactinium" : "Protactinium",
+     "Pa" : "Protactinium",
+     "Uranium" : "Uranium",
+     "U" : "Uranium",
+     "Neptunium" : "Neptunium",
+     "Np" : "Neptunium",
+     "Plutonium" : "Plutonium",
+     "Pu" : "Plutonium",
+     "Americium" : "Americium",
+     "Am" : "Americium",
+     "Curium" : "Curium",
+     "Cm" : "Curium",
+     "Berkelium" : "Berkelium",
+     "Bk" : "Berkelium",
+     "Californium" : "Californium",
+     "Cf" : "Californium",
+     "Einsteinium" : "Einsteinium",
+     "Es" : "Einsteinium",
+     "Fermium" : "Fermium",
+     "Fm" : "Fermium",
+     "Mendelevium" : "Mendelevium",
+     "Md" : "Mendelevium",
+     "Nobelium" : "Nobelium",
+     "No" : "Nobelium",
+     "Lawrencium" : "Lawrencium",
+     "Lr" : "Lawrencium",
+     "Rutherfordium" : "Rutherfordium",
+     "Rf" : "Rutherfordium",
+     "Dubnium" : "Dubnium",
+     "Db" : "Dubnium",
+     "Seaborgium" : "Seaborgium",
+     "Sg" : "Seaborgium",
+     "Bohrium" : "Bohrium",
+     "Bh" : "Bohrium",
+     "Hassium" : "Hassium",
+     "Hs" : "Hassium",
+     "Meitnerium" : "Meitnerium",
+     "Mt" : "Meitnerium",
+     "Darmstadtium" : "Darmstadtium",
+     "Ds" : "Darmstadtium",
+     "Roentgenium" : "Roentgenium",
+     "Rg" : "Roentgenium",
+     "Copernicium" : "Copernicium",
+     "Cn" : "Copernicium",
+     "Nihonium" : "Nihonium",
+     "Nh" : "Nihonium",
+     "Flerovium" : "Flerovium",
+     "Fl" : "Flerovium",
+     "Moscovium" : "Moscovium",
+     "Mc" : "Moscovium",
+     "Livermorium" : "Livermorium",
+     "Lv" : "Livermorium",
+     "Tennessine" : "Tennessine",
+     "Ts" : "Tennessine",
+     "Oganesson" : "Oganesson",
+     "Og" : "Oganesson"
+   }
+
+ },
+ "Amino Acids": {
+   "Arginine": {
+     "1code": "R",
+     "3code": "ARG",
+     "Charge": "+",
+     "Polarity": "Polar",
+     "Codons": [
+       "CGU",
+       "CGC",
+       "CGA",
+       "CGG",
+       "AGA",
+       "AGG"
+     ],
+     "List": [
+       "CG",
+       "CD",
+       "NE",
+       "CZ",
+       "NH1",
+       "NH2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 249.26,
+       "Gly-X-Gly ASA sc": 190.24,
+       "Ala-X-Ala ASA w": 235.45,
+       "Ala-X-Ala ASA sc": 190.04
+     },
+     "std-alpha-prop" : 0.88
+
+   },
+   "Histidine": {
+     "1code": "H",
+     "3code": "HIS",
+     "Charge": "+",
+     "Polarity": "Polar",
+     "Codons": [
+       "CAU",
+       "CAC"
+     ],
+     "List": [
+       "CG",
+       "ND1",
+       "CD2",
+       "CE1",
+       "NE2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 198.51,
+       "Gly-X-Gly ASA sc": 141.27,
+       "Ala-X-Ala ASA w": 184.79,
+       "Ala-X-Ala ASA sc": 141.17
+     },
+     "std-alpha-prop" : 2.55
+   },
+   "Lysine": {
+     "1code": "K",
+     "3code": "LYS",
+     "Charge": "+",
+     "Polarity": "Polar",
+     "Codons": [
+       "AAA",
+       "AAG"
+     ],
+     "List": [
+       "CG",
+       "CD",
+       "CE",
+       "NZ"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 207.49,
+       "Gly-X-Gly ASA sc": 147.99,
+       "Ala-X-Ala ASA w": 193.73,
+       "Ala-X-Ala ASA sc": 147.83
+     },
+     "std-alpha-prop" : 1.09
+   },
+   "Aspartate": {
+     "1code": "D",
+     "3code": "ASP",
+     "Charge": "-",
+     "Polarity": "Polar",
+     "Codons": [
+       "GAU",
+       "GAC"
+     ],
+     "List": [
+       "CG",
+       "OD1",
+       "OD2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 155.37,
+       "Gly-X-Gly ASA sc": 97.80,
+       "Ala-X-Ala ASA w": 141.61,
+       "Ala-X-Ala ASA sc": 97.66
+     },
+     "std-alpha-prop" : 2.89
+   },
+   "Glutamate": {
+     "1code": "E",
+     "3code": "GLU",
+     "Charge": "-",
+     "Polarity": "Polar",
+     "Codons": [
+       "GAA",
+       "GAG"
+     ],
+     "List": [
+       "CG",
+       "CD",
+       "OE1",
+       "OE2"
+     ],
+     "ALA": {
+       "Gly-X-Gly ASA w": 187.16,
+       "Gly-X-Gly ASA sc": 132.53,
+       "Ala-X-Ala ASA w": 173.46,
+       "Ala-X-Ala ASA sc": 132.42
+     },
+     "std-alpha-prop" : 1.67
+   },
+   "Serine": {
+     "1code": "S",
+     "3code": "SER",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "UCU",
+       "UCC",
+       "UCA",
+       "UCG",
+       "AGU",
+       "AGC"
+     ],
+     "List": [
+       "OG"
+     ],
+     "ALA": {
+       "Gly-X-Gly ASA w": 125.68,
+       "Gly-X-Gly ASA sc": 69.08,
+       "Ala-X-Ala ASA w": 111.97,
+       "Ala-X-Ala ASA sc": 68.97
+     },
+     "std-alpha-prop" : 2.09
+   },
+   "Threonine": {
+     "1code": "T",
+     "3code": "THR",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "ACU",
+       "ACC",
+       "ACA",
+       "ACG"
+     ],
+     "List": [
+       "OG1",
+       "CG2"
+     ],
+     "ALA": {
+       "Gly-X-Gly ASA w": 148.06,
+       "Gly-X-Gly ASA sc": 88.62,
+       "Ala-X-Ala ASA w": 134.28,
+       "Ala-X-Ala ASA sc": 88.45
+     },
+     "std-alpha-prop" : 2.76
+   },
+   "Asparagine": {
+     "1code": "N",
+     "3code": "ASN",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "AAU",
+       "AAC"
+     ],
+     "List": [
+       "CG",
+       "OD1",
+       "ND2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 168.87,
+       "Gly-X-Gly ASA sc": 109.92,
+       "Ala-X-Ala ASA w": 155.22,
+       "Ala-X-Ala ASA sc": 109.87
+     },
+     "std-alpha-prop" : 2.72
+   },
+   "Glutamine": {
+     "1code": "Q",
+     "3code": "GLN",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "CAA",
+       "CAG"
+     ],
+     "List": [
+       "CG",
+       "CD",
+       "OE1",
+       "NE2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 189.17,
+       "Gly-X-Gly ASA sc": 129.68,
+       "Ala-X-Ala ASA w": 175.42,
+       "Ala-X-Ala ASA sc": 129.52
+     },
+     "std-alpha-prop" : 1.63
+   },
+   "Cysteine": {
+     "1code": "C",
+     "3code": "CYS",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "UGU",
+       "UGC"
+     ],
+     "List": [
+       "SG"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 141.48,
+       "Gly-X-Gly ASA sc": 82.07,
+       "Ala-X-Ala ASA w": 127.72,
+       "Ala-X-Ala ASA sc": 81.91
+     },
+     "std-alpha-prop" : 2.85
+   },
+   "Glycine": {
+     "1code": "G",
+     "3code": "GLY",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "GGU",
+       "GGC",
+       "GGA",
+       "GGA"
+     ],
+     "List": [
+       "CA"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 83.91,
+       "Gly-X-Gly ASA sc": 0,
+       "Ala-X-Ala ASA w": 70.27,
+       "Ala-X-Ala ASA sc": 0
+     },
+     "std-alpha-prop" : 4.18
+   },
+   "Proline": {
+     "1code": "P",
+     "3code": "PRO",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "CCU",
+       "CCC",
+       "CCA",
+       "CCG"
+     ],
+     "List": [
+       "CG",
+       "CD"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 144.80,
+       "Gly-X-Gly ASA sc": 106.44,
+       "Ala-X-Ala ASA w": 126.78,
+       "Ala-X-Ala ASA sc": 98.23
+     },
+     "std-alpha-prop" : 13.22
+   },
+   "Alanine": {
+     "1code": "A",
+     "3code": "ALA",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "GCU",
+       "GCC",
+       "GCA",
+       "GCG"
+     ],
+     "List": [
+       "CB"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 116.40,
+       "Gly-X-Gly ASA sc": 55.40,
+       "Ala-X-Ala ASA w": 102.68,
+       "Ala-X-Ala ASA sc": 55.28
+     },
+     "std-alpha-prop" : 0.00
+   },
+   "Valine": {
+     "1code": "V",
+     "3code": "VAL",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "GUU",
+       "GUC",
+       "GUA",
+       "GUG"
+     ],
+     "List": [
+       "CG1",
+       "CG2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 162.24,
+       "Gly-X-Gly ASA sc": 103.12,
+       "Ala-X-Ala ASA w": 148.51,
+       "Ala-X-Ala ASA sc": 103.00
+     },
+     "std-alpha-prop" : 2.55
+   },
+   "Isoleucine": {
+     "1code": "I",
+     "3code": "ILE",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "AUU",
+       "AUC",
+       "AUA"
+     ],
+     "List": [
+       "CG1",
+       "CG2",
+       "CD1"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 189.95,
+       "Gly-X-Gly ASA sc": 130.71,
+       "Ala-X-Ala ASA w": 176.22,
+       "Ala-X-Ala ASA sc": 130.58
+     },
+     "std-alpha-prop" : 1.72
+   },
+   "Leucine": {
+     "1code": "L",
+     "3code": "LEU",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "UUA",
+       "UUG",
+       "CUU",
+       "CUC",
+       "CUA",
+       "CUG"
+     ],
+     "List": [
+       "CG",
+       "CD1",
+       "CD2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 197.99,
+       "Gly-X-Gly ASA sc": 141.52,
+       "Ala-X-Ala ASA w": 184.33,
+       "Ala-X-Ala ASA sc": 141.47
+     },
+     "std-alpha-prop" : 0.88
+   },
+   "Methionine": {
+     "1code": "M",
+     "3code": "MET",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "AUG"
+     ],
+     "List": [
+       "CG",
+       "SD",
+       "CE"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 210.55,
+       "Gly-X-Gly ASA sc": 150.39,
+       "Ala-X-Ala ASA w": 196.87,
+       "Ala-X-Ala ASA sc": 150.32
+     },
+     "std-alpha-prop" : 1.00
+   },
+   "Phenylalanine": {
+     "1code": "F",
+     "3code": "PHE",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "UUU",
+       "UUC"
+     ],
+     "List": [
+       "CG",
+       "CD1",
+       "CD2",
+       "CE1",
+       "CE2",
+       "CZ"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 223.29,
+       "Gly-X-Gly ASA sc": 164.18,
+       "Ala-X-Ala ASA w": 209.64,
+       "Ala-X-Ala ASA sc": 164.14
+     },
+     "std-alpha-prop" : 2.26
+   },
+   "Tyrosine": {
+     "1code": "Y",
+     "3code": "TYR",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "UAU",
+       "UAC"
+     ],
+     "List": [
+       "CG",
+       "CD1",
+       "CD2",
+       "CE1",
+       "CE2",
+       "CZ",
+       "OH"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 238.30,
+       "Gly-X-Gly ASA sc": 180.03,
+       "Ala-X-Ala ASA w": 224.68,
+       "Ala-X-Ala ASA sc": 180.01
+     },
+     "std-alpha-prop" : 2.22
+   },
+   "Tryptophan": {
+     "1code": "W",
+     "3code": "TRP",
+     "Charge": "None",
+     "Polarity": "Nonpolar",
+     "Codons": [
+       "UGG"
+     ],
+     "List": [
+       "CG",
+       "CD1",
+       "CD2",
+       "NE1",
+       "CE2",
+       "CE3",
+       "CZ2",
+       "CZ3",
+       "CH2"
+     ],
+     "ASA": {
+       "Gly-X-Gly ASA w": 265.42,
+       "Gly-X-Gly ASA sc": 209.62,
+       "Ala-X-Ala ASA w": 251.78,
+       "Ala-X-Ala ASA sc": 209.57
+     },
+     "std-alpha-prop" : 2.05
+   },
+   "Selenocysteine": {
+     "1code": "U",
+     "3code": "SEC",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "UGA"
+     ],
+     "List": [
+       "SE"
+     ],
+     "ASA": {},
+     "std-alpha-prop" : "None"
+   },
+   "Pyrrolysine": {
+     "1code": "O",
+     "3code": "PYL",
+     "Charge": "None",
+     "Polarity": "Polar",
+     "Codons": [
+       "UAG"
+     ],
+     "ASA": {},
+     "std-alpha-prop" : "None"
+   }
+ },
+ "DNA Nucleotides": {},
+ "RNA Nucleotides": {},
+ "Atoms": {
+   "Hydrogen":{
+     "Symbol": "H",
+     "Number": 1,
+     "Stable": {
+       "1" : {
+         "Mass": 1.0078250319,
+         "Abundance": 0.999885
+       },
+       "2" : {
+
+         "Mass": 2.0141017779,
+         "Abundance": 0.000115
+       }
+     }
+   },
+   "Helium": {
+     "Symbol": "He",
+     "Number": 2,
+     "Stable": {
+       "3": {
+         "Mass": 3.0160293094,
+         "Abundance": 0.00000134
+       },
+       "4": {
+         "Mass": 4.0026032497,
+         "Abundance": 0.99999866
+       }
+     }
+   },
+   "Lithium": {
+     "Symbol": "Li",
+     "Number": 3,
+     "Stable": {
+       "6": {
+         "Mass": 6.0151223,
+         "Abundance": 0.0759
+       },
+       "7": {
+         "Mass": 7.0160041,
+         "Abundance": 0.9241
+       }
+     }
+   },
+   "Beryllium": {
+     "Symbol": "Be",
+     "Number": 4,
+     "Stable": {
+       "9": {
+         "Mass": 9.0121822,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Boron":{
+     "Symbol": "B",
+     "Number": 5,
+     "Stable": {
+       "10": {
+         "Mass": 10.0129371,
+         "Abundance": 0.199
+       },
+       "11": {
+         "Mass":  11.0093055,
+         "Abundance": 0.801
+       }
+     }
+   },
+   "Carbon":{
+     "Symbol": "C",
+     "Number": 6,
+     "Stable": {
+       "12": {
+         "Mass": 12.000,
+         "Abundance": 0.9893
+       },
+       "13": {
+         "Mass":  13.003354838,
+         "Abundance":  0.0107
+       }
+     }
+   },
+   "Nitrogen":{
+     "Symbol": "N",
+     "Number": 7,
+     "Stable": {
+       "14": {
+         "Mass": 14.0030740074,
+         "Abundance": 0.99636
+       },
+       "15": {
+         "Mass":  15.000108973,
+         "Abundance": 0.00364
+       }
+     }
+   },
+   "Oxygen": {
+     "Symbol": "O",
+     "Number": 8,
+     "Stable": {
+       "16": {
+         "Mass":  15.9949146223,
+         "Abundance": 0.99757
+       },
+       "17": {
+         "Mass":  16.99913150,
+         "Abundance": 0.00038
+       },
+       "18": {
+         "Mass": 17.9991604,
+         "Abundance": 0.00205
+       }
+     }
+   },
+   "Fluorine": {
+     "Symbol": "F",
+     "Number": 9,
+     "Stable": {
+       "19": {
+         "Mass": 18.99840320,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Neon": {
+     "Symbol": "Ne",
+     "Number": 10,
+     "Stable": {
+       "20": {
+         "Mass":  19.992440176,
+         "Abundance": 0.9048
+       },
+       "21": {
+         "Mass": 20.99384674,
+         "Abundance": 0.0027
+       },
+       "22": {
+         "Mass": 21.99138550,
+         "Abundance":  0.0925
+       }
+     }
+   },
+   "Sodium": {
+     "Symbol": "Na",
+     "Number": 11,
+     "Stable": {
+       "23": {
+         "Mass": 22.98976966,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Magnesium": {
+     "Symbol": "Mg",
+     "Number": 12,
+     "Stable": {
+       "24": {
+         "Mass": 23.98504187,
+         "Abundance":  0.7899
+       },
+       "25": {
+         "Mass": 24.98583700,
+         "Abundance": 0.1000
+       },
+       "26": {
+         "Mass":  25.98259300,
+         "Abundance": 0.1101
+       }
+     }
+   },
+   "Aluminum": {
+     "Symbol": "Al",
+     "Number": 13,
+     "Stable": {
+       "27": {
+         "Mass":  26.98153841,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Silicon": {
+     "Symbol": "Si",
+     "Number": 14,
+     "Stable": {
+       "28": {
+         "Mass": 27.97692649,
+         "Abundance": 0.92223
+       },
+       "29": {
+         "Mass":28.97649468,
+         "Abundance": 0.04685
+       },
+       "30": {
+         "Mass":  29.97377018,
+         "Abundance": 0.03092
+       }
+     }
+   },
+   "Phosphorus": {
+     "Symbol": "P",
+     "Number": 15,
+     "Stable": {
+       "31": {
+         "Mass": 30.97376149,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Sulfur": {
+     "Symbol": "S",
+     "Number": 16,
+     "Stable": {
+       "32": {
+         "Mass":  31.97207073,
+         "Abundance": 0.9499
+       },
+       "33": {
+         "Mass": 32.97145854,
+         "Abundance":  0.0075
+       },
+       "34": {
+         "Mass":  33.96786687,
+         "Abundance": 0.0425
+       },
+       "36": {
+         "Mass":  35.96708088,
+         "Abundance":  0.0001
+       }
+     }
+   },
+   "Chlorine": {
+     "Symbol": "Cl",
+     "Number": 17,
+     "Stable": {
+       "35": {
+         "Mass": 34.96885271,
+         "Abundance": 0.7576
+       },
+       "37": {
+         "Mass":  36.96590260,
+         "Abundance": 0.2424
+       }
+     }
+   },
+   "Argon": {
+     "Symbol": "Ar",
+     "Number": 18,
+     "Stable": {
+       "36": {
+         "Mass": 35.96754626,
+         "Abundance":  0.003365
+       },
+       "38": {
+         "Mass":  37.9627322,
+         "Abundance": 0.000632
+       },
+       "40": {
+         "Mass": 39.962383124,
+         "Abundance":  0.996003
+       }
+     }
+   },
+   "Potassium": {
+     "Symbol": "K",
+     "Number": 19,
+     "Stable": {
+       "39": {
+         "Mass": 38.9637069,
+         "Abundance" : 0.932581
+       },
+       "40" : {
+         "Mass": 39.96399867,
+         "Abundance": 0.000117
+       },
+       "41": {
+         "Mass":  40.96182597,
+         "Abundance": 0.067302
+       }
+     }
+   },
+   "Calcium": {
+     "Symbol": "Ca",
+     "Number": 20,
+     "Stable": {
+       "40": {
+         "Mass":  39.9625912,
+         "Abundance":  0.96941
+       },
+       "42": {
+         "Mass": 41.9586183,
+         "Abundance": 0.00647
+       },
+       "43": {
+         "Mass": 42.9587668,
+         "Abundance": 0.00135
+       },
+       "44": {
+         "Mass":  43.9554811,
+         "Abundance":  0.02086
+       },
+       "46": {
+         "Mass":  45.9536927,
+         "Abundance": 0.00004
+       },
+       "48": {
+         "Mass": 47.952533,
+         "Abundance":  0.00187
+       }
+     }
+   },
+   "Scandium": {
+     "Symbol": "Sc",
+     "Number": 21,
+     "Stable": {
+       "45": {
+         "Mass": 44.9559102,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Titanium": {
+     "Symbol": "Ti",
+     "Number": 22,
+     "Stable": {
+       "46": {
+         "Mass": 45.9526295,
+         "Abundance":  0.0825
+       },
+       "47": {
+         "Mass": 46.9517637,
+         "Abundance": 0.0744
+       },
+       "48": {
+         "Mass": 47.9479470,
+         "Abundance": 0.7372
+       },
+       "49": {
+         "Mass": 48.9478707,
+         "Abundance": 0.0541
+       },
+       "50": {
+         "Mass": 49.9447920,
+         "Abundance": 0.0518
+       }
+     }
+   },
+   "Vanadium": {
+     "Symbol": "V",
+     "Number": 23,
+     "Stable": {
+       "50": {
+         "Mass": 49.9471627,
+         "Abundance":  0.00250
+       },
+       "51": {
+         "Mass":  50.9439635,
+         "Abundance": 0.99750
+       }
+     }
+   },
+   "Chromium": {
+     "Symbol": "Cr",
+     "Number": 24,
+     "Stable": {
+       "50": {
+         "Mass":  49.9460495,
+         "Abundance": 0.04345
+       },
+       "52": {
+         "Mass":  51.9405115,
+         "Abundance": 0.83789
+       },
+       "53": {
+         "Mass":  52.9406534,
+         "Abundance": 0.09501
+       },
+       "54": {
+         "Mass": 53.9388846,
+         "Abundance":  0.02365
+       }
+     }
+   },
+   "Manganese": {
+     "Symbol": "Mn",
+     "Number": 25,
+     "Stable": {
+       "55": {
+         "Mass":  54.9380493,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Iron": {
+     "Symbol": "Fe",
+     "Number": 26,
+     "Stable": {
+       "54": {
+         "Mass": 53.9396147,
+         "Abundance":  0.05845
+       },
+       "56": {
+         "Mass":  55.9349418,
+         "Abundance":  0.91754
+       },
+       "57": {
+         "Mass": 56.9353983,
+         "Abundance": 0.02119
+       },
+       "58": {
+         "Mass": 57.9332801,
+         "Abundance":  0.00282
+       }
+     }
+   },
+   "Cobalt": {
+     "Symbol": "Co",
+     "Number": 27,
+     "Stable": {
+       "59": {
+         "Mass":  58.9331999,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Nickel": {
+     "Symbol": "Ni",
+     "Number": 28,
+     "Stable": {
+       "58": {
+         "Mass": 57.9353477,
+         "Abundance":  0.680769
+       },
+       "60": {
+         "Mass":  59.9307903,
+         "Abundance":  0.262231
+       },
+       "61": {
+         "Mass": 60.9310601,
+         "Abundance": 0.011399
+       },
+       "62": {
+         "Mass": 61.9283484,
+         "Abundance": 0.036345
+       },
+       "64": {
+         "Mass": 63.9279692,
+         "Abundance": 0.009256
+       }
+     }
+   },
+   "Copper": {
+     "Symbol": "Cu",
+     "Number": 29,
+     "Stable": {
+       "63": {
+         "Mass": 62.9296007,
+         "Abundance": 0.6915
+       },
+       "65": {
+         "Mass": 64.9277938,
+         "Abundance":  0.3085
+       }
+     }
+   },
+   "Zinc":{
+     "Symbol": "Zn",
+     "Number": 30,
+     "Stable": {
+       "64": {
+         "Mass": 63.9291461,
+         "Abundance": 0.48268
+       },
+       "66": {
+         "Mass": 65.9260364,
+         "Abundance": 0.27975
+       },
+       "67": {
+         "Mass": 66.9271305,
+         "Abundance": 0.04102
+       },
+       "68": {
+         "Mass": 67.9248473,
+         "Abundance": 0.19024
+       },
+       "70": {
+         "Mass":  69.925325,
+         "Abundance": 0.00631
+       }
+     }
+   },
+   "Gallium": {
+     "Symbol": "Ga",
+     "Number": 31,
+     "Stable": {
+       "69": {
+         "Mass": 68.925581,
+         "Abundance": 0.60108
+       },
+       "71": {
+         "Mass": 70.9247073,
+         "Abundance": 0.39892
+       }
+     }
+   },
+   "Germanium": {
+     "Symbol": "Ge",
+     "Number": 32,
+     "Stable": {
+       "70": {
+         "Mass":  69.9242500,
+         "Abundance":  0.2038
+       },
+       "72": {
+         "Mass": 71.9220763,
+         "Abundance":  0.2731
+       },
+       "73": {
+         "Mass":  72.9234595,
+         "Abundance":  0.0776
+       },
+       "74": {
+         "Mass": 73.9211784,
+         "Abundance": 0.3672
+       },
+       "76": {
+         "Mass": 75.9214029,
+         "Abundance":  0.0783
+       }
+     }
+   },
+   "Arsenic": {
+     "Symbol": "As",
+     "Number": 33,
+     "Stable": {
+       "75": {
+         "Mass": 74.9215966,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Selenium": {
+     "Symbol": "Se",
+     "Number": 34,
+     "Stable": {
+       "74": {
+         "Mass": 73.9224767,
+         "Abundance": 0.0089
+       },
+       "76": {
+         "Mass": 75.9192143,
+         "Abundance": 0.0937
+       },
+       "77": {
+         "Mass":  76.9199148,
+         "Abundance": 0.0763
+       },
+       "78": {
+         "Mass": 77.9173097,
+         "Abundance": 0.2377
+       },
+       "80": {
+         "Mass": 79.9165221,
+         "Abundance":  0.4961
+       },
+       "82": {
+         "Mass":  81.9167003,
+         "Abundance":  0.0873
+       }
+     }
+   },
+   "Bromine": {
+     "Symbol": "Br",
+     "Number": 35,
+     "Stable": {
+       "79": {
+         "Mass": 78.9183379,
+         "Abundance": 0.5069
+       },
+       "81": {
+         "Mass": 80.916291,
+         "Abundance": 0.4931
+       }
+     }
+   },
+   "Krypton": {
+     "Symbol": "Kr",
+     "Number": 36,
+     "Stable": {
+       "78": {
+         "Mass": 77.920388,
+         "Abundance": 0.00355
+       },
+       "80": {
+         "Mass": 79.916379,
+         "Abundance":  0.02286
+       },
+       "82": {
+         "Mass": 81.9134850,
+         "Abundance":   0.11593
+       },
+       "83": {
+         "Mass": 82.914137,
+         "Abundance":  0.11500
+       },
+       "84": {
+         "Mass":  83.911508,
+         "Abundance":   0.56987
+       },
+       "86": {
+         "Mass": 85.910615,
+         "Abundance":   0.17279
+       }
+     }
+   },
+   "Rubidium": {
+     "Symbol": "Rb",
+     "Number": 37,
+     "Stable": {
+       "85": {
+         "Mass": 84.9117924,
+         "Abundance": 0.7217
+       },
+       "87": {
+         "Mass": 86.9091858,
+         "Abundance": 0.2783
+       }
+     }
+   },
+   "Strontium": {
+     "Symbol": "Sr",
+     "Number": 38,
+     "Stable": {
+       "84": {
+         "Mass": 83.913426,
+         "Abundance": 0.0056
+       },
+       "86": {
+         "Mass": 85.9092647,
+         "Abundance": 0.0986
+       },
+       "87": {
+         "Mass": 86.9088816,
+         "Abundance": 0.0700
+       },
+       "88": {
+         "Mass": 87.9056167,
+         "Abundance": 0.8258
+       }
+     }
+   },
+   "Yttrium": {
+     "Symbol": "Y",
+     "Number": 39,
+     "Stable": {
+       "89": {
+         "Mass": 88.9058485,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Zirconium": {
+     "Symbol": "Zr",
+     "Number": 40,
+     "Stable": {
+       "90": {
+         "Mass": 89.9047022,
+         "Abundance": 0.5145
+       },
+       "91": {
+         "Mass": 90.9056434,
+         "Abundance": 0.1122
+       },
+       "92": {
+         "Mass": 91.9050386,
+         "Abundance": 0.1715
+       },
+       "94": {
+         "Mass": 93.9063144,
+         "Abundance": 0.1738
+       },
+       "96": {
+         "Mass": 95.908275,
+         "Abundance": 0.0280
+       }
+     }
+   },
+   "Niobium": {
+     "Symbol": "Nb",
+     "Number": 41,
+     "Stable": {
+       "93": {
+         "Mass": 92.9063762,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Molybdenum": {
+     "Symbol": "Mo",
+     "Number": 42,
+     "Stable": {
+       "92": {
+         "Mass": 91.906810,
+         "Abundance": 0.1477
+       },
+       "94": {
+         "Mass": 93.9050867,
+         "Abundance": 0.0923
+       },
+       "95": {
+         "Mass": 94.9058406,
+         "Abundance": 0.1590
+       },
+       "96": {
+         "Mass": 95.9046780,
+         "Abundance": 0.1668
+       },
+       "97": {
+         "Mass": 96.9060201,
+         "Abundance": 0.0956
+       },
+       "98": {
+         "Mass": 97.9054069,
+         "Abundance": 0.2419
+       },
+       "100": {
+         "Mass": 99.907476,
+         "Abundance": 0.0967
+       }
+     }
+   },
+   "Technetium": {
+     "Symbol": "Tc",
+     "Number": 43,
+     "Stable": {}
+   },
+   "Ruthenium": {
+     "Symbol": "Ru",
+     "Number": 44,
+     "Stable": {
+       "96": {
+         "Mass": 95.907604,
+         "Abundance": 0.0554
+       },
+	"98": {
+         "Mass": 97.905287,
+         "Abundance": 0.0187
+       },
+	"99": {
+         "Mass": 98.9059385,
+         "Abundance": 0.1276
+       },
+	"100": {
+         "Mass": 99.9042189,
+         "Abundance": 0.1260
+       },
+	"101": {
+         "Mass": 100.9055815,
+         "Abundance": 0.1706
+       },
+	"102": {
+         "Mass": 101.9043488,
+         "Abundance": 0.3155
+       },
+	"104": {
+         "Mass": 103.905430,
+         "Abundance": 0.1862
+       }
+     }
+   },
+   "Rhodium": {
+     "Symbol": "Rh",
+     "Number": 45,
+     "Stable": {
+       "103": {
+         "Mass": 102.905504,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Palladium": {
+     "Symbol": "Pd",
+     "Number": 46,
+     "Stable": {
+       "102": {
+         "Mass": 101.905607,
+         "Abundance": 0.0102
+       },
+	"104": {
+         "Mass": 103.904034,
+         "Abundance": 0.1114
+       },
+	"105": {
+         "Mass": 104.905083,
+         "Abundance": 0.2233
+       },
+	"106": {
+         "Mass": 105.903484,
+         "Abundance": 0.2733
+       },
+	"108": {
+         "Mass": 107.903895,
+         "Abundance": 0.2646
+       },
+	"110": {
+         "Mass": 109.905153,
+         "Abundance": 0.1172
+       }
+     }
+   },
+   "Silver": {
+     "Symbol": "Ag",
+     "Number": 47,
+     "Stable": {
+       "107": {
+         "Mass": 106.905093,
+         "Abundance": 0.51839
+       },
+	"109": {
+         "Mass": 108.904756,
+         "Abundance": 0.48161
+       }
+     }
+   },
+   "Cadmium": {
+     "Symbol": "Cd",
+     "Number": 48,
+     "Stable": {
+       "106": {
+         "Mass": 105.906458,
+         "Abundance": 0.0125
+       },
+	"108": {
+         "Mass": 107.904183,
+         "Abundance": 0.0089
+       },
+	"110": {
+         "Mass": 109.903006,
+         "Abundance": 0.1249
+       },
+	"111": {
+         "Mass": 110.904182,
+         "Abundance": 0.1280
+       },
+	"112": {
+         "Mass": 111.9027577,
+         "Abundance": 0.2413
+       },
+	"113": {
+         "Mass": 112.9044014,
+         "Abundance": 0.1222
+       },
+	"114": {
+         "Mass": 113.9033586,
+         "Abundance": 0.2873
+       },
+	"116": {
+         "Mass":  115.904756,
+         "Abundance": 0.0749
+       }
+     }
+   },
+   "Indium": {
+     "Symbol": "In",
+     "Number": 49,
+     "Stable": {
+       "113": {
+         "Mass": 112.904062,
+         "Abundance": 0.0429
+       },
+	"115": {
+         "Mass": 114.903879,
+         "Abundance": 0.9571
+ }
+     }
+   },
+   "Tin": {
+     "Symbol": "Sn",
+     "Number": 50,
+     "Stable": {
+       "112": {
+         "Mass": 111.904822,
+         "Abundance": 0.0097
+       },
+	"114": {
+         "Mass": 113.902783,
+         "Abundance": 0.0066
+       },
+	"115": {
+         "Mass": 114.903347,
+         "Abundance": 0.0034
+       },
+	"116": {
+         "Mass": 115.901745,
+         "Abundance": 0.1454
+       },
+	"117": {
+         "Mass": 116.902955,
+         "Abundance": 0.0768
+       },
+	"118": {
+         "Mass": 117.901608,
+         "Abundance": 0.2422
+       },
+	"119": {
+         "Mass": 118.903311,
+         "Abundance": 0.0859
+       },
+	"120": {
+         "Mass":119.9021985,
+         "Abundance": 0.3258
+       },
+	"122": {
+         "Mass": 121.9034411,
+         "Abundance": 0.0463
+       },
+	"124": {
+         "Mass":123.9052745,
+         "Abundance": 0.0579
+       }
+     }
+   },
+   "Antimony": {
+     "Symbol": "Sb",
+     "Number": 51,
+     "Stable": {
+       "121": {
+         "Mass": 120.9038222,
+         "Abundance": 0.5721
+       },
+	"123": {
+         "Mass": 122.9042160,
+         "Abundance":  0.4279
+       }
+     }
+   },
+   "Tellurium": {
+     "Symbol": "Te",
+     "Number": 52,
+     "Stable": {
+       "120": {
+         "Mass": 119.904026,
+         "Abundance": 0.0009
+	      },
+         "122": {
+                 "Mass": 121.9030558,
+                 "Abundance": 0.0255
+         },
+         "123": {
+                 "Mass": 122.9042711,
+                 "Abundance": 0.0089
+         },
+         "124": {
+                 "Mass": 123.9028188,
+                 "Abundance": 0.0474
+         },
+         "125": {
+                 "Mass": 124.9044241,
+                 "Abundance": 0.0707
+         },
+        "126": {
+                 "Mass": 125.9033049,
+                 "Abundance": 0.1884
+        },
+         "128": {
+                 "Mass": 127.9044615,
+                 "Abundance": 0.3174
+            },
+         "130": {
+                 "Mass": 129.9062229,
+                 "Abundance": 0.3408
+               }
+     }
+   },
+   "Iodine": {
+     "Symbol": "I",
+     "Number": 53,
+     "Stable": {
+       "127": {
+         "Mass": 126.904468,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Xenon": {
+     "Symbol": "Xe",
+     "Number": 54,
+     "Stable": {
+       "124": {
+         "Mass": 123.9058954,
+         "Abundance": 0.000952
+       },
+	"126": {
+         "Mass": 125.904268,
+         "Abundance": 0.000890
+       },
+	"128": {
+         "Mass": 127.9035305,
+         "Abundance": 0.019102
+       },
+	"129": {
+         "Mass": 128.9047799,
+         "Abundance": 0.264006
+       },
+	"130": {
+         "Mass": 129.9035089,
+         "Abundance": 0.040710
+       },
+	"131": {
+         "Mass": 130.9050828,
+         "Abundance": 0.212324
+       },
+	"132": {
+         "Mass": 131.9041546,
+         "Abundance": 0.269086
+       },
+	"134": {
+         "Mass": 133.9053945,
+         "Abundance": 0.104357
+       },
+	"136": {
+         "Mass": 135.907220,
+         "Abundance": 0.088573
+       }
+     }
+   },
+   "Cesium": {
+     "Symbol": "Cs",
+     "Number": 55,
+     "Stable": {
+       "133": {
+         "Mass": 132.905447,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Caesium": {
+     "Symbol": "Cs",
+     "Number": 55,
+     "Stable": {
+       "133": {
+         "Mass": 132.905447,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Barium": {
+     "Symbol": "Ba",
+     "Number": 56,
+     "Stable": {
+       "130": {
+         "Mass": 129.906311,
+         "Abundance": 0.00106
+       },
+       "132": {
+         "Mass": 131.905056,
+         "Abundance": 0.00101
+       },
+       "134": {
+         "Mass": 133.904504,
+         "Abundance": 0.02417
+       },
+       "135": {
+         "Mass": 134.905684,
+         "Abundance": 0.06592
+       },
+       "136": {
+         "Mass": 135.904571,
+         "Abundance": 0.07854
+       },
+       "137": {
+         "Mass": 136.905822,
+         "Abundance": 0.11232
+       },
+       "138": {
+         "Mass": 137.905242,
+         "Abundance": 0.71698
+       }
+     }
+   },
+   "Lanthanum": {
+     "Symbol": "La",
+     "Number": 57,
+     "Stable": {
+       "138": {
+         "Mass": 137.907108,
+         "Abundance": 0.00090
+       },
+       "139": {
+         "Mass": 138.906349,
+         "Abundance": 0.99910
+       }
+     }
+   },
+   "Cerium": {
+     "Symbol": "Ce",
+     "Number": 58,
+     "Stable": {
+       "136": {
+         "Mass": 135.907140,
+         "Abundance": 0.00185
+       },
+       "138": {
+         "Mass": 137.905986,
+         "Abundance": 0.00251
+       },
+       "140": {
+         "Mass": 139.905435,
+         "Abundance": 0.88450
+       },
+       "142": {
+         "Mass": 141.909241,
+         "Abundance": 0.11114
+       }
+     }
+   },
+   "Praseodymium": {
+     "Symbol": "Pr",
+     "Number": 59,
+     "Stable": {
+       "141": {
+         "Mass": 140.907648,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Neodymium": {
+     "Symbol": "Nd",
+     "Number": 60,
+     "Stable": {
+       "142": {
+         "Mass":141.907719,
+         "Abundance":0.272
+       },
+	"143": {
+         "Mass":142.909810,
+         "Abundance":0.122
+       },
+	"144": {
+         "Mass":143.910083,
+         "Abundance": 0.238
+       },
+	"145": {
+         "Mass":144.912569,
+         "Abundance": 0.083
+       },
+	"146": {
+         "Mass":145.913113,
+         "Abundance": 0.172
+       },
+	"148": {
+         "Mass":147.916889,
+         "Abundance": 0.057
+       },
+	"150": {
+         "Mass":149.920887,
+         "Abundance": 0.056
+       }
+     }
+   },
+   "Promethium": {
+     "Symbol": "Pm",
+     "Number": 61,
+     "Stable": {}
+   },
+   "Samarium": {
+     "Symbol": "Sm",
+     "Number": 62,
+     "Stable": {
+       "144": {
+         "Mass": 143.911996,
+         "Abundance": 0.0307
+},
+	"147": {
+         "Mass": 146.914894,
+         "Abundance": 0.1499
+},
+	"148": {
+         "Mass": 147.914818,
+         "Abundance": 0.1124
+},
+	"149": {
+         "Mass": 148.917180,
+         "Abundance": 0.1382
+},
+	"150": {
+         "Mass": 149.917272,
+         "Abundance": 0.0738
+},
+	"152": {
+         "Mass": 151.919729,
+         "Abundance": 0.2675
+},
+	"154": {
+         "Mass": 153.922206,
+         "Abundance": 0.2275
+       }
+     }
+   },
+   "Europium": {
+     "Symbol": "Eu",
+     "Number": 63,
+     "Stable": {
+       "151": {
+         "Mass":150.919846,
+         "Abundance":0.4781
+       },
+	"153": {
+         "Mass":152.921227,
+         "Abundance": 0.5219
+       }
+     }
+   },
+   "Gadolinium": {
+     "Symbol": "Gd",
+     "Number": 64,
+     "Stable": {
+       "152": {
+         "Mass": 151.919789,
+         "Abundance":0.0020
+       },
+	"154": {
+         "Mass":153.920862,
+         "Abundance":0.0218
+       },
+	"155": {
+         "Mass":154.922619,
+         "Abundance":0.1480
+       },
+	"156": {
+         "Mass":155.922120,
+         "Abundance":0.2047
+       },
+	"157": {
+         "Mass":156.923957,
+         "Abundance":0.1565
+       },
+	"158": {
+         "Mass":157.924101,
+         "Abundance": 0.2484
+       },
+	"160": {
+         "Mass":159.927051,
+         "Abundance":  0.2186
+       }
+     }
+   },
+   "Terbium": {
+     "Symbol": "Tb",
+     "Number": 65,
+     "Stable": {
+       "159": {
+         "Mass": 158.925343,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Dysprosium": {
+     "Symbol": "Dy",
+     "Number": 66,
+     "Stable": {
+       "156": {
+         "Mass": 155.924278,
+         "Abundance": 0.00056
+},
+	"158": {
+         "Mass": 157.924405,
+         "Abundance": 0.00095
+},
+	"160": {
+         "Mass": 159.925194,
+         "Abundance": 0.02329
+},
+	"161": {
+         "Mass": 160.926930,
+         "Abundance": 0.18889
+},
+	"162": {
+         "Mass": 161.926795,
+         "Abundance": 0.25475
+},
+	"163": {
+         "Mass": 162.928728,
+         "Abundance": 0.24896
+},
+	"164": {
+         "Mass": 163.929171,
+         "Abundance": 0.28260
+       }
+     }
+   },
+   "Holmium": {
+     "Symbol": "Ho",
+     "Number": 67,
+     "Stable": {
+       "165": {
+         "Mass": 164.930319,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Erbium": {
+     "Symbol": "Er",
+     "Number": 68,
+     "Stable": {
+       "162": {
+         "Mass": 161.928775,
+         "Abundance": 0.00139
+},
+ "164": {
+         "Mass": 163.929197,
+         "Abundance": 0.01601
+	},
+ "166": {
+         "Mass": 165.930290,
+         "Abundance": 0.33503
+	},
+ "167": {
+         "Mass": 166.932046,
+         "Abundance": 0.22869
+	},
+ "168": {
+         "Mass": 167.932368,
+         "Abundance": 0.26978
+	},
+ "170": {
+         "Mass": 169.932368,
+         "Abundance": 0.14910
+       }
+     }
+   },
+   "Thulium": {
+     "Symbol": "Tm",
+     "Number": 69,
+     "Stable": {
+       "169": {
+         "Mass": 168.934211,
+         "Abundance": 1.0000
+       }
+     }
+   },
+   "Ytterbium": {
+     "Symbol": "Yb",
+     "Number": 70,
+     "Stable": {
+       "168": {
+         "Mass": 167.933895,
+         "Abundance": 0.0013
+       },
+       "170": {
+         "Mass": 169.934759,
+         "Abundance": 0.0304
+       },
+       "171": {
+         "Mass": 170.936323,
+         "Abundance": 0.1428
+       },
+       "172": {
+         "Mass": 171.936378,
+         "Abundance": 0.2183
+       },
+       "173": {
+         "Mass": 172.938207,
+         "Abundance": 0.1613
+       },
+       "174": {
+         "Mass": 173.938858,
+         "Abundance": 0.3183
+       },
+       "176": {
+         "Mass": 175.942569,
+         "Abundance": 0.1276
+       }
+     }
+   },
+   "Lutetium": {
+     "Symbol": "Lu",
+     "Number": 71,
+     "Stable": {
+       "175": {
+         "Mass": 174.9407682,
+         "Abundance": 0.9741
+       },
+       "176": {
+         "Mass": 175.9426827,
+         "Abundance": 0.0259
+       }
+     }
+   },
+   "Hafnium": {
+     "Symbol": "Hf",
+     "Number": 72,
+     "Stable": {
+       "174": {
+         "Mass": 173.940042,
+         "Abundance": 0.0016
+       },
+       "176": {
+         "Mass": 175.941403,
+         "Abundance": 0.0526
+       },
+       "177": {
+         "Mass": 176.9432204,
+         "Abundance": 0.1860
+       },
+       "178": {
+         "Mass": 177.9436981,
+         "Abundance": 0.2728
+       },
+       "179": {
+         "Mass": 178.9458154,
+         "Abundance": 0.1362
+       },
+       "180": {
+         "Mass": 179.9465488,
+         "Abundance": 0.3508
+       }
+     }
+   },
+   "Tantalum": {
+     "Symbol": "Ta",
+     "Number": 73,
+     "Stable": {
+       "180": {
+         "Mass": 179.947466,
+         "Abundance": 0.00012
+       },
+       "181": {
+         "Mass": 180.947996,
+         "Abundance": 0.99988
+       }
+     }
+   },
+   "Tungsten": {
+     "Symbol": "W",
+     "Number": 74,
+     "Stable": {
+       "180": {
+         "Mass": 179.946706,
+         "Abundance": 0.0012
+       },
+       "182": {
+         "Mass": 181.948205,
+         "Abundance": 0.2650
+       },
+       "183": {
+         "Mass": 182.9502242,
+         "Abundance": 0.1431
+       },
+       "184": {
+         "Mass": 183.9509323,
+         "Abundance": 0.3064
+       },
+       "186": {
+         "Mass": 185.954362,
+         "Abundance": 0.2843
+       }
+     }
+   },
+   "Rhenium": {
+     "Symbol": "Re",
+     "Number": 75,
+     "Stable": {
+       "185": {
+         "Mass": 184.952955,
+         "Abundance": 0.3740
+       },
+       "187": {
+         "Mass": 186.9557505,
+         "Abundance": 0.6260
+       }
+     }
+   },
+   "Osmium": {
+     "Symbol": "Os",
+     "Number": 76,
+     "Stable": {
+       "184": {
+         "Mass": 183.952491,
+         "Abundance": 0.0002
+       },
+       "186": {
+         "Mass": 185.953838,
+         "Abundance": 0.0159
+       },
+       "187": {
+         "Mass": 186.9557476,
+         "Abundance": 0.0196
+       },
+       "188": {
+         "Mass": 187.9558357,
+         "Abundance": 0.1324
+       },
+       "189": {
+         "Mass": 188.958145,
+         "Abundance": 0.1615
+       },
+       "190": {
+         "Mass": 189.958445,
+         "Abundance": 0.2626
+       },
+       "192": {
+         "Mass": 191.961479,
+         "Abundance": 0.4078
+       }
+     }
+   },
+   "Iridium": {
+     "Symbol": "Ir",
+     "Number": 77,
+     "Stable": {
+       "191": {
+         "Mass": 190.960591,
+         "Abundance": 0.373
+       },
+       "193": {
+         "Mass": 192.962923,
+         "Abundance": 0.627
+       }
+     }
+   },
+   "Platinum": {
+     "Symbol": "Pt",
+     "Number": 78,
+     "Stable": {
+       "190": {
+         "Mass": 189.959930,
+         "Abundance": 0.00014
+       },
+       "192": {
+         "Mass": 191.961035,
+         "Abundance": 0.00782
+       },
+       "194": {
+         "Mass": 193.962663,
+         "Abundance": 0.32967
+       },
+       "195": {
+         "Mass": 194.964774,
+         "Abundance": 0.33832
+       },
+       "196": {
+         "Mass": 195.964934,
+         "Abundance": 0.25242
+       },
+       "198": {
+         "Mass": 197.967875,
+         "Abundance": 0.07163
+       }
+     }
+   },
+   "Gold": {
+     "Symbol": "Au",
+     "Number": 79,
+     "Stable": {
+       "197": {
+         "Mass": 196.966551,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Mercury": {
+     "Symbol": "Hg",
+     "Number": 80,
+     "Stable": {
+       "196": {
+         "Mass": 195.965814,
+         "Abundance": 0.0015
+       },
+       "198": {
+         "Mass": 197.966752,
+         "Abundance": 0.0997
+       },
+       "199": {
+         "Mass": 198.968262,
+         "Abundance": 0.1687
+       },
+       "200": {
+         "Mass": 199.968309,
+         "Abundance": 0.2310
+       },
+       "201": {
+         "Mass": 200.970285,
+         "Abundance": 0.1318
+       },
+       "202": {
+         "Mass": 201.970625,
+         "Abundance": 0.2986
+       },
+       "204": {
+         "Mass": 203.973475,
+         "Abundance": 0.0687
+       }
+     }
+   },
+   "Thallium": {
+     "Symbol": "Tl",
+     "Number": 81,
+     "Stable": {
+       "203": {
+         "Mass": 202.972329,
+         "Abundance": 0.2952
+       },
+       "205": {
+         "Mass": 204.974412,
+         "Abundance": 0.7048
+       }
+     }
+   },
+   "Lead": {
+     "Symbol": "Pb",
+     "Number": 82,
+     "Stable": {
+       "204": {
+         "Mass":  203.973028,
+         "Abundance": 0.014
+       },
+       "206": {
+         "Mass":  205.974449,
+         "Abundance":  0.241
+       },
+       "207": {
+         "Mass":   206.975880,
+         "Abundance": 0.221
+       },
+       "208": {
+         "Mass":   207.976636,
+         "Abundance": 0.524
+       }
+     }
+   },
+   "Bismuth": {
+     "Symbol": "Bi",
+     "Number": 83,
+     "Stable": {
+       "209": {
+         "Mass":  208.980384,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Polonium": {
+     "Symbol": "Po",
+     "Number": 84,
+     "Stable": {}
+   },
+   "Astatine": {
+     "Symbol": "At",
+     "Number": 85,
+     "Stable": {}
+   },
+   "Radon": {
+     "Symbol": "Rn",
+     "Number": 86,
+     "Stable": {}
+   },
+   "Francium": {
+     "Symbol": "Fr",
+     "Number": 87,
+     "Stable": {}
+   },
+   "Radium": {
+     "Symbol": "Ra",
+     "Number": 88,
+     "Stable": {}
+   },
+   "Actinium": {
+     "Symbol": "Ac",
+     "Number": 89,
+     "Stable": {}
+   },
+   "Thorium": {
+     "Symbol": "Th",
+     "Number": 90,
+     "Stable": {
+       "232": {
+         "Mass":  232.0380495,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Protactinium": {
+     "Symbol": "Pa",
+     "Number": 91,
+     "Stable": {
+       "231": {
+         "Mass": 231.03588,
+         "Abundance": 1.00
+       }
+     }
+   },
+   "Uranium": {
+     "Symbol": "U",
+     "Number": 92,
+     "Stable": {
+       "234": {
+         "Mass": 234.0409447,
+         "Abundance": 0.000054
+       },
+       "235": {
+         "Mass": 235.0439222,
+         "Abundance": 0.007204
+       },
+       "238": {
+         "Mass":  238.0507835,
+         "Abundance": 0.992742
+       }
+     }
+   },
+   "Neptunium": {
+     "Symbol": "Np",
+     "Number": 93,
+     "Stable": {}
+   },
+   "Plutonium": {
+     "Symbol": "Pu",
+     "Number": 94,
+     "Stable": {}
+   },
+   "Americium": {
+     "Symbol": "Am",
+     "Number": 95,
+     "Stable": {}
+   },
+   "Curium": {
+     "Symbol": "Cm",
+     "Number": 96,
+     "Stable": {}
+   },
+   "Berkelium": {
+     "Symbol": "Bk",
+     "Number": 97,
+     "Stable": {}
+   },
+   "Californium": {
+     "Symbol": "Cf",
+     "Number": 98,
+     "Stable": {}
+   },
+   "Einsteinium": {
+     "Symbol": "Es",
+     "Number": 99,
+     "Stable": {}
+   },
+   "Fermium": {
+     "Symbol": "Fm",
+     "Number": 100,
+     "Stable": {}
+   },
+   "Mendelevium": {
+     "Symbol": "Md",
+     "Number": 101,
+     "Stable": {}
+   },
+   "Nobelium": {
+     "Symbol": "No",
+     "Number": 102,
+     "Stable": {}
+   },
+   "Lawrencium": {
+     "Symbol": "Lr",
+     "Number": 103,
+     "Stable": {}
+   },
+   "Rutherfordium": {
+     "Symbol": "Rf",
+     "Number": 104,
+     "Stable": {}
+   },
+   "Dubnium": {
+     "Symbol": "Db",
+     "Number": 105,
+     "Stable": {}
+   },
+   "Seaborgium": {
+     "Symbol": "Sg",
+     "Number": 106,
+     "Stable": {}
+   },
+   "Bohrium": {
+     "Symbol": "Bh",
+     "Number": 107,
+     "Stable": {}
+   },
+   "Hassium": {
+     "Symbol": "Hs",
+     "Number": 108,
+     "Stable": {}
+   },
+   "Meitnerium": {
+     "Symbol": "Mt",
+     "Number": 109,
+     "Stable": {}
+   },
+   "Darmstadtium": {
+     "Symbol": "Ds",
+     "Number": 110,
+     "Stable": {}
+   },
+   "Roentgenium": {
+     "Symbol": "Rg",
+     "Number": 111,
+     "Stable": {}
+   },
+   "Copernicium": {
+     "Symbol": "Cn",
+     "Number": 112,
+     "Stable": {}
+   },
+   "Nihonium": {
+     "Symbol": "Nh",
+     "Number": 113,
+     "Stable": {}
+   },
+   "Flerovium": {
+     "Symbol": "Fl",
+     "Number": 114,
+     "Stable": {}
+   },
+   "Moscovium": {
+     "Symbol": "Mc",
+     "Number": 115,
+     "Stable": {}
+   },
+   "Livermorium": {
+     "Symbol": "Lv",
+     "Number": 116,
+     "Stable": {}
+   },
+   "Tennessine": {
+     "Symbol": "Ts",
+     "Number": 117,
+     "Stable": {}
+   },
+   "Oganesson": {
+     "Symbol": "Og",
+     "Number": 118,
+     "Stable": {}
+   }
+ },
+ "Sources": {
+   "Atom molar masses": "STANDARD ATOMIC WEIGHTS, ciaaw 2020. Available online at www.ciaaw.org/atomic-masses.htm",
+   "Isotopic Abundances": "CIAAW. Isotopic compositions of the elements 2019. Available online at www.ciaaw.org.",
+   "Model peptide SASAs or ASAs": "Uttamkumar Samanta, Ranjit P. Bahadur, Pinak Chakrabarti, Quantifying the accessible surface area of protein residues in their local environment, Protein Engineering, Design and Selection, Volume 15, Issue 8, August 2002, Pages 659–667, https://doi.org/10.1093/protein/15.8.659"
+ },
+"Special Thanks": ["Bechthold, H. C.", "Farwell, Taylor Cameron", "Holliday, Noah", "Howald, Curtis M.", "Jenkins, Chloe E.", "Loosli, Sarah", "Rivers, Ava D."]
+}
+
