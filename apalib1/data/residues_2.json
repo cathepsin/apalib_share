@@ -396,8 +396,8 @@
        "Ala-X-Ala ASA w": 235.45,
        "Ala-X-Ala ASA sc": 190.04
      },
-     "std-alpha-prop" : 0.88
-
+     "std-alpha-prop" : 0.88,
+     "Centroid": ["CG", "CD", "NE", "CZ", "NH1", "NH2"]
    },
    "Histidine": {
      "1code": "H",
@@ -421,7 +421,8 @@
        "Ala-X-Ala ASA w": 184.79,
        "Ala-X-Ala ASA sc": 141.17
      },
-     "std-alpha-prop" : 2.55
+     "std-alpha-prop" : 2.55,
+     "Centroid": ["CG", "ND1", "CD2", "CE1", "NE2"]
    },
    "Lysine": {
      "1code": "K",
@@ -444,7 +445,8 @@
        "Ala-X-Ala ASA w": 193.73,
        "Ala-X-Ala ASA sc": 147.83
      },
-     "std-alpha-prop" : 1.09
+     "std-alpha-prop" : 1.09,
+     "Centroid": ["CG", "CD", "CE", "NZ"]
    },
    "Aspartate": {
      "1code": "D",
@@ -466,7 +468,8 @@
        "Ala-X-Ala ASA w": 141.61,
        "Ala-X-Ala ASA sc": 97.66
      },
-     "std-alpha-prop" : 2.89
+     "std-alpha-prop" : 2.89,
+     "Centroid": ["CG", "OD1", "OD2"]
    },
    "Glutamate": {
      "1code": "E",
@@ -489,7 +492,8 @@
        "Ala-X-Ala ASA w": 173.46,
        "Ala-X-Ala ASA sc": 132.42
      },
-     "std-alpha-prop" : 1.67
+     "std-alpha-prop" : 1.67,
+     "Centroid": ["CG", "CD", "OE1", "OE2"]
    },
    "Serine": {
      "1code": "S",
@@ -513,7 +517,8 @@
        "Ala-X-Ala ASA w": 111.97,
        "Ala-X-Ala ASA sc": 68.97
      },
-     "std-alpha-prop" : 2.09
+     "std-alpha-prop" : 2.09,
+     "Centroid": ["OG"]
    },
    "Threonine": {
      "1code": "T",
@@ -536,7 +541,8 @@
        "Ala-X-Ala ASA w": 134.28,
        "Ala-X-Ala ASA sc": 88.45
      },
-     "std-alpha-prop" : 2.76
+     "std-alpha-prop" : 2.76,
+     "Centroid": ["OG1", "CG2"]
    },
    "Asparagine": {
      "1code": "N",
@@ -558,7 +564,8 @@
        "Ala-X-Ala ASA w": 155.22,
        "Ala-X-Ala ASA sc": 109.87
      },
-     "std-alpha-prop" : 2.72
+     "std-alpha-prop" : 2.72,
+     "Centroid": ["CG", "OD1", "ND2"]
    },
    "Glutamine": {
      "1code": "Q",
@@ -581,7 +588,8 @@
        "Ala-X-Ala ASA w": 175.42,
        "Ala-X-Ala ASA sc": 129.52
      },
-     "std-alpha-prop" : 1.63
+     "std-alpha-prop" : 1.63,
+     "Centroid": ["CG", "CD", "OE1", "NE2"]
    },
    "Cysteine": {
      "1code": "C",
@@ -601,7 +609,8 @@
        "Ala-X-Ala ASA w": 127.72,
        "Ala-X-Ala ASA sc": 81.91
      },
-     "std-alpha-prop" : 2.85
+     "std-alpha-prop" : 2.85,
+     "Centroid": ["SG"]
    },
    "Glycine": {
      "1code": "G",
@@ -623,7 +632,8 @@
        "Ala-X-Ala ASA w": 70.27,
        "Ala-X-Ala ASA sc": 0
      },
-     "std-alpha-prop" : 4.18
+     "std-alpha-prop" : 4.18,
+     "Centroid": ["CA"]
    },
    "Proline": {
      "1code": "P",
@@ -646,7 +656,8 @@
        "Ala-X-Ala ASA w": 126.78,
        "Ala-X-Ala ASA sc": 98.23
      },
-     "std-alpha-prop" : 13.22
+     "std-alpha-prop" : 13.22,
+     "Centroid": ["CG", "CD"]
    },
    "Alanine": {
      "1code": "A",
@@ -668,7 +679,8 @@
        "Ala-X-Ala ASA w": 102.68,
        "Ala-X-Ala ASA sc": 55.28
      },
-     "std-alpha-prop" : 0.00
+     "std-alpha-prop" : 0.00,
+     "Centroid": ["CB"]
    },
    "Valine": {
      "1code": "V",
@@ -691,7 +703,8 @@
        "Ala-X-Ala ASA w": 148.51,
        "Ala-X-Ala ASA sc": 103.00
      },
-     "std-alpha-prop" : 2.55
+     "std-alpha-prop" : 2.55,
+     "Centroid": ["CG1", "CG2"]
    },
    "Isoleucine": {
      "1code": "I",
@@ -714,7 +727,8 @@
        "Ala-X-Ala ASA w": 176.22,
        "Ala-X-Ala ASA sc": 130.58
      },
-     "std-alpha-prop" : 1.72
+     "std-alpha-prop" : 1.72,
+     "Centroid": ["CG1", "CG2", "CD1"]
    },
    "Leucine": {
      "1code": "L",
@@ -740,7 +754,8 @@
        "Ala-X-Ala ASA w": 184.33,
        "Ala-X-Ala ASA sc": 141.47
      },
-     "std-alpha-prop" : 0.88
+     "std-alpha-prop" : 0.88,
+     "Centroid": ["CG", "CD1", "CD2"]
    },
    "Methionine": {
      "1code": "M",
@@ -761,7 +776,8 @@
        "Ala-X-Ala ASA w": 196.87,
        "Ala-X-Ala ASA sc": 150.32
      },
-     "std-alpha-prop" : 1.00
+     "std-alpha-prop" : 1.00,
+     "Centroid": ["CG", "SD", "CE"]
    },
    "Phenylalanine": {
      "1code": "F",
@@ -786,7 +802,8 @@
        "Ala-X-Ala ASA w": 209.64,
        "Ala-X-Ala ASA sc": 164.14
      },
-     "std-alpha-prop" : 2.26
+     "std-alpha-prop" : 2.26,
+     "Centroid": ["CG", "CD1", "CD2", "CE1", "CE2", "CZ"]
    },
    "Tyrosine": {
      "1code": "Y",
@@ -812,7 +829,8 @@
        "Ala-X-Ala ASA w": 224.68,
        "Ala-X-Ala ASA sc": 180.01
      },
-     "std-alpha-prop" : 2.22
+     "std-alpha-prop" : 2.22,
+     "Centroid": ["CG", "CD1", "CD2", "CE1", "CE2", "CZ", "OH"]
    },
    "Tryptophan": {
      "1code": "W",
@@ -839,7 +857,8 @@
        "Ala-X-Ala ASA w": 251.78,
        "Ala-X-Ala ASA sc": 209.57
      },
-     "std-alpha-prop" : 2.05
+     "std-alpha-prop" : 2.05,
+     "Centroid": ["CG", "CD1", "CD2", "NE1", "CE2", "CE3", "CZ2", "CZ3", "CH2"]
    },
    "Selenocysteine": {
      "1code": "U",
@@ -853,7 +872,8 @@
        "SE"
      ],
      "ASA": {},
-     "std-alpha-prop" : "None"
+     "std-alpha-prop" : "None",
+     "Centroid": ["SE"]
    },
    "Pyrrolysine": {
      "1code": "O",
@@ -864,7 +884,8 @@
        "UAG"
      ],
      "ASA": {},
-     "std-alpha-prop" : "None"
+     "std-alpha-prop" : "None",
+     "Centroid": ["CG", "CD", "CE", "NZ", "O2", "C2", "CA2", "N2", "CE2", "CD2", "CG2", "CB2"]
    }
  },
  "DNA Nucleotides": {},
