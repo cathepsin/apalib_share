@@ -1,8 +1,8 @@
-from apalib.AminoAcid import AminoAcid
-from apalib.Atom import Atom
-from apalib.DNA import DNA
-from apalib.RNA import RNA
-from apalib.HETATM import HETATM
+from apalib1.AminoAcid import AminoAcid
+from apalib1.Atom import Atom
+from apalib1.DNA import DNA
+from apalib1.RNA import RNA
+from apalib1.HETATM import HETATM
 
 class Container:
     def __init__(self):

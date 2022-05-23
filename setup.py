@@ -8,7 +8,7 @@ classifiers = [
 ]
 
 setup(
-    name='apalib',
+    name='apalib1',
     version='0.0.5',
     # description='Advanced Protein Analysis library',
     # long_description=open('README.md').read() +'\n\n' + open('CHANGELOG.txt').read(),

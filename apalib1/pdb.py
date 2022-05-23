@@ -1,6 +1,6 @@
-import apalib.apalibExceptions
-import apalib.config as config
-import apalib.apalibExceptions as apaExcept
+import apalib1.apalibExceptions
+import apalib1.config as config
+import apalib1.apalibExceptions as apaExcept
 import sys
 
 
@@ -90,7 +90,7 @@ class PDB:
     # def CountResidues(self, **kwargs):
     #     for key in kwargs:
     #         if key != 'find' or (key == 'find' and not isinstance(kwargs['find'], list)):
-    #             raise apalib.apalibExceptions.BadKwarg('find=[residue_name1, residue_name2, ...]')
+    #             raise apalib1.apalibExceptions.BadKwarg('find=[residue_name1, residue_name2, ...]')
     #
     #     # If a specific residue is wanted
     #     if 'find' in kwargs:
@@ -108,4 +108,4 @@ class PDB:
     def Validate(self, **kwargs):
         for key in kwargs:
             if key != 'pdb' or (key == 'pdb' and not isinstance(kwargs['pdb'], str)):
-                raise apalib.apalibExceptions.BadKwarg('pdb=<pdb_to_validate>')
+                raise apalib1.apalibExceptions.BadKwarg('pdb=<pdb_to_validate>')
