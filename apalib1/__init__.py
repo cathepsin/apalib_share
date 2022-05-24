@@ -15,6 +15,9 @@ from apalib1.pdb import PDB
 
 pdb = PDB()
 
+def PrintWow():
+    x = 10
+    return
 # TODO work on error messages
 # try:
 #     requests.get(r"http://www.google.com", timeout=5)

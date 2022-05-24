@@ -14,6 +14,9 @@ class HETATM:
         if 'atoms' in kwargs:
             self.SetAtoms(kwargs['atoms'])
 
+    def AddAttribute(self, attr, var):
+        self.__dict__[attr] = var
+
     def SetNumber(self, num):
         self.number = num
 
