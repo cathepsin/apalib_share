@@ -9,7 +9,7 @@ classifiers = [
 
 setup(
     name='apalib',
-    version='0.0.6',
+    version='0.0.7',
     # description='Advanced Protein Analysis library',
     # long_description=open('README.md').read() +'\n\n' + open('CHANGELOG.txt').read(),
     author='Nate McMurray',
