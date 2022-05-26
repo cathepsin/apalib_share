@@ -1,3 +1,4 @@
+import sys
 global FLAGS
 FLAGS = {}
 
@@ -112,7 +113,6 @@ class Atom:
         elif 'H' in id:
             self.SetElement('H')
         else:
-            import sys
             sys.exit("SOMETHING WENT WRONG! CHECK WHAT HAPPENED! THIS ERROR SHOULD NOT OCCUR")
 
     @staticmethod

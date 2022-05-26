@@ -1,8 +1,3 @@
-import sys
-import json
-import pkg_resources
-import requests
-
 import apalib.config
 import apalib.apalibExceptions
 from apalib.Container import Container

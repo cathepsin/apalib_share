@@ -1,3 +1,4 @@
+import sys
 # global ONE_LETTER
 # global THREE_LETTER
 # global FULL_NAME
@@ -188,10 +189,8 @@ class AminoAcid:
                            self.centroid[2] - self.GetCA().GetCoordinates()[2]]
 
         elif len(self.name) == 4 and self.name[1:] in AAs:
-            import sys
             sys.stderr.write("ROTAMER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         else:
-            import sys
             sys.exit("UNKNOWN AMINO ACID YO. DO SOMETHING ABOUT THIS!!!!!")
 
     def GetCentroid(self):
