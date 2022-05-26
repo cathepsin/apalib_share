@@ -2,7 +2,7 @@
 # global THREE_LETTER
 # global FULL_NAME
 from types import FunctionType
-from apalib1.config import *
+from apalib.config import *
 global FLAGS
 FLAGS = {}
 
@@ -48,7 +48,7 @@ class AminoAcid:
         accepted = ['unique']
         for key in kwargs.keys():
             if key not in accepted:
-                raise apalib1.apalibExceptions.BadKwarg(accepted)
+                raise apalib.apalibExceptions.BadKwarg(accepted)
 
         if self.rotamer is not None:
             return self.rotamer

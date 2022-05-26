@@ -1,8 +1,8 @@
-from apalib1.AminoAcid import AminoAcid
-from apalib1.Atom import Atom
-from apalib1.DNA import DNA
-from apalib1.RNA import RNA
-from apalib1.HETATM import HETATM
+from apalib.AminoAcid import AminoAcid
+from apalib.Atom import Atom
+from apalib.DNA import DNA
+from apalib.RNA import RNA
+from apalib.HETATM import HETATM
 
 class Container:
     def __init__(self):
@@ -49,7 +49,7 @@ class Container:
         self.HETATMChains = hchain
 
     #Return all residues from all chains as a single list
-    def AsList(self):
+    def AsList(self, ordered=True):
         fullLst = []
         retLst = []
         lst = [self.PeptideChains, self.DNAChains, self.RNAChains, self.HETATMChains]
@@ -58,4 +58,4 @@ class Container:
                 fullLst = fullLst + list(val.values())
         for val in fullLst:
             retLst = retLst + list(val.values())
-        return retLst
+        return sorted(retLst, key=lambda val : val.number) if ordered else retLst
