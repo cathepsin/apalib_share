@@ -7,7 +7,5 @@ from apalib1.RNA import RNA
 from apalib1.HETATM import HETATM
 
 from apalib1.Data import Data
-
 Container = Container()
-
 data = Data()

@@ -3,7 +3,7 @@ import json
 import pkg_resources
 import requests
 
-import apalib1.config
+import apalib1.config as GLOBALS
 import apalib1.apalibExceptions
 from apalib1.Container import Container
 from apalib1.AminoAcid import AminoAcid
@@ -13,20 +13,17 @@ from apalib1.RNA import RNA
 from apalib1.HETATM import HETATM
 from apalib1.pdb import PDB
 
-pdb = PDB()
 
-def PrintWow():
-    x = 10
-    return
+
 # TODO work on error messages
-# try:
-#     requests.get(r"http://www.google.com", timeout=5)
-# except (requests.exceptions.InvalidSchema, requests.exceptions.ConnectionError):
-#     sys.stderr.write(apalib1.apalibExceptions.BadInternet())
+try:
+    requests.get(r"http://www.google.com", timeout=5)
+except :
+    sys.stderr.write(apalib1.apalibExceptions.BadInternet())
 
 
 # TODO Move **ALL HARDCODED DATA** into a json
-
+# TODO Make error messages a full string (functional with stderr.write())
 # TODO get this to work with DNA and RNA domains https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences-and-the-pdb-format
 # Parsing DNA/RNA should be essentially the same as an amino acid atom-group, with some intricacies. 1pyi is a good example
 # TODO Check other PDB standards

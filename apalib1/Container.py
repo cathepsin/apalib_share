@@ -12,14 +12,11 @@ class Container:
         self.RNAChains = None
         self.HETATMChains = None
 
-
     def ClearAll(self):
         self.__init__()
 
-
     def SetFetch(self, fetch):
         self.current_fetch = fetch
-
 
     def GetFetch(self):
         return self.current_fetch
@@ -30,30 +27,23 @@ class Container:
     def SetProteinChains(self, pchain):
         self.PeptideChains = pchain
 
-
     def GetPeptideChains(self):
         return self.PeptideChains
-
 
     def SetDNAChains(self,dchain):
         self.DNAChains = dchain
 
-
     def GetDNAChains(self):
         return self.DNAChains
-
 
     def GetRNAChains(self):
         return self.RNAChains
 
-
     def SetRNAChains(self, rchain):
         self.RNAChains = rchain
 
-
     def GetHETATMChains(self):
         return self.HETATMChains
-
 
     def SetHETATMChains(self, hchain):
         self.HETATMChains = hchain
