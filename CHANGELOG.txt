@@ -1,6 +1,7 @@
 v0.0.x
     + Moved more hardcoded data into a json file
     + Added a "Data" class to access json file
+    + More restructuring
 
 
 v0.0.2 January 27, 2022 (Pre-release alpha)

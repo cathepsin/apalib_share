@@ -1,8 +1,4 @@
 import sys
-# global ONE_LETTER
-# global THREE_LETTER
-# global FULL_NAME
-from types import FunctionType
 from apalib.config import *
 global FLAGS
 FLAGS = {}
@@ -73,11 +69,6 @@ class AminoAcid:
                 lst += retDict['Common']
         return retDict
 
-
-
-
-
-
     def GetCA(self):
         if self.atoms is None:
             return None
@@ -120,6 +111,7 @@ class AminoAcid:
         self.heptad = heptad
 
     def CalculateCentroid(self, atoms):
+        #TODO switch to using the JSON for this
         # *For Glycine, only the alpha carbon is considered
         # *For Alanine, only the beta carbon is considered
         AAs = {
@@ -195,6 +187,9 @@ class AminoAcid:
 
     def GetCentroid(self):
         return self.centroid
+
+    def GetVector(self):
+        return self.vector
 
     @staticmethod
     def OneToThree(oln):

@@ -7,6 +7,8 @@ from apalib.DNA import DNA
 from apalib.RNA import RNA
 from apalib.HETATM import HETATM
 from apalib.pdb import PDB
+from apalib.Data import Data
+import math
 
 
 
@@ -24,7 +26,6 @@ from apalib.pdb import PDB
 # TODO Check other PDB standards
 # TODO Ensure functionality with symmetry pairs
 # TODO Make set_name a thing everywhere
-
 
 #  Naive approach to calculating isoelectric point at a specific pH
 
@@ -58,9 +59,6 @@ def getIEP(pHofInterest):
                 total_counts['ARG'] += 1
             elif value.name == "TYR":
                 total_counts['TYR'] += 1
-
-
-
     print(total_counts)
 
     # TODO Add pKa values to JSON file
@@ -99,11 +97,6 @@ def getIEP(pHofInterest):
 
 
 # TODO in all GETTERS in each class, add a check to see if variable exists
-# if var in self.__dict__:
-#   return var
-# return None
-
-
 # TODO Complete the below functions before pushing version 1.0.0
 
 # def SurfaceArea(**kwargs):
@@ -115,36 +108,60 @@ def getIEP(pHofInterest):
 #         sys.stderr.write("Solvent radius not provided. Specify using SurfaceArea(solvent_radius=val)\n")
 #     print("stub")
 #
-# def GetDistance(coor1, coor2):
-#     return ((coor1[0] - coor2[0])**2 + (coor1[1] - coor2[1])**2 + (coor1[2] - coor2[2])**2)**.5
-#
-# def VectorPair(self, AA1, AA2):
-#     # Slope of line made from CA --> CENTROID
-#     CA1 = AA1.GetCA()
-#     CA2 = AA2.GetCA()
-#     # XY orthogonal projection
-#     m1 = (AA1.GetCentroid()[1] - CA1.GetCoordinates()[1]) / (AA1.GetCentroid()[0] - CA1.GetCoordinates()[0])
-#     m2 = (AA2.GetCentroid()[1] - CA2.GetCoordinates()[1]) / (AA2.GetCentroid()[0] - CA2.GetCoordinates()[0])
-#     # Intersection point
-#     #
-#     #               y_2 - y_1 + m_1x_1 - m_2x_2
-#     #   x_int =    ------------------------------
-#     #                       m_1 - m_2
-#
-#     x_int = (AA2.GetCentroid()[1] - AA1.GetCentroid()[1] + m1 * AA1.GetCentroid()[0] - m2 * AA2.GetCentroid()[0])
-#     #/ (m1 - m2)
-#     # Cast back into 3D
-#     #
-#     #        x - x_1
-#     #   z = --------- * c + z_1
-#     #           a
-#
-#     y1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[1] + AA1.GetCentroid()[1]
-#     y2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[1] + AA2.centroid[1]
-#
-#     z1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[2] + AA1.GetCentroid()[2]
-#     z2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[2] + AA2.GetCentroid()[2]
-#     return abs(z1 - z2), [x_int, y1, z1], [x_int, y2, z2]
+
+def VectorPair(AA1, AA2):
+    # Slope of line made from CA --> CENTROID
+    CA1 = AA1.GetCA()
+    CA2 = AA2.GetCA()
+    # XY orthogonal projection
+    m1 = (AA1.GetCentroid()[1] - CA1.GetCoordinates()[1]) / (AA1.GetCentroid()[0] - CA1.GetCoordinates()[0])
+    m2 = (AA2.GetCentroid()[1] - CA2.GetCoordinates()[1]) / (AA2.GetCentroid()[0] - CA2.GetCoordinates()[0])
+    '''
+     Intersection point
+                   y_2 - y_1 + m_1x_1 - m_2x_2
+       x_int =    ------------------------------
+                           m_1 - m_2
+    '''
+    x_int = (AA2.GetCentroid()[1] - AA1.GetCentroid()[1] + m1 * AA1.GetCentroid()[0] - m2 * AA2.GetCentroid()[0])
+    ''' 
+    Cast back into 3D
+            x - x_1
+       z = --------- * c + z_1
+               a
+    '''
+    y1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[1] + AA1.GetCentroid()[1]
+    y2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[1] + AA2.centroid[1]
+    z1 = (x_int - AA1.GetCentroid()[0]) / AA1.vector[0] * AA1.vector[2] + AA1.GetCentroid()[2]
+    z2 = (x_int - AA2.GetCentroid()[0]) / AA2.vector[0] * AA2.vector[2] + AA2.GetCentroid()[2]
+    return abs(z1 - z2), [x_int, y1, z1], [x_int, y2, z2]
+
+def GetCentAngle(res1, res2, rad = True):
+    #Get angle using res1_centroid --> res1_CA --> res2_CA
+    CA1 = res1.GetCA().GetCoordinates()
+    CA2 = res2.GetCA().GetCoordinates()
+    cent = res1.GetCentroid()
+    a = GetDist(cent, CA1)
+    b = GetDist(CA1, CA2)
+    c = GetDist(cent, CA2)
+    theta = math.acos(-1 * (c**2 - a**2 - b**2)/(2*a*b))
+    if rad:
+        return theta
+    return math.degrees(theta)
+
+#Checks that a residue-vector does not point backwards to extend towards a point
+#TODO test this function a bit more
+def CheckIsForward(res, pt):
+    v1 = res.GetVector()
+    v2 = [res.centroid[0] - pt[0],
+          res.centroid[1] - pt[1],
+          res.centroid[2] - pt[2]]
+    #If any of the components switch direction then all v1_i * v2_i will be negative
+    if v1[0] * v2[0] < 0 or v1[1] * v2[1] < 0 or v1[2] * v2[2] < 0:
+        return False
+    return True
+
+def GetDist(a1, a2):
+    return ((a1[0] - a2[0]) ** 2 + (a1[1] - a2[1]) ** 2 + (a1[2] - a2[2]) ** 2) ** (1 / 2)
 #
 # def CheckBridge(object1, object2):
 #     print("stub")

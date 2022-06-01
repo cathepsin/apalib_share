@@ -1,5 +1,6 @@
 import apalib.apalibExceptions
 import apalib.apalibExceptions as apaExcept
+import sys
 
 from apalib import *
 
@@ -45,7 +46,7 @@ class PDB:
                 atomNumber = int(line[6:11])
                 id = line[11:16].strip()
                 groupName = line[16:20].strip()
-                coordinates = [float(line[27:38]), float(line[38:46]), float(line[46:55])]
+                coordinates = [line[27:38], line[38:46], line[46:55]]
                 occupancy = float(line[55:60])
                 bfactor = float(line[60:67])
                 element = line[77:].strip()

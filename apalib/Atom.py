@@ -34,7 +34,7 @@ class Atom:
         return None
 
     def SetCoordinates(self, coor):
-        self.coordinates = [coor[0], coor[1], coor[2]]
+        self.coordinates = [float(coor[0]), float(coor[1]), float(coor[2])]
 
     def GetCoordinates(self):
         if 'coordinates' in self.__dict__:
