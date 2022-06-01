@@ -30,11 +30,17 @@ class Container:
     def GetPeptideChains(self):
         return self.PeptideChains
 
+    def ClearPeptideChains(self):
+        self.PeptideChains = None
+
     def SetDNAChains(self,dchain):
         self.DNAChains = dchain
 
     def GetDNAChains(self):
         return self.DNAChains
+
+    def ClearDNAChains(self):
+        self.DNAChains = None
 
     def GetRNAChains(self):
         return self.RNAChains
@@ -42,11 +48,17 @@ class Container:
     def SetRNAChains(self, rchain):
         self.RNAChains = rchain
 
+    def ClearRNAChains(self):
+        self.RNAChains = None
+
     def GetHETATMChains(self):
         return self.HETATMChains
 
     def SetHETATMChains(self, hchain):
         self.HETATMChains = hchain
+
+    def ClearHEETATMChains(self):
+        self.HETATMChains = None
 
     #Return all residues from all chains as a single list
     def AsList(self, ordered=True):

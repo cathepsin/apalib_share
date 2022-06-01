@@ -1,205 +1,105 @@
-#Advanced Protein Analysis Library
-This library was created to provide tools useful for advanced protein analysis.
-##Methods and Classes
-###Library Methods:
-####Parse(fd)
-***Input:*** File descriptor to a pdb file  
-***Output:*** None  
-***Description:*** Parses a user-provided PDB (or similar) file.
-Will work generally for .ent or .mmol extensions, but full
-functionality is not guaranteed. Populates the CONTAINER object's
-RNAChains, DNAChains, proteinChains, and HETATMChains dictionaries.    
-####ParsePDB('PDBCode')
-***Input:*** 4-letter PDB code of type *str*  
-***Output:*** None  
-***Description:*** Wrapper method for the Parse() function. Downloads a 
-PDB file from the RCSB PDB and performs the Parse() function
-on the retrieved file.
-####ClearAll()
-***Input:*** None  
-***Output:*** None  
-***Description:*** Clears the stored RNAChains, DNAChains, proteinChains,
- HETATMChains, and currently fetched PDB.
-####SetFetch(fetch)
-***Input:*** PDB info as string  
-***Output:*** None  
-***Description:*** CONTAINER current_fetch setter
-####ClearFetch()
-**Input:** None  
-**Output:** None  
-**Description:** Empties the buffer holding any fetched PDB
-information. Not required for repeat fetches
-####GetFetch()
-**Input:** None  
-**Output:** current_fetch  
-**Description:** CONTAINER current_fetch getter
-####SetProteinChains(protChains)
-**Input:** Python dictionary containing protein chains  
-**Output:** None  
-**Description:** CONTAINER proteinChains setter
-####GetProteinChains()
-**Input:** None  
-**Output:** proteinChains  
-**Description:** CONTAINER proteinChains getter
-####SetDNAChains(dnaChains)
-**Input:** Python dicitonary containing DNA chains  
-**Output:** None  
-**Description:** CONTAINER DNAChains setter
-####GetDNAChains()
-**Input:** None  
-**Output:** DNAChains  
-**Description:** CONTAINER DNAChains getter
-####SetRNAChains(dnaChains)
-**Input:** Python dicitonary containing RNA chains  
-**Output:** None  
-**Description:** CONTAINER RNAChains setter
-####GetRNAChains()
-**Input:** None  
-**Output:** RNAChains  
-**Description:** CONTAINER RNAChains getter
-####SetHETATMChains(hetatmChains)
-**Input:** Python dicitonary containing HETATM chains  
-**Output:** None  
-**Description:** CONTAINER HETATMChains setter
-####GetHETATMChains()
-**Input:** None  
-**Output:** HETATMChains  
-**Description:** CONTAINER HETATMChains getter
-###CONTAINER Class
-A class used to store useful information and keep data somewhat abstracted. Stored variables, as
-well as their getters/setters are listed below. A single instance of this
-class is created when the module is loaded. Though not required, in order to guarantee full functionality,
-it is recommended that the CONTAINER object is not interacted with directly, and instead interacted with
-using the provided methods:
+<h1>Advanced Protein Analysis Library</h1>
+<p>A library to provide tools useful for advanced protein analysis.</p>
+<p>Note that this README is temporary, and only contains limited information while
+while everything is still in development.</p>
 
-Variable  |Description| Getter method | Setter method
---- | --- | --- | ---
-current_fetch | Stores text of a PDB file (or related file, such as .mmol or .ent) | GetFetch() | SetFetch(*fetch*)
-ProteinChains | Stores protein chains as listed in a PDB file as a Python dictionary.  ProteinChains[chain][index]-->residue|  GetProteinChains()| SetProteinChains(*proteinChains*)
-DNAChains | Stores DNA chains as listed in a PDB file as a Python dictionary.  DNAChains[chain][index]-->residue | GetDNAChains() | SetDNAChains(*dnaChains*)
-RNAChains | Stores RNA chains as listed in a PDB file as a Python dictionary.  RNAChains[chain][index]-->residue| GetRNAChains() | SetRNAChains(*rnaChains*)
-HETATMChains | Stores HETATM chains as listed in a PDB file as a Python dictionary.  HETATMChains[chain][index]-->residue | GetHETATMChains() | SetHETATMChains(*hetatmChains*)
-###Atom Class
-A class used to store information about a single atom
-####Initialization
-Atom(**kwargs)  
-kwargs:
- * **number** : *int* Atom number as provided from PDB file. Set using **Atom.SetNumber(num)**
- * **coordinates** *list\<*int(x)* *int(y)* *int(z)*>* XYZ coordinates of atom. Stored as
-a Python dictionary as __atomName['x'], __atomName['y'], and __atomName['z']
-. Set using **Atom.SetCoordinates(coordinates[3])**
- * **id** : *str* Atom ID as provided from PDB file. Set using **Atom.SetID(id)**
- * **occupancy** : *float* Atom occupancy as provided from PDB file. Set using **Atom.SetOccupancy(occ)**
- * **b_factor** : *float* Atom b_factor as provided from PDB file. Set using **Atom.SetBFactor(bfac)**
- * **element** : *str* Atom element as provided from PDB file. Set using **Atom.SetElement(ele)**
- * **residue** : *str* Atom's parent residue code. Set using **Atom.SetResidue(res)**
- * **extract** : *Bool* Optional argument. When set to false, Atom.element will not be
-used to extrapolate the element species. Defaults to True
+<h2>Required Packages:</h2>
+<ul>
+ <li>numpy</li>
+</ul>
+<h2>Top Level Methods</h2>
+<h3>apalib.VectorPair(residue1, residue2)</h3>
+<p>Returns a tupule containing the z_difference for two residues, the x_intercept in 3D space for the first residue, and
+the x_intercept in 3D space for the second residue.</p>
+<p>Example</p>
+<pre><code>import apalib
+pdb = apalib.PDB()
+pdb.Fetch('5u59')
+res_one = pdb.Contents().GetPeptideChains()['A'][1]
+res_two = pdb.Contents().GetPeptideChains()['A'][2]
+val = apalib.VectorPair(res_one, res_two)
+</code></pre>
+<h3>apalib.GetCentAngle(residue1, residue2, rad = True)</h3>
+<p>Returns the angle made by <code>residue1.centroid</code> --> <code>residue1.CA</code> --> <code>residue2.CA</code>.
+If <code>rad</code> is set to <code>True</code>, then the result will be in radians. Otherwise it will be in degrees</p>
+<h3>apalib.CheckIsForward(residue, point)</h3>
+<p>Returns true if a residue-vector points forwards towards a point. In other words, given a vector v = k&lt a,b,c > made from
+<code>residue.CA --> residue.centroid</code> and some point p = (x,y,z), this method will return true if k is positive.</p>
+<h3>GetDist(atom1, atom2)</h3>
+<p>Returns the distance between two atoms</p>
+<h2>PDB class</h2>
+<p>Class used for reading and parsing <code>.pdb</code> files. Because other similar file extensions exist, there is
+no check that a file is a <code>.pdb</code> file.</p>
 
-####Setter notes
-***Atom.SetID(id)*** will extrapolate the element species and also set Atom.element
-accordingly. This can be prevented by setting the optional argument **extract** to False. Not all
-PDB files contain elemental species information.  
-*e.g.*  
-```
-newAtom = Atom.Atom(name='GLY', number='50',id='CA', extract=False)  
-#or
-newAtom.SetID(newID, **extract=False**)
-```
-###AminoAcid Class
-A class used to organize a group of atoms as an amino acid and provide useful methods.
-####Initialization
-AminoAcid(**kwargs)  
-kwargs:
- * **name** : *str* 3-letter residue code. Set using **AminoAcid.SetName(name)**
- * **number** : *int* residue number as listed in the PDB file. Set using **AminoAcid.SetNumber(num)**
- * **atoms** : *list\<Atom>*list of atoms in the residue. Set using **AminoAcid.SetAtoms(atomList)**
+<h3>Methods</h3>
+<h4>pdb.Read(<em>filepath</em>)</h4>
+<p>Reads and parses a pdb file from your local computer. Stores information in the 
+pdb object's <code>container</code></p>
+<p>Example:</p>
+<pre><code>import apalib
+pdb = apalib.PDB()
+pdb.Read(r"C:\Users\username\Documents\1j1j.pdb")</code></pre>
+<h4>pdb.Fetch(<em>pdb_code</em>)</h4>
+<p>Fetches and parses a pdb file directly from the <em>Protein Databank</em>. Stores
+information in the pdb object's <code>container</code></p>
+<p>Example:</p>
+<pre><code>import apalib
+pdb = apalib.PDB()
+pdb.Fetch("5u59")</code></pre>
+<h4>pdb.Contents()</h4>
+<p>Gets the pdb object's <code>Container</code>.</p>
 
-####Setter notes
-***AminoAcid.SetName(name)*** will fail and the BAD_NAME flag will be raisedif provided 2 letters or if a 3-letter amino acid code cannot be found.
-In order to accommodate rotamers or other situations where the occupancy of several atoms is not 1.00, 3+ letters
-are allowed. According to naming conventions, a rotamer must be labeled with some symbol followed a the 3-letter code.   
-*e.g.* 
-```
-AminoAcid.SetName(AGLY)
-AminoAcid.SetName(BGLY)<br><br>
-```
-If a 1-letter code is provided, the name will be converted to a 3-letter code. This is only
-possible when editing the name of an amino acid, and not upon initialization (to avoid conflict with
-RNA residues). This feature can be disabled by setting the optional argument **set_name** to False, but 
-note that functionality of some methods may be lost if a bad name is given  
-*e.g.* 
-```
-1. newAA = AminoAcid(**list_of_kwargs)
-2. newAA.SetName(R, set_name=False)
-```
-If the full name of an amino acid is provided, then the name will be converted to a 3-letter code.
-This is only possible when editing the name of an amino acid, and not upon initialization. This feature
-can be disabled by setting the optional argument **set_name** to false, but 
-note that functionality of some methods may be lost if a bad name is given  
-*e.g.*
-```
-1. newAA = AmindoAcid(**list_of_kwargs)
-2. newAA.SetName(Arginine, set_name=False
-```
-####AminoAcid Methods
-#####InsertAtom(atom)
-**Input:** Atom object  
-**Output:** None  
-**Description:** Inserts an atom to to AminoAcid.atoms
-
-#####Flags
-Flags can be accessed using *AminoAcid.flags*. The possible flags are as follows:
-
-Flag | Description | Clearing
---- | --- | ---
-BAD_NAME | Raised if there is an attempt to name a residue something non-standard | Use AminoAcid.SetName() to assign a valid name
-ROT_RES | Raised if a residue has rotamer conformations | Should not be cleared
-###RNA Class
-A class used to organize a group of atoms as RNA and provide useful methods.
-####Initialization
-RNA(**kwargs)  
-kwargs:
- * **name** : *str* 1-letter residue code. Set using **RNA.SetName(name)**
- * **number** : *int* residue number as listed in the PDB file. Set using **RNA.SetNumber(num)**
- * **atoms** : *list\<Atom>*list of atoms in the residue. Set using **RNA.SetAtoms(atomList)**
-####Setter notes
- If the full name of a nucleotide is provided, then the name will be converted to a 1-letter code.
- This is only possible when editing the name of an RNA residue, and not upon initialization. This feature
- can be disabled by setting the optional argument **set_name** to False, but 
- note that functionality of some methods may be lost if a bad name is given  
-###DNA Class
-A class used to organize a group of atoms as DNA and provide useful methods.
-####Initialization
-DNA(**kwargs)  
-kwargs:
- * **name** : *str* 2-letter residue code. Set using **DNA.SetName(name)**
- * **number** : *int* residue number as listed in the PDB file. Set using **DNA.SetNumber(num)**
- * **atoms** : *list\<Atom>*list of atoms in the residue. Set using **DNA.SetAtoms(atomList)**
-
-####Setter notes
-According to the PDB standard, DNA residues are to be listed using the letter "D" plus the 1-letter
-residue code. Thus when storing the name of a nucleotide residue in DNA, the letter "D" should
-be prepended. If not, the letter "D" will automatically be prepended. This feature can be disabled by 
-setting the optional argument **set_name** to False, but note that functionality of some methods may be lost  
-*e.g.*
-```
-newDNAResidue = DNA.DNA(name='G', set_name=False)
-newDNAResidue.set_name(G, set_name=False)
-```
- If the full name of a nucleotide is provided, then the name will be converted to a 1-letter code.
- This is only possible when editing the name of an RNA residue, and not upon initialization. This feature
- can be disabled by setting the optional argument **set_name** to False, but 
- note that functionality of some methods may be lost if a bad name is given  
-###HETATM Class
-A class used to organize a group of atoms as a HETATM and provide useful methods.
-####Initialization
-HETATM(**kwargs)  
-kwargs:
- * **name** : *str* HETATM code as provided by PDB. Set using **HETATM.SetName(name)**
- * **number** : *int* group number as listed in the PDB file. Set using **HETATM.SetNumber(num)**
- * **atoms** : *list\<Atom>*list of atoms in the group. Set using **HETATM.SetAtoms(atomList)**
-
-
-
-
+<h2>Container class</h2>
+<p>Class used for storing fetched or read information from a <code>.pdb</code> file.</p>
+<p>This class contains several useful variables and is primarily paired with the above <code>pdb</code>class</p>
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Description</th>
+    <th>Getter Method</th>
+    <th>Setter Method</th>
+    <th>Clear Method</th>
+  </tr>
+  <tr>
+    <td>Fetch</td>
+    <td>Contains the raw input string from a fetch or read.</td>
+    <td>Container.GetFetch()</td>
+    <td>Container.SetFetch()</td>
+    <td>Container.ClearFetch()</td>
+  </tr>
+  <tr>
+    <td>PeptideChains</td>
+    <td>Contains a dictionary of all amino acid residues from a fetch</td>
+    <td>Container.GetPeptideChains()</td>
+    <td>Container.SetPeptideChains()</td>
+    <td>Container.ClearPeptideChains()</td>
+  </tr>
+  <tr>
+    <td>DNAChains</td>
+    <td>Contains a dictionary of all DNA residues from a fetch</td>
+    <td>Container.GetDNAChains()</td>
+    <td>Container.SetDNAChains()</td>
+    <td>Container.ClearDNAChains()</td>
+  </tr>
+  <tr>
+    <td>RNAChains</td>
+    <td>Contains a dictionary of all RNA residues from a fetch</td>
+    <td>Container.GetRNAChains()</td>
+    <td>Container.SetRNAChains()</td>
+    <td>Container.ClearRNAChains()</td>
+  </tr>
+  <tr>
+    <td>HETATMChains</td>
+    <td>Contains a dictionary of all HETATM residues from a fetch</td>
+    <td>Container.GetHETATMChains()</td>
+    <td>Container.SetHETATMChains()</td>
+    <td>Container.ClearHETATMChains()</td>
+  </tr>
+</table>
+<h3>Other Methods</h3>
+<h4>Container.ClearAll()</h4>
+<p>Clears all data from and reinitializes a <code>Container</code> object</p>
+<h4>Container.AsList(ordered=True)</h4>
+<p>Returns a list containing all residues from all chains stored in a <code>Container</code> object. If <code>
+ordered</code> is set to <code>True</code>, then the returned list will be ordered numerically from the residue
+number as it appears in its associated PDB file.</p>

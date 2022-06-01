@@ -18,20 +18,25 @@ class PDB:
         try:
             with urllib.request.urlopen(url) as f:
                 self.container.SetFetch(f.read().decode('utf-8'))
-                self.Parse()
+                self._Parse()
         except urllib.error.URLError:
             sys.stderr.write("The requested pdb code could not be retrieved or does not exist\n")
 
+    def Read(self, path):
+        with open(path, 'r') as fp:
+            self.container.SetFetch(fp.read())
+            self._Parse()
+
     # Wrapper for the ParsePDB file to allow functionality with a fetched protein
-    def Parse(self):
+    def _Parse(self):
         try:
             if self.container.GetFetch() is None:
                 raise apaExcept.NoFetchError
-            return self.ParsePDB(self.container.GetFetch().splitlines())
+            return self._ParsePDB(self.container.GetFetch().splitlines())
         except apaExcept.NoFetchError as e:
             sys.stderr.write(e.message)
 
-    def ParsePDB(self, pdbFile):
+    def _ParsePDB(self, pdbFile):
         proteinChains = dict()
         DNAChains = dict()
         RNAChains = dict()
